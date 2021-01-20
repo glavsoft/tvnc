@@ -21,8 +21,8 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Header
@@ -267,9 +267,11 @@ a.bottom-container {
 /* Footer
  =======================================*/
 .footer {
+  display: flex;
   background-color: #e8e8e8;
 }
 .footer__inner {
+  width: 100%;
   height: 38px;
   display: flex;
   justify-content: space-between;
