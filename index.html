@@ -30,26 +30,11 @@
 <!--        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");-->
 <!--        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript' %3E%3C/script%3E"));-->
 <!--    </script>-->
-    <script type="text/javascript">
-        try {
-            var pageTracker = _gat._getTracker("UA-7918504-1");
-            pageTracker._trackPageview();
-        } catch(err) {}</script>
-    <script type="text/javascript">
-        function startAnimation() {
-            var frames = 3;
-            var frame = 0;
-            var div = document.getElementById("remote-ripple-animation");
-            setInterval(function () {
-                if (frame < frames) {
-                    frame++;
-                } else {
-                    frame = 0;
-                }
-                div.style.backgroundPosition = "0px " + (-144 * frame) + "px";
-            }, 5000);
-        }
-    </script>
+<!--    <script type="text/javascript">-->
+<!--        try {-->
+<!--            var pageTracker = _gat._getTracker("UA-7918504-1");-->
+<!--            pageTracker._trackPageview();-->
+<!--        } catch(err) {}</script>-->
 </head>
 
 <body>
@@ -105,9 +90,24 @@
             </div>
         </div>
     </div>
+    <div class="cookie-block">
+        <span class="cookie-block__item cookie-block__item-description">
+            We use cookies to enhance your site experience and for analytical purposes, as explained in our
+            <a href="#" target="blank" class="cookie-block__link cookie-block__privacy-policy">
+                Privacy policy</a>.
+            If you continue to use the site, please consent to the use of cookies.
+        </span>
+        <span class="ok-cookie cookie-block__item cookie-block__button-accept">
+            <a href="#" class="cookie-block__link">
+                Accept and Close
+            </a>
+        </span>
+        <a href="#" class="ok-cookie cookie-block__item cookie-block__link cookie-block__button-close"></a>
+    </div>
 </footer>
 
 
+<script src="js/cookie.js"></script>
 </body>
 
 </html>

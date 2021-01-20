@@ -119,8 +119,95 @@ body {
 }
 
 /* Footer Copyright
- =======================================*/
+ =====================================*/
 .footer-copyright__paragraph {
   color: #000000;
   margin: 0 auto;
+}
+
+/* Cookie block
+ =====================================*/
+.cookie-block {
+  display: none;
+  color: #ffffff;
+  bottom: 0;
+  position: fixed;
+  padding: 15px 35px;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000000;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 20px;
+  left: 0;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Roboto, "Helvetica Neue", sans-serif;
+}
+.cookie-block__item-description {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+.cookie-block__link {
+  text-decoration: none;
+}
+.cookie-block__privacy-policy {
+  cursor: pointer;
+  color: #0366d6;
+  text-decoration: none;
+}
+.cookie-block__privacy-policy:hover {
+  text-decoration: underline;
+}
+.cookie-block__button-accept {
+  background: #00a99d;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 8.5px 10px;
+  margin-left: 8px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+}
+@media (max-width: 900px) {
+  .cookie-block__button-accept {
+    margin: 0 5px 5px;
+  }
+}
+.cookie-block__button-accept a {
+  color: #ffffff;
+}
+.cookie-block__button-close {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -10px;
+  width: 15px;
+  height: 15px;
+  opacity: 0.5;
+  padding: 10px;
+  outline: 0;
+}
+.cookie-block__button-close:before, .cookie-block__button-close:after {
+  position: absolute;
+  content: " ";
+  height: 15px;
+  width: 2px;
+  top: 3px;
+  background-color: #ffffff;
+}
+.cookie-block__button-close:before {
+  transform: rotate(45deg);
+}
+.cookie-block__button-close:after {
+  transform: rotate(-45deg);
 }
