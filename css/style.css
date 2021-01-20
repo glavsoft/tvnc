@@ -17,6 +17,7 @@ body {
 /* Container
  =======================================*/
 .container {
+  display: flex;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -30,10 +31,10 @@ body {
   background-color: #e8e8e8;
 }
 .header__inner {
-  height: 130px;
+  height: 122px;
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 15px 0;
   align-items: center;
 }
 
@@ -88,10 +89,13 @@ body {
 /* Main
  =======================================*/
 .main {
+  display: flex;
   background-color: #ffffff;
 }
 .main__inner {
-  height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 160px);
 }
 
 .site-container {
@@ -266,7 +270,7 @@ a.bottom-container {
   background-color: #e8e8e8;
 }
 .footer__inner {
-  height: 30px;
+  height: 38px;
   display: flex;
   justify-content: space-between;
   align-items: center;

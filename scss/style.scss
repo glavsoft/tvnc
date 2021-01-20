@@ -16,6 +16,7 @@ body {
 /* Container
  =======================================*/
 .container {
+    display: flex;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
@@ -28,10 +29,10 @@ body {
 .header {
     background-color: #e8e8e8;
     &__inner {
-        height: 130px;
+        height: 122px;
         display: flex;
         justify-content: space-between;
-        padding: 20px 0;
+        padding: 15px 0;
         align-items: center;
     }
 }
@@ -84,11 +85,12 @@ body {
 /* Main
  =======================================*/
 .main {
+    display: flex;
     background-color: #ffffff;
     &__inner {
-        height: calc(100vh - 160px);
-        //display: flex;
-        //flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 160px);
 
     }
 }
@@ -237,7 +239,7 @@ a.bottom-container {
 .footer {
     background-color: #e8e8e8;
     &__inner {
-        height: 30px;
+        height: 38px;
         display: flex;
         justify-content: space-between;
         align-items: center;
