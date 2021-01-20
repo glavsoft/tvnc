@@ -14,6 +14,36 @@ body {
   box-sizing: border-box;
 }
 
+* a {
+  color: #0040c0;
+}
+
+* {
+  outline: none;
+}
+
+h3 {
+  margin: 9px 0;
+}
+
+p {
+  margin: 8px 0;
+}
+
+blockquote {
+  margin: 8px 40px;
+}
+
+ul,
+ol {
+  margin: 8px 0;
+  padding-left: 40px;
+}
+
+li {
+  margin: 4px 0;
+}
+
 /* Container
  =======================================*/
 .container {
@@ -21,8 +51,7 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 10px;
 }
 
 /* Header
@@ -96,12 +125,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 160px);
+  padding: 10px 0;
 }
 
 .site-container {
   max-width: 730px;
   flex-wrap: wrap;
-  margin: 0px 0px 0px -13px;
+  margin: 0 0 0 -13px;
 }
 
 .all-flex {
@@ -246,7 +276,7 @@ a.bottom-container {
 .all-flex.top-container-left {
   min-width: 72px;
   min-height: 72px;
-  margin: 0px 13px 0px 0px;
+  margin: 0 13px 0 0;
   align-items: flex-end;
 }
 
@@ -284,16 +314,12 @@ a.bottom-container {
 
 /* Footer Privacy Policy
  =======================================*/
-.footer-privacy__link {
-  text-decoration: none;
-  color: #000000;
-}
-
 /* Footer Copyright
  =====================================*/
 .footer-copyright__paragraph {
   color: #000000;
   margin: 0 auto;
+  text-align: right;
 }
 
 /* Cookie block
