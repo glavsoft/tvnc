@@ -87,7 +87,8 @@ body {
     background-color: #ffffff;
     &__inner {
         height: calc(100vh - 160px);
-        display: flex;
+        //display: flex;
+        //flex-direction: column;
 
     }
 }
