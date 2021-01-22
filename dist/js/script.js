@@ -47,4 +47,12 @@ var cookies = function cookies() {
   }
 };
 
-cookies();
+cookies(); //добавление кнопки бургер меню
+
+var burgerButton = document.querySelector('.header__burger');
+
+burgerButton.onclick = function () {
+  burgerButton.classList.toggle('active');
+  document.querySelector('.header__menu').classList.toggle('active');
+  document.querySelector('body').classList.toggle('lock');
+};
