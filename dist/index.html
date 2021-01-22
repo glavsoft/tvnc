@@ -38,7 +38,32 @@
 </head>
 
 <body>
-    @@include('_header.html')
+    <header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header-left">
+                <a class="header-left__img" href="/">
+                    <img src="img/logo/tightvnc-logo-90x90.png" alt="">
+                </a>
+                <div class="header-left__title">
+                    <h3>
+                        TightVNC Software
+                    </h3>
+                    <p>
+                        Free, Lightweight, Fast and Reliable Remote Control / Remote Desktop Software
+                    </p>
+                </div>
+            </div>
+            <nav class="nav">
+                <a class="nav__link" href="#">TightVNC</a>
+                <a class="nav__link" href="#">Licensing / SDK</a>
+                <a class="nav__link" href="#">Information</a>
+                <a class="nav__link" href="#">Feedback</a>
+                <a class="nav__link" href="#">More Products</a>
+            </nav>
+        </div>
+    </div>
+</header>
     <main class="main">
         <div class="container">
             <div class="main__inner">
@@ -196,7 +221,36 @@
             </div>
         </div>
     </main>
-    @@include('_footer.html')
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer-item footer-privacy">
+                <a class="footer-privacy__link" href="#">
+                    Privacy Policy
+                </a>
+            </div>
+            <div class="footer-item footer-copyright">
+                <p class="footer-copyright__paragraph">
+                    Copyright © 2006–2021 GlavSoft LLC
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="cookie-block">
+        <span class="cookie-block__item cookie-block__item-description">
+            We use cookies to enhance your site experience and for analytical purposes, as explained in our
+            <a href="#" target="blank" class="cookie-block__link cookie-block__privacy-policy">
+                Privacy policy</a>.
+            If you continue to use the site, please consent to the use of cookies.
+        </span>
+        <span class="ok-cookie cookie-block__item cookie-block__button-accept">
+            <a href="#" class="cookie-block__link">
+                Accept and Close
+            </a>
+        </span>
+        <a href="#" class="ok-cookie cookie-block__item cookie-block__link cookie-block__button-close"></a>
+    </div>
+</footer>
     <script src="js/script.min.js"></script>
 </body>
 </html>
