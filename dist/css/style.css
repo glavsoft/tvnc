@@ -652,6 +652,12 @@ a.bottom-container {
   }
 }
 
+@media (max-width: 767px) and (max-width: 480px) {
+  .header__menu {
+    padding-top: 90px;
+  }
+}
+
 @media (max-width: 480px) {
   .header__inner {
     height: 80px;

@@ -185,6 +185,9 @@ li {
     transition: all 0.3s ease 0s;
     background-color: #ffffff;
     padding: 130px 10px 20px 10px;
+    @media (max-width:480px) {
+      padding-top: 90px;
+    }
   }
   .header__menu.active {
     top: 0;
