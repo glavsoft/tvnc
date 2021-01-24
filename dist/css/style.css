@@ -147,6 +147,14 @@ li {
   display: none;
 }
 
+.header__menu a {
+  text-decoration: none;
+}
+
+.header__menu li {
+  list-style-type: none;
+}
+
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,10 +166,11 @@ li {
           justify-content: flex-end;
   padding: 0 0 0 0;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .header__list li {
+  position: relative;
   list-style: none;
   margin: 10px 0 10px 20px;
   padding: 0 0 0 0;
@@ -169,14 +178,81 @@ li {
 
 .header__link {
   color: #000000;
-  text-decoration: none;
 }
 
-.header__link:hover {
+.header__link:hover,
+.sub-menu__link:hover,
+.sub-sub-menu__link:hover {
   opacity: .65;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.header__list li:hover .sub-menu__list {
+  display: block;
+}
+
+.sub-menu__list > li {
+  z-index: 1;
+  position: relative;
+  background-color: #f1f7f8;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+.sub-menu__list {
+  margin: 0;
+  padding: 0;
+}
+
+.sub-sub-menu__list {
+  margin: 0;
+  padding: 0;
+}
+
+.sub-sub-menu__list > li {
+  margin: 0;
+  padding: 0;
+}
+
+.sub-menu__list {
+  display: none;
+  width: 210px;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  padding: 15px 0 0 0;
+}
+
+.sub-menu__link {
+  color: #000000;
+  display: inline-block;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.sub-menu__list > li:hover .sub-sub-menu__list {
+  display: block;
+}
+
+.sub-sub-menu__list {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  width: 300px;
+  padding: 0 0 0 5px;
+}
+
+.sub-sub-menu__list li {
+  background-color: #ffffff;
+}
+
+.sub-sub-menu__link {
+  color: #000000;
+  display: inline-block;
+  padding: 5px 10px;
 }
 
 /* Main
@@ -649,6 +725,28 @@ a.bottom-container {
 
   .header__link {
     font-size: 24px;
+  }
+
+  .sub-menu__list {
+    display: block;
+    position: relative;
+    top: 10px;
+    padding: 0 0 0 10px;
+  }
+
+  .sub-menu__list li {
+    margin: 0 0 10px 0;
+  }
+
+  .sub-sub-menu__list {
+    display: block;
+    position: relative;
+    left: 0;
+    padding: 10px 0 0 20px;
+  }
+
+  .sub-sub-menu__list li {
+    margin: 0 0 5px 0;
   }
 }
 
