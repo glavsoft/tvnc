@@ -1,5 +1,4 @@
-@@include('alert.js')
-@@include('cookie.js')
+@@include('../components/cookie/script.js')
 
 //добавление кнопки бургер меню
 let burgerButton = document.querySelector('.header__burger');
