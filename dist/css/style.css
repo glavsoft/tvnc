@@ -619,6 +619,10 @@ a.bottom-container {
   font-weight: bold;
 }
 
+.active-menu__link2 {
+  text-decoration: underline;
+}
+
 @media (max-width: 900px) {
   .cookie-block__button-accept {
     margin: 0 5px 5px;
