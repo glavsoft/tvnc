@@ -5,7 +5,15 @@ body {
   color: #000000;
   background-color: #ffffff;
 }
-
+a:active {
+  color:red;
+}
+ul.mgnul > li {
+  margin-top:0.5em; margin-bottom:0.5em;
+}
+ol.mgnol > li {
+  margin-top:0.5em; margin-bottom:0.5em;
+}
 /* означает для всех элементов */
 *,
 *:before,
@@ -21,23 +29,23 @@ a {
   //padding:0;
   outline:none;
 }
-h3 {
-  margin: 9px 0;
-}
-p {
-  margin: 8px 0;
-}
-blockquote {
-  margin: 8px 40px;
-}
-ul,
-ol {
-  margin: 8px 0;
-  padding-left: 40px;
-}
-li {
-  margin: 4px 0;
-}
+//h3 {
+//  margin: 9px 0;
+//}
+//p {
+//  margin: 8px 0;
+//}
+//blockquote {
+//  margin: 8px 40px;
+//}
+//ul,
+//ol {
+//  margin: 8px 0;
+//  padding-left: 40px;
+//}
+//li {
+//  margin: 4px 0;
+//}
 /* Container
  =======================================*/
 .container {
@@ -325,10 +333,10 @@ li {
     padding: 80px 0 0 0;
   }
   &__inner {
-    display: flex;
+    //display: flex;
     flex-direction: column;
     min-height: calc(100vh - 160px);
-    padding: 10px 0;
+    //padding: 10px 0;
   }
 }
 .color-for-teg-strong {

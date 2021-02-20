@@ -8,6 +8,20 @@ body {
   background-color: #ffffff;
 }
 
+a:active {
+  color: red;
+}
+
+ul.mgnul > li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ol.mgnol > li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 /* означает для всех элементов */
 
 *,
@@ -23,28 +37,6 @@ a {
 
 * {
   outline: none;
-}
-
-h3 {
-  margin: 9px 0;
-}
-
-p {
-  margin: 8px 0;
-}
-
-blockquote {
-  margin: 8px 40px;
-}
-
-ul,
-ol {
-  margin: 8px 0;
-  padding-left: 40px;
-}
-
-li {
-  margin: 4px 0;
 }
 
 /* Container
@@ -275,15 +267,11 @@ li {
 }
 
 .main__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: calc(100vh - 160px);
-  padding: 10px 0;
 }
 
 .color-for-teg-strong {
