@@ -1,34 +1,35 @@
 <!doctype html>
 <html lang="en">
 <head>
-    @@include('_head.html')
+    @@include('components/head/_index.html')
 </head>
 
 <body>
-<header class="header">
-    <div class="container">
-        <div class="header__inner">
-            @@include('_header.html')
-        </div>
-    </div>
-</header>
 
-<main class="main">
-    <div class="container">
-        <div class="main__inner">
-            @@include('template/_licensing-server-macos.html')
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                @@include('components/header/_index.html')
+            </div>
         </div>
-    </div>
-</main>
+    </header>
 
-<footer class="footer">
-    <div class="container">
-        <div class="footer__inner">
-            @@include('_footer.html')
+    <main class="main">
+        <div class="container">
+            <div class="main__inner">
+                @@include('pages/licensing-server-macos/_index.html')
+            </div>
         </div>
-    </div>
-</footer>
+    </main>
 
-<script src="js/script.min.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                @@include('components/footer/_index.html')
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.min.js"></script>
 </body>
 </html>
