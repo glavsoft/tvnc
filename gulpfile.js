@@ -26,8 +26,8 @@ let path = {
     //отлавливать их изменения и сразу что то на лету выполнять
     watch: {
         html: source_folder + "/**/*.html",                             //слушаем все дочерние папки и только те файлы которые именют разширение .html
-        css: source_folder + "/scss/**/*.scss",
-        js: source_folder+ "/js/**/*.js",                               //аналогично
+        css: source_folder + "/**/*.scss",
+        js: source_folder+ "/**/*.js",                               //аналогично
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     },
     //создаем еще один объект который содержит путь к папки проекта, этот объект будет отвечать за удаление этой папки
