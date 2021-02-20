@@ -13,9 +13,9 @@ document.querySelectorAll('.header__list li a').forEach(function(el) {
     } else if ( window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/tvnc/dist') {    // ('/') второе условие нужно для того что бы исключить корневой файл
         el.classList.add('active-menu__link');
     }
-    // else if ( window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/index.html') {  // ('/index.html')
-    //     el.classList.add('active-menu__link');
-    // }
+    else if ( window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/index.html') {  // ('/index.html')
+        el.classList.add('active-menu__link');
+    }
     //console.log(window.location.pathname);
 
 });
