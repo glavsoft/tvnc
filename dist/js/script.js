@@ -46,7 +46,16 @@ var cookies = function cookies() {
   }
 };
 
-cookies(); //Активный пункт меню с помощью JavaScript
+cookies(); //добавление кнопки бургер меню
+
+var burgerButton = document.querySelector('.header__burger');
+
+burgerButton.onclick = function () {
+  burgerButton.classList.toggle('active');
+  document.querySelector('.header__menu').classList.toggle('active');
+  document.querySelector('body').classList.toggle('lock');
+}; //Активный пункт меню с помощью JavaScript
+
 
 document.querySelectorAll('.header__list li a').forEach(function (el) {
   if (window.location.pathname.indexOf(el.getAttribute('href')) > 0) {
@@ -69,12 +78,4 @@ document.querySelectorAll(".header__list li a").forEach(function (el1) {
     var punktMainMenu = el1.parentNode.parentNode.parentNode.querySelector('.header__link');
     punktMainMenu.classList.add('active-menu__link');
   }
-}); //добавление кнопки бургер меню
-
-var burgerButton = document.querySelector('.header__burger');
-
-burgerButton.onclick = function () {
-  burgerButton.classList.toggle('active');
-  document.querySelector('.header__menu').classList.toggle('active');
-  document.querySelector('body').classList.toggle('lock');
-};
+});
