@@ -8,11 +8,11 @@ burgerButton.onclick = function() {
 
 //Активный пункт меню с помощью JavaScript
 document.querySelectorAll('.header__list li a').forEach(function(el) {
-    if ( window.location.pathname.indexOf(el.getAttribute('href')) > -1 ) {                      //по умолчанию было -1
+    if ( window.location.pathname.indexOf(el.getAttribute('href')) > 0 ) {                      //по умолчанию было -1
         el.classList.add('active-menu__link');
-    } else if ( window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/') {    //второе условие нужно для того что бы исключить корневой файл
+    } else if ( window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/tvnc/dist/') {    // ('/') второе условие нужно для того что бы исключить корневой файл
         el.classList.add('active-menu__link');
-    } else if ( window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/index.html') {
+    } else if ( window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/index.html') {  // ('/index.html')
         el.classList.add('active-menu__link');
     }
     //console.log(window.location.pathname);
