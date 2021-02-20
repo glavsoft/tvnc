@@ -1,0 +1,78 @@
+/* Main style
+ =======================================*/
+
+body {
+  margin: 0;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+}
+a:active {
+  color:red;
+}
+ul.mgnul > li {
+  margin-top:0.5em; margin-bottom:0.5em;
+}
+ol.mgnol > li {
+  margin-top:0.5em; margin-bottom:0.5em;
+}
+/* означает для всех элементов */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: $blue-color;
+}
+*{
+  //margin:0;
+  //padding:0;
+  outline:none;
+}
+//h3 {
+//  margin: 9px 0;
+//}
+//p {
+//  margin: 8px 0;
+//}
+//blockquote {
+//  margin: 8px 40px;
+//}
+//ul,
+//ol {
+//  margin: 8px 0;
+//  padding-left: 40px;
+//}
+//li {
+//  margin: 4px 0;
+//}
+
+/* Container
+ =======================================*/
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Main
+ =======================================*/
+.main {
+  display: flex;
+  background-color: #ffffff;
+  padding: 122px 0 0 0;
+  @media(max-width: 480px) {
+    padding: 80px 0 0 0;
+  }
+  &__inner {
+    //display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 160px);
+    //padding: 10px 0;
+  }
+}
