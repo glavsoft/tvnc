@@ -65,7 +65,7 @@ document.querySelectorAll('.header__list li a').forEach(function (el) {
     // ('/') второе условие нужно для того что бы исключить корневой файл
     el.classList.add('active-menu__link');
   } else if (window.location.pathname === '/tvnc/dist/') {
-    //в целом не нужная штука, когда зальется на хостинг можно убрать
+    //в целом не нужная штука, когда зальется на хостинг можно убрать если в корне то просто /
     document.querySelector('.header__list li a').classList.add('active-menu__link');
   }
 }); //Активный пункт САМОГО ВЕРХНЕГО меню с помощью JavaScript
