@@ -11,13 +11,13 @@ document.querySelectorAll('.header__list li a').forEach(function(el) {
     if ( window.location.pathname.indexOf(el.getAttribute('href')) > 0 ) {                      //по умолчанию было -1
         el.classList.add('active-menu__link');
     }
-    else if ( window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/') {    // ('/') второе условие нужно для того что бы исключить корневой файл
+    else if ( (window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/') ) {    // ('/') второе условие нужно для того что бы исключить корневой файл
         el.classList.add('active-menu__link');
+
     }
-    else if ( window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/index.html') {  // ('/index.html')
-        el.classList.add('active-menu__link');
+    else if (window.location.pathname === '/') {                                                                //в целом не нужная штука, когда зальется на хостинг можно убрать
+        document.querySelector('.header__list li a').classList.add('active-menu__link');
     }
-    //console.log(window.location.pathname);
 
 });
 
