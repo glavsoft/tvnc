@@ -125,14 +125,14 @@ function js() {
 //создадим функцию для работы с images файломи
 function images() {
     return src(path.src.img)                                            //ф-я будет возвращать перем src, внутри переменной укажим путь к исходным файлам которые находятся в объекте path
-        .pipe(
-            imagemin({
-                progressive: true,
-                svgoPlugins: [{ removeViewBox: false }],                //работа с svg изображениями
-                interlaced: true,
-                optimizationLevel: 3                                    //0 to 7    данная настройка указыват на качество изображения 3
-            })
-        )
+        // .pipe(                                                       //комментируем эту функцию .pipe если не хотим что бы не ужимала картинки
+        //     imagemin({
+        //         progressive: true,
+        //         svgoPlugins: [{ removeViewBox: false }],                //работа с svg изображениями
+        //         interlaced: true,
+        //         optimizationLevel: 3                                    //0 to 7    данная настройка указыват на качество изображения 3
+        //     })
+        // )
         .pipe(dest(path.build.img))                                      //pipe это ф-я в которой мы пишим комманды для галпа. Сейчас тут просто галп перекопирует файлы и папки которые лежат в исходной папке в папку назначения
         .pipe(browsersync.stream())                                       //ф-я stream нужна что бы после каждого перекопирования файлов (описано в строке выще) необходимо что бы галп обновил страницу
 }
