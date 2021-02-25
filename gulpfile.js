@@ -130,7 +130,7 @@ function images() {
                 progressive: true,
                 svgoPlugins: [{ removeViewBox: false }],                //работа с svg изображениями
                 interlaced: true,
-                optimizationLevel: 3                                    //0 to 7    данная настройка указыват на качество изображения
+                optimizationLevel: 3                                    //0 to 7    данная настройка указыват на качество изображения 3
             })
         )
         .pipe(dest(path.build.img))                                      //pipe это ф-я в которой мы пишим комманды для галпа. Сейчас тут просто галп перекопирует файлы и папки которые лежат в исходной папке в папку назначения
