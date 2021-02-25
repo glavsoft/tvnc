@@ -15,7 +15,7 @@ document.querySelectorAll('.header__list li a').forEach(function(el) {
         el.classList.add('active-menu__link');
 
     }
-    else if (window.location.pathname === '/') {                                                                //в целом не нужная штука, когда зальется на хостинг можно убрать
+    else if (window.location.pathname === '/tvnc/dist/') {                                                                //в целом не нужная штука, когда зальется на хостинг можно убрать
         document.querySelector('.header__list li a').classList.add('active-menu__link');
     }
 

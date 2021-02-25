@@ -64,7 +64,7 @@ document.querySelectorAll('.header__list li a').forEach(function (el) {
   } else if (window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/') {
     // ('/') второе условие нужно для того что бы исключить корневой файл
     el.classList.add('active-menu__link');
-  } else if (window.location.pathname === '/') {
+  } else if (window.location.pathname === '/tvnc/dist/') {
     //в целом не нужная штука, когда зальется на хостинг можно убрать
     document.querySelector('.header__list li a').classList.add('active-menu__link');
   }
