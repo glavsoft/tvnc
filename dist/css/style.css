@@ -3,6 +3,7 @@
 /* Main style
  =======================================*/
 
+html,
 body {
   margin: 0;
   font-family: Verdana, Arial, sans-serif;
@@ -508,19 +509,24 @@ a.bottom-container {
   display: none;
 }
 
-.header__menu a {
+.menu a {
   text-decoration: none;
 }
 
-.header__menu span.header__link {
+.menu a.parent {
+  margin: 0 30px 0 0;
+}
+
+.menu span.menu__link {
   cursor: pointer;
 }
 
-.header__menu li {
-  list-style-type: none;
+.menu li {
+  position: relative;
+  list-style: none;
 }
 
-.header__list {
+.menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -534,18 +540,22 @@ a.bottom-container {
   z-index: 3;
 }
 
-.header__list li {
+.menu__list li {
   position: relative;
   list-style: none;
   margin: 10px 0 10px 20px;
   padding: 0 0 0 0;
 }
 
-.header__link {
+.menu__list > li {
+  margin: 0 30px 0 0;
+}
+
+.menu__link {
   color: #000000;
 }
 
-.header__link:hover,
+.menu__link:hover,
 .sub-menu__link:hover,
 .sub-sub-menu__link:hover {
   opacity: .65;
@@ -554,30 +564,11 @@ a.bottom-container {
   transition: all 0.3s ease 0s;
 }
 
-.header__list li:hover .sub-menu__list {
-  display: block;
-}
-
 .sub-menu__list > li {
   z-index: 1;
   position: relative;
   background-color: #f1f7f8;
   margin: 0 0 0 0;
-  padding: 0;
-}
-
-.sub-menu__list {
-  margin: 0;
-  padding: 0;
-}
-
-.sub-sub-menu__list {
-  margin: 0;
-  padding: 0;
-}
-
-.sub-sub-menu__list > li {
-  margin: 0;
   padding: 0;
 }
 
@@ -590,6 +581,20 @@ a.bottom-container {
   padding: 15px 0 0 0;
 }
 
+.sub-sub-menu__list {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-width: 300px;
+  padding: 0 0 0 5px;
+}
+
+.sub-sub-menu__list > li {
+  margin: 0;
+  padding: 0;
+}
+
 .sub-menu__link {
   color: #000000;
   display: inline-block;
@@ -597,14 +602,10 @@ a.bottom-container {
   width: 100%;
 }
 
-.sub-menu__list > li:hover .sub-sub-menu__list {
-  display: block;
-}
-
 .sub-sub-menu__list {
   display: none;
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 100%;
   width: 300px;
   padding: 0 0 0 5px;
@@ -618,6 +619,52 @@ a.bottom-container {
   color: #000000;
   display: inline-block;
   padding: 5px 10px;
+}
+
+.arrow {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 12px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #000;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+.arrow.active {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.sub-menu__arrow.arrow {
+  right: 10px;
+  border-left: 10px solid #000;
+  border-right: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+body.mouse .menu__list > li:hover .sub-menu__list {
+  display: block;
+}
+
+body.mouse .sub-menu__list > li:hover .sub-sub-menu__list {
+  display: block;
+}
+
+body.touch .sub-menu__list.open {
+  display: block;
+}
+
+body.touch .sub-sub-menu__list.open {
+  display: block;
+}
+
+body.touch .arrow {
+  display: block;
 }
 
 .active-menu__link {
@@ -710,7 +757,7 @@ a.bottom-container {
     bottom: 9px;
   }
 
-  .header__menu {
+  .menu {
     position: fixed;
     top: -100%;
     left: 0;
@@ -724,47 +771,56 @@ a.bottom-container {
     padding: 130px 10px 20px 10px;
   }
 
-  .header__menu.active {
+  .menu.active {
     top: 0;
   }
 
-  .header__list {
+  .menu__list {
     display: block;
   }
 
-  .header__list li {
+  .menu__list > li {
     margin: 0 0 20px 0;
   }
 
-  .header__link {
+  .menu__link {
     font-size: 24px;
   }
 
+  .sub-menu__link {
+    font-size: 20px;
+  }
+
   .sub-menu__list {
-    display: block;
     position: relative;
     top: 10px;
     padding: 0 0 0 10px;
-  }
-
-  .sub-menu__list li {
-    margin: 0 0 10px 0;
+    width: 280px;
   }
 
   .sub-sub-menu__list {
-    display: block;
+    padding: 0 5px;
     position: relative;
+    top: 0;
     left: 0;
-    padding: 10px 0 0 20px;
   }
 
   .sub-sub-menu__list li {
     margin: 0 0 5px 0;
   }
+
+  .sub-menu__arrow.arrow {
+    right: 10px;
+    top: 15px;
+    border-bottom: none;
+    border-left: 10px solid transparent;
+    border-top: 10px solid #000;
+    border-right: 10px solid transparent;
+  }
 }
 
 @media (max-width: 767px) and (max-width: 480px) {
-  .header__menu {
+  .menu {
     padding-top: 90px;
   }
 }
