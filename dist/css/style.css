@@ -50,7 +50,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 1450px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -64,6 +64,10 @@ a {
   display: flex;
   background-color: #ffffff;
   padding: 122px 0 0 0;
+}
+
+.main .container {
+  max-width: 1250px;
 }
 
 .main__inner {
@@ -581,7 +585,7 @@ a.bottom-container {
   display: none;
   width: 210px;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 15px;
   padding: 15px 0 0 0;
 }
@@ -622,6 +626,12 @@ a.bottom-container {
 
 .active-menu__link2 {
   text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 60px;
+  }
 }
 
 @media (max-width: 900px) {
