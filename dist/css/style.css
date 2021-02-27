@@ -696,6 +696,11 @@ body.touch .arrow {
   text-decoration: underline;
 }
 
+.main__inner pre {
+  overflow: auto;
+  width: 93vw;
+}
+
 @media (min-width: 1027px) {
   .container {
     padding: 0 60px;
