@@ -85,6 +85,10 @@ blockquote {
     flex-direction: column;
     min-height: calc(100vh - 160px);
     //padding: 10px 0;
+    div.table-overflow{
+      width: 99%;
+      overflow: auto;
+    }
     @media (max-width:480px) {
       min-height: calc(100vh - 118px);
     }

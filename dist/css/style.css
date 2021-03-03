@@ -85,6 +85,11 @@ blockquote {
   min-height: calc(100vh - 160px);
 }
 
+.main__inner div.table-overflow {
+  width: 99%;
+  overflow: auto;
+}
+
 /* Header
  =======================================*/
 
