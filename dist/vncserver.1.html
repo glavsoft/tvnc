@@ -173,73 +173,85 @@
     <main class="main">
         <div class="container">
             <div class="main__inner">
-                
+                <h3>NAME</h3>
+vncserver - a wrapper to launch an X server for VNC.
+<h3>SYNOPSIS</h3>
+<font color="#007000"><b>vncserver</b></font>
+[:<font color="#700070"><i>display</i></font>] [-geometry <font color="#700070"><i>width</i></font>x<font color="#700070"><i>height</i></font>] [-depth <font color="#700070"><i>depth</i></font>]
+[-pixelformat rgb<font color="#700070"><i>NNN</i></font>|bgr<font color="#700070"><i>NNN</i></font>] [-name <font color="#700070"><i>desktop-name</i></font>]
+[<font color="#700070"><i>Xvnc-options</i></font>...]
+<dl compact="">
+<dt><font color="#007000"><b>vncserver</b></font> -kill :<font color="#700070"><i>display</i></font></dt><dd>
+</dd><dt><font color="#007000"><b>vncserver</b></font> -help</dt><dd>
+</dd></dl>
+<h3>DESCRIPTION</h3>
+<font color="#007000"><b>vncserver</b></font> is a wrapper script for <font color="#007000"><b>Xvnc</b></font>, the free X server
+for VNC (Virtual Network Computing). It provides all capabilities of a
+standard X server, but does not connect to a display for itself.
+Instead, <font color="#007000"><b>Xvnc</b></font> creates a virtual desktop you can view or control
+remotely using a VNC viewer.
+<h3>OPTIONS</h3>
+You can add <font color="#007000"><b>Xvnc</b></font> options at the command line. They will be added
+to the invocation of Xvnc without changes. The options provided by the
+<font color="#007000"><b>vncserver</b></font> itself are as follows:
+<dl compact="">
+<dt><font color="#007000"><b>:</b></font><font color="#700070"><i>display</i></font></dt><dd>
+The display number to use. If omitted, the next free display number
+is used.
+</dd><dt><font color="#007000"><b>-geometry</b></font> <font color="#700070"><i>width</i></font><font color="#007000"><b>x</b></font><font color="#700070"><i>height</i></font></dt><dd>
+Set desktop width and height.
+</dd><dt><font color="#007000"><b>-depth</b></font> <font color="#700070"><i>depth</i></font></dt><dd>
+Set the colour depth of the visual to provide, in bits per pixel. Must
+be a value between 8 and 32.
+</dd><dt><font color="#007000"><b>-pixelformat</b></font> <font color="#007000"><b>rgb</b></font><font color="#700070"><i>NNN</i></font>|<font color="#007000"><b>bgr</b></font><font color="#700070"><i>NNN</i></font></dt><dd>
+Set colour format for pixels representation. The viewer can do the
+conversion to any other pixel format, but it is faster if the depth
+and pixel format of the server is the same as the equivalent values on
+the viewer display.
+</dd><dt><font color="#007000"><b>-name</b></font> <font color="#700070"><i>string</i></font></dt><dd>
+This specifies the name of the desktop.
+</dd><dt><font color="#007000"><b>-kill</b></font> <font color="#007000"><b>:</b></font><font color="#700070"><i>display</i></font></dt><dd>
+Stops the session running on the specified display.
+</dd><dt><font color="#007000"><b>-help</b></font></dt><dd>
+Prints a short usage notice to stderr.
+</dd></dl>
+<h3>EXAMPLES</h3>
+<dl compact="">
+<dt><font color="#007000"><b>vncserver</b></font></dt><dd>
+Invokes <font color="#007000"><b>Xvnc</b></font> on the next available display and with suitable
+defaults.
+</dd><dt><font color="#007000"><b>vncserver</b></font> <font color="#700070"><i>:1</i></font></dt><dd>
+Invokes <font color="#007000"><b>Xvnc</b></font> on display :1.
+</dd><dt><font color="#007000"><b>vncserver</b></font> <font color="#700070"><i>-geometry 800x600 -depth 16 :1</i></font></dt><dd>
+Invokes <font color="#007000"><b>Xvnc</b></font> on display :1 with desktop size of 800x600 pixels
+and color depth of 16 bits per pixel.
+</dd><dt><font color="#007000"><b>vncserver</b></font> <font color="#700070"><i>-kill :1</i></font></dt><dd>
+Shuts down <font color="#007000"><b>Xvnc</b></font> server on display :1.
+</dd></dl>
+<h3>FILES</h3>
+<dl compact="">
+<dt>/etc/tightvncserver.conf</dt><dd>
+System-wide configuration file of TightVNC Server.
+</dd><dt>$HOME/.vnc/tightvncserver.conf</dt><dd>
+User configuration file of TightVNC Server. Its setting override
+system-wide configuration.
+</dd></dl>
+<h3>SEE ALSO</h3>
+<b><a href="Xvnc.1.php">Xvnc</a></b>(1), <b><a href="vncviewer.1.php">vncviewer</a></b>(1), <b><a href="vncpasswd.1.php">vncpasswd</a></b>(1), <b><a href="vncconnect.1.php">vncconnect</a></b>(1)
+<h3>AUTHORS</h3>
+Original VNC was developed in AT&amp;T Laboratories Cambridge. TightVNC
+additions were implemented by Constantin Kaplinsky. Many other people
+participated in development, testing and support.
 <p>
-    Below is an annotated list of all the pages on the <a href="https://www.tightvnc.com/">TightVNC Web site</a>.
-</p>
-<h3>TightVNC</h3>
-<ul>
-    <li><a href="index.html">Main Page</a> - a brief overview of the software and the site.</li>
-    <li><a href="download.html">Download</a> - links to download the latest stable versions for
-        all supported platforms.</li>
-    <li><a href="download.html">Download (v2.0)</a> - links to download Beta version of
-        TightVNC 2.0.</li>
-    <li><a href="lists.html">Mailing Lists</a> - instructions on using TightVNC mailing lists.</li>
-    <li><a href="sitemap.html">Site Map</a> - this page.</li>
-</ul>
-<h3>Services</h3>
-<ul>
-    <li><a href="support.html">Technical Support</a> - information on our technical support
-        services.</li>
-    <li><a href="freesupport.html">Free Technical Support</a> - hints on how to get free support,
-        where to send your questions, and where to search for the answers.</li>
-    <li><a href="development.html">Development and Customization Services</a> - our offerings
-        on TightVNC customization and software development.</li>
-</ul>
-<h3>Information</h3>
-<ul>
-    <li><a href="intro.html">Introduction</a> - what TightVNC is, supported features, TightVNC
-        and other VNC software.</li>
-    <li><a href="screenshots.html">Screenshots</a> - images of TightVNC software in action.</li>
-    <li><a href="docs.html">Documentation</a> - links to various pieces of documentation:</li>
-    <ul>
-        <li><a href="winst.html">TightVNC for Windows: Installation and Getting
-            Started</a></li>
-        <li><a href="doc/win32/building.txt">Win32 BUILDING.txt</a> - how to build Win32
-            version from the sources.</li>
-        <li><a href="doc/unix/REAMDE.txt">Unix README</a> - how to build and install
-            the Unix version.</li>
-        <li><a href="vncviewer.1.html">vncviewer(1)</a> - Unix manual page for the
-            <tt>vncviewer</tt> program.</li>
-        <li><a href="vncserver.1.html">vncserver(1)</a> - Unix manual page for the
-            <tt>vncserver</tt> script.</li>
-        <li><a href="Xvnc.1.html">Xvnc(1)</a> - Unix manual page for <tt>Xvnc</tt> server.</li>
-        <li><a href="vncpasswd.1.html">vncpasswd(1)</a> - Unix manual page for the
-            <tt>vncpasswd</tt> utility.</li>
-        <li><a href="vncconnect.1.html">vncconnect(1)</a> - Unix manual page for the
-            <tt>vncconnect</tt> utility.</li>
-        <li><a href="doc/java/README.txt">Java Viewer README</a> - documentation on the TightVNC
-            Java viewer.</li>
-    </ul>
-    <li><a href="faq.html">FAQ</a> - Frequently Asked Questions with answers (under
-        construction).</li>
-    <li><a href="whatsnew.html">What's New in TightVNC</a> - a brief overview of changes
-        introduced in each TightVNC release.</li>
-    <li><a href="pr.html">Press Releases</a> - a list of recent press releases featuring
-        products and services available on the TightVNC Web site:</li>
-    <ul>
-        <li><a href="tightvnc-2.0-goes-beta.html">TightVNC 2.0 Goes Beta</a></li>
-        <li><a href="tightvnc-meets-windows7.html">TightVNC meets Windows 7</a></li>
-    </ul>
-</ul>
-<h3>Feedback</h3>
-<ul>
-    <li><a href="bugs.html">Report Bugs</a> - how to report bugs in TightVNC software.</li>
-    <li><a href="rfe.html">Suggest Features</a> - how to send new feature requests.</li>
-    <li><a href="contact.html">Contact Us</a> - how to contact TightVNC staff, our e-mail
-        addresses.</li>
-</ul>
-
+<font color="#007000"><b>Man page authors:</b></font>
+<br>
+Marcus Brinkmann &lt;Marcus.Brinkmann at ruhr-uni-bochum.de&gt;,
+<br>
+Tim Waugh &lt;twaugh at redhat.com&gt;,
+<br>
+Constantin Kaplinsky &lt;const at tightvnc.com&gt;
+</p><p>
+            </p>
             </div>
         </div>
     </main>

@@ -1,0 +1,79 @@
+<h3>NAME</h3>
+vncserver - a wrapper to launch an X server for VNC.
+<h3>SYNOPSIS</h3>
+<font color="#007000"><b>vncserver</b></font>
+[:<font color="#700070"><i>display</i></font>] [-geometry <font color="#700070"><i>width</i></font>x<font color="#700070"><i>height</i></font>] [-depth <font color="#700070"><i>depth</i></font>]
+[-pixelformat rgb<font color="#700070"><i>NNN</i></font>|bgr<font color="#700070"><i>NNN</i></font>] [-name <font color="#700070"><i>desktop-name</i></font>]
+[<font color="#700070"><i>Xvnc-options</i></font>...]
+<dl compact="">
+<dt><font color="#007000"><b>vncserver</b></font> -kill :<font color="#700070"><i>display</i></font></dt><dd>
+</dd><dt><font color="#007000"><b>vncserver</b></font> -help</dt><dd>
+</dd></dl>
+<h3>DESCRIPTION</h3>
+<font color="#007000"><b>vncserver</b></font> is a wrapper script for <font color="#007000"><b>Xvnc</b></font>, the free X server
+for VNC (Virtual Network Computing). It provides all capabilities of a
+standard X server, but does not connect to a display for itself.
+Instead, <font color="#007000"><b>Xvnc</b></font> creates a virtual desktop you can view or control
+remotely using a VNC viewer.
+<h3>OPTIONS</h3>
+You can add <font color="#007000"><b>Xvnc</b></font> options at the command line. They will be added
+to the invocation of Xvnc without changes. The options provided by the
+<font color="#007000"><b>vncserver</b></font> itself are as follows:
+<dl compact="">
+<dt><font color="#007000"><b>:</b></font><font color="#700070"><i>display</i></font></dt><dd>
+The display number to use. If omitted, the next free display number
+is used.
+</dd><dt><font color="#007000"><b>-geometry</b></font> <font color="#700070"><i>width</i></font><font color="#007000"><b>x</b></font><font color="#700070"><i>height</i></font></dt><dd>
+Set desktop width and height.
+</dd><dt><font color="#007000"><b>-depth</b></font> <font color="#700070"><i>depth</i></font></dt><dd>
+Set the colour depth of the visual to provide, in bits per pixel. Must
+be a value between 8 and 32.
+</dd><dt><font color="#007000"><b>-pixelformat</b></font> <font color="#007000"><b>rgb</b></font><font color="#700070"><i>NNN</i></font>|<font color="#007000"><b>bgr</b></font><font color="#700070"><i>NNN</i></font></dt><dd>
+Set colour format for pixels representation. The viewer can do the
+conversion to any other pixel format, but it is faster if the depth
+and pixel format of the server is the same as the equivalent values on
+the viewer display.
+</dd><dt><font color="#007000"><b>-name</b></font> <font color="#700070"><i>string</i></font></dt><dd>
+This specifies the name of the desktop.
+</dd><dt><font color="#007000"><b>-kill</b></font> <font color="#007000"><b>:</b></font><font color="#700070"><i>display</i></font></dt><dd>
+Stops the session running on the specified display.
+</dd><dt><font color="#007000"><b>-help</b></font></dt><dd>
+Prints a short usage notice to stderr.
+</dd></dl>
+<h3>EXAMPLES</h3>
+<dl compact="">
+<dt><font color="#007000"><b>vncserver</b></font></dt><dd>
+Invokes <font color="#007000"><b>Xvnc</b></font> on the next available display and with suitable
+defaults.
+</dd><dt><font color="#007000"><b>vncserver</b></font> <font color="#700070"><i>:1</i></font></dt><dd>
+Invokes <font color="#007000"><b>Xvnc</b></font> on display :1.
+</dd><dt><font color="#007000"><b>vncserver</b></font> <font color="#700070"><i>-geometry 800x600 -depth 16 :1</i></font></dt><dd>
+Invokes <font color="#007000"><b>Xvnc</b></font> on display :1 with desktop size of 800x600 pixels
+and color depth of 16 bits per pixel.
+</dd><dt><font color="#007000"><b>vncserver</b></font> <font color="#700070"><i>-kill :1</i></font></dt><dd>
+Shuts down <font color="#007000"><b>Xvnc</b></font> server on display :1.
+</dd></dl>
+<h3>FILES</h3>
+<dl compact="">
+<dt>/etc/tightvncserver.conf</dt><dd>
+System-wide configuration file of TightVNC Server.
+</dd><dt>$HOME/.vnc/tightvncserver.conf</dt><dd>
+User configuration file of TightVNC Server. Its setting override
+system-wide configuration.
+</dd></dl>
+<h3>SEE ALSO</h3>
+<b><a href="Xvnc.1.php">Xvnc</a></b>(1), <b><a href="vncviewer.1.php">vncviewer</a></b>(1), <b><a href="vncpasswd.1.php">vncpasswd</a></b>(1), <b><a href="vncconnect.1.php">vncconnect</a></b>(1)
+<h3>AUTHORS</h3>
+Original VNC was developed in AT&amp;T Laboratories Cambridge. TightVNC
+additions were implemented by Constantin Kaplinsky. Many other people
+participated in development, testing and support.
+<p>
+<font color="#007000"><b>Man page authors:</b></font>
+<br>
+Marcus Brinkmann &lt;Marcus.Brinkmann at ruhr-uni-bochum.de&gt;,
+<br>
+Tim Waugh &lt;twaugh at redhat.com&gt;,
+<br>
+Constantin Kaplinsky &lt;const at tightvnc.com&gt;
+</p><p>
+            </p>

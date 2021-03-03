@@ -173,73 +173,82 @@
     <main class="main">
         <div class="container">
             <div class="main__inner">
-                
+                <h3>NAME</h3>
+vncpasswd - set passwords for VNC server
+<h3>SYNOPSIS</h3>
+<font color="#007000"><b>vncpasswd</b></font>
+[<font color="#700070"><i>file</i></font>]
+<br>
+<font color="#007000"><b>vncpasswd</b></font>
+<font color="#700070"><i>-t</i></font>
+<br>
+<font color="#007000"><b>vncpasswd</b></font>
+<font color="#700070"><i>-f</i></font>
+<br>
+<h3>DESCRIPTION</h3>
+The <font color="#007000"><b>vncpasswd</b></font> utility should be used to create and change
+passwords for the TightVNC server authentication. <font color="#007000"><b>Xvnc</b></font> uses such
+passwords when started with the <font color="#007000"><b>-rfbauth</b></font> command-line option
+(or when started from the <font color="#007000"><b>vncserver</b></font> script).
 <p>
-    Below is an annotated list of all the pages on the <a href="https://www.tightvnc.com/">TightVNC Web site</a>.
-</p>
-<h3>TightVNC</h3>
-<ul>
-    <li><a href="index.html">Main Page</a> - a brief overview of the software and the site.</li>
-    <li><a href="download.html">Download</a> - links to download the latest stable versions for
-        all supported platforms.</li>
-    <li><a href="download.html">Download (v2.0)</a> - links to download Beta version of
-        TightVNC 2.0.</li>
-    <li><a href="lists.html">Mailing Lists</a> - instructions on using TightVNC mailing lists.</li>
-    <li><a href="sitemap.html">Site Map</a> - this page.</li>
-</ul>
-<h3>Services</h3>
-<ul>
-    <li><a href="support.html">Technical Support</a> - information on our technical support
-        services.</li>
-    <li><a href="freesupport.html">Free Technical Support</a> - hints on how to get free support,
-        where to send your questions, and where to search for the answers.</li>
-    <li><a href="development.html">Development and Customization Services</a> - our offerings
-        on TightVNC customization and software development.</li>
-</ul>
-<h3>Information</h3>
-<ul>
-    <li><a href="intro.html">Introduction</a> - what TightVNC is, supported features, TightVNC
-        and other VNC software.</li>
-    <li><a href="screenshots.html">Screenshots</a> - images of TightVNC software in action.</li>
-    <li><a href="docs.html">Documentation</a> - links to various pieces of documentation:</li>
-    <ul>
-        <li><a href="winst.html">TightVNC for Windows: Installation and Getting
-            Started</a></li>
-        <li><a href="doc/win32/building.txt">Win32 BUILDING.txt</a> - how to build Win32
-            version from the sources.</li>
-        <li><a href="doc/unix/REAMDE.txt">Unix README</a> - how to build and install
-            the Unix version.</li>
-        <li><a href="vncviewer.1.html">vncviewer(1)</a> - Unix manual page for the
-            <tt>vncviewer</tt> program.</li>
-        <li><a href="vncserver.1.html">vncserver(1)</a> - Unix manual page for the
-            <tt>vncserver</tt> script.</li>
-        <li><a href="Xvnc.1.html">Xvnc(1)</a> - Unix manual page for <tt>Xvnc</tt> server.</li>
-        <li><a href="vncpasswd.1.html">vncpasswd(1)</a> - Unix manual page for the
-            <tt>vncpasswd</tt> utility.</li>
-        <li><a href="vncconnect.1.html">vncconnect(1)</a> - Unix manual page for the
-            <tt>vncconnect</tt> utility.</li>
-        <li><a href="doc/java/README.txt">Java Viewer README</a> - documentation on the TightVNC
-            Java viewer.</li>
-    </ul>
-    <li><a href="faq.html">FAQ</a> - Frequently Asked Questions with answers (under
-        construction).</li>
-    <li><a href="whatsnew.html">What's New in TightVNC</a> - a brief overview of changes
-        introduced in each TightVNC release.</li>
-    <li><a href="pr.html">Press Releases</a> - a list of recent press releases featuring
-        products and services available on the TightVNC Web site:</li>
-    <ul>
-        <li><a href="tightvnc-2.0-goes-beta.html">TightVNC 2.0 Goes Beta</a></li>
-        <li><a href="tightvnc-meets-windows7.html">TightVNC meets Windows 7</a></li>
-    </ul>
-</ul>
-<h3>Feedback</h3>
-<ul>
-    <li><a href="bugs.html">Report Bugs</a> - how to report bugs in TightVNC software.</li>
-    <li><a href="rfe.html">Suggest Features</a> - how to send new feature requests.</li>
-    <li><a href="contact.html">Contact Us</a> - how to contact TightVNC staff, our e-mail
-        addresses.</li>
-</ul>
-
+<font color="#007000"><b>vncpasswd</b></font> allows to enter either one or two passwords. The first
+password is the primary one, the second password can be used for
+view-only authentication. <font color="#007000"><b>Xvnc</b></font> will restrict mouse and keyboard
+input from clients who authenticated with the view-only password. The
+<font color="#007000"><b>vncpasswd</b></font> utility asks interactively if it should set the second
+password.
+</p><p>
+The password file name defaults to <font color="#007000"><b>$HOME/.vnc/passwd</b></font> unless the
+<font color="#007000"><b>-t</b></font> command-line option was used (see the OPTIONS section
+below). The <font color="#007000"><b>$HOME/.vnc/</b></font> directory will be created if it does not
+exist.
+</p><p>
+Each password has to be longer than five characters (unless the
+<font color="#007000"><b>-f</b></font> command-line option was used, see its description below). 
+Only the first eight characters are significant. If the primary
+password is too short, the program will abort. If the view-only
+password is too short, then only the primary password will be saved.
+</p><p>
+Unless a file name was provided in the command-line explicitly, this
+utility may perform certain sanity checks to prevent writing a
+password file into some hazardous place.
+</p><p>
+If at least one password was saved successfully, <font color="#007000"><b>vncpasswd</b></font> will
+exit with status code 0. Otherwise the returned status code will be
+set to 1.
+<br>
+</p><h3>OPTIONS</h3>
+<dl compact="">
+<dt><font color="#007000"><b>-t</b></font></dt><dd>
+Write passwords into <font color="#007000"><b>/tmp/$USER-vnc/passwd</b></font>, creating the
+<font color="#007000"><b>/tmp/$USER-vnc/</b></font> directory if it does not exist, and checking the
+permissions on that directory (the mode must be 700). This option can
+help to improve security when your home partition may be shared via
+network (e.g. when using NFS).
+</dd><dt><font color="#007000"><b>-f</b></font></dt><dd>
+Filter mode. Read plain-text passwords from stdin, write encrypted
+versions to stdout. One or two passwords (full-control and view-only)
+can be supplied in the input stream, newline terminates a password. 
+Note that in the filter mode, short or even empty passwords will be
+silently accepted.
+</dd></dl>
+<h3>SEE ALSO</h3>
+<b><a href="vncserver.1.php">vncserver</a></b>(1), <b><a href="Xvnc.1.php">Xvnc</a></b>(1), <b><a href="vncviewer.1.php">vncviewer</a></b>(1),
+<b><a href="vncconnect.1.php">vncconnect</a></b>(1)
+<h3>AUTHORS</h3>
+Original VNC was developed in AT&amp;T Laboratories Cambridge. TightVNC
+additions were implemented by Constantin Kaplinsky. Many other people
+participated in development, testing and support.
+<p>
+<font color="#007000"><b>Man page authors:</b></font>
+<br>
+Marcus Brinkmann &lt;Marcus.Brinkmann at ruhr-uni-bochum.de&gt;,
+<br>
+Tim Waugh &lt;twaugh at redhat.com&gt;,
+<br>
+Constantin Kaplinsky &lt;const at tightvnc.com&gt;
+</p><p>
+            </p>
             </div>
         </div>
     </main>
