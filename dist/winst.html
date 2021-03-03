@@ -322,28 +322,49 @@
     icon shows the IP address of the machine (which can be entered in the remote viewer to access
     the server).
   </p>
-  <table cellspacing="0" cellpadding="8" border="0" align="center">
-    <tbody><tr align="center">
-      <td nowrap=""><img src="images/winvnc-icon-normal.png" alt="[tray icon]" width="320" vspace="4" hspace="18" height="96"><br><font size="-1"><i>A normal icon of the TightVNC Server</i></font></td>
-      <td nowrap=""><img src="images/winvnc-icon-ip.png" alt="[tray icon]" width="320" vspace="4" hspace="18" height="96"><br><font size="-1"><i>Mouse over the icon shows IP addresses</i></font></td>
-    </tr>
-    <tr align="center">
-      <td nowrap=""><img src="images/winvnc-icon-service-hint.png" alt="[tray icon]" width="320" vspace="4" hspace="18" height="96"><br><font size="-1"><i>Hint showing that TightVNC is<br>running as a system service</i></font></td>
-      <td nowrap=""><img src="images/winvnc-icon-connected.png" alt="[tray icon]" width="320" vspace="4" hspace="18" height="96"><br><font size="-1"><i>Icon is shown in inverted colors<br>when viewers are connected</i></font></td>
-    </tr>
-    <tr align="center">
-      <td nowrap=""><img src="images/winvnc-icon-disabled.png" alt="[tray icon]" width="320" vspace="4" hspace="18" height="96"><br><font size="-1"><i>Red border indicates that new<br>client connections are disabled</i></font></td>
-      <td nowrap=""><img src="images/winvnc-icon-disabled-hint.png" alt="[tray icon]" width="320" vspace="4" hspace="18" height="96"><br><font size="-1"><i>Hint showing the reason for<br>disabling client connections</i></font></td>
-    </tr>
-  </tbody></table>
+
+<div class="winst-container">
+  <div class="winst-wrap">
+    <div class="winst-first">
+      <img src="images/winvnc-icon-normal.png" alt="[tray icon]">
+      <p><i>A normal icon of the TightVNC Server</i></p>
+    </div>
+    <div class="winst-second">
+      <img src="images/winvnc-icon-ip.png" alt="[tray icon]">
+      <p><i>Mouse over the icon shows IP addresses</i></p>
+    </div>
+  </div>
+  <div class="winst-wrap">
+    <div class="winst-first">
+      <img src="images/winvnc-icon-service-hint.png" alt="[tray icon]">
+      <p><i>Hint showing that TightVNC is <br>running as a system service</i></p>
+    </div>
+    <div class="winst-second">
+      <img src="images/winvnc-icon-connected.png" alt="[tray icon]">
+      <p><i>Icon is shown in inverted colors <br>when viewers are connected</i></p>
+    </div>
+  </div>
+  <div class="winst-wrap">
+    <div class="winst-first">
+      <img src="images/winvnc-icon-disabled.png" alt="[tray icon]">
+      <p><i>Red border indicates that new <br>client connections are disabled</i></p>
+    </div>
+    <div class="winst-second">
+      <img src="images/winvnc-icon-disabled-hint.png" alt="[tray icon]">
+      <p><i>Hint showing the reason for <br>disabling client connections</i></p>
+    </div>
+  </div>
+</div>
+
+
   <p>
     Right-clicking on the tray icon will bring up a menu:
   </p>
-  <table cellspacing="0" cellpadding="8" border="0" align="center">
-    <tbody><tr align="center">
-    <td nowrap=""><img src="images/winvnc-menu.png" alt="[tray menu]" width="256" vspace="4" hspace="18" height="192"><br><font size="-1"><i>Menu of the TightVNC Server</i></font></td>
-    </tr>
-  </tbody></table>
+<div class="winst-wrap winst-wrap-images">
+  <img src="images/winvnc-menu.png" alt="[tray menu]">
+  <p><i>Menu of the TightVNC Server</i></p>
+</div>
+
   <p>
   The following menu commands are available:
   </p>
@@ -371,11 +392,17 @@
     TightVNC Viewer. To run the viewer, choose <b>Start-&gt;Programs-&gt;TightVNC-&gt;TightVNC
     Viewer</b>. You will see a window allowing to choose which server to connect to.
   </p>
-  <table cellspacing="0" cellpadding="8" border="0" align="center">
-    <tbody><tr align="center">
-      <td nowrap=""><img src="images/viewer-newconn.png" alt="[dialog]" width="386" vspace="4" hspace="18" height="163"><br><font size="-1"><i>"New Connection" dialog window</i></font></td>
-    </tr>
-  </tbody></table>
+<!--  <table cellspacing="0" cellpadding="8" border="0" align="center">-->
+<!--    <tbody><tr align="center">-->
+<!--      <td nowrap=""><img src="images/viewer-newconn.png" alt="[dialog]" width="386" vspace="4" hspace="18" height="163"><br><font size="-1"><i>"New Connection" dialog window</i></font></td>-->
+<!--    </tr>-->
+<!--  </tbody></table>-->
+
+<div class="winst-wrap winst-wrap-images winst-wrap-images-new">
+  <img src="images/viewer-newconn.png" alt="[dialog]">
+  <p><i>"New Connection" dialog window</i></p>
+</div>
+
   <p>
     After entering the host name or its IP address (and optionally a display number), choose
     "Connect". On successful connection, you will be prompted for your password, and if
@@ -393,14 +420,20 @@
     click on that control. Another way to obtain context help is to press F1 key while the
     keyboard focus is in the corresponding control.
   </p>
-  <table cellspacing="0" cellpadding="8" border="0" align="center">
-    <tbody><tr align="center">
-      <td nowrap=""><img src="images/viewer-newconn-help1.png" alt="[help instructions]" width="386" vspace="4" hspace="18" height="163"><br><font size="-1"><i>Using context help</i></font></td>
-    </tr>
-    <tr align="center">
-      <td nowrap=""><img src="images/viewer-newconn-help2.png" alt="[contex help text]" width="386" vspace="4" hspace="18" height="163"><br><font size="-1"><i>The resulting help window</i></font></td>
-    </tr>
-  </tbody></table>
+<!--  <table cellspacing="0" cellpadding="8" border="0" align="center">-->
+<!--    <tbody><tr align="center">-->
+<!--      <td nowrap=""><img src="images/viewer-newconn-help1.png" alt="[help instructions]" width="386" vspace="4" hspace="18" height="163"><br><font size="-1"><i>Using context help</i></font></td>-->
+<!--    </tr>-->
+<!--    <tr align="center">-->
+<!--      <td nowrap=""><img src="images/viewer-newconn-help2.png" alt="[contex help text]" width="386" vspace="4" hspace="18" height="163"><br><font size="-1"><i>The resulting help window</i></font></td>-->
+<!--    </tr>-->
+<!--  </tbody></table>-->
+
+<div class="winst-wrap winst-wrap-images winst-wrap-images-new">
+  <img src="images/viewer-newconn-help1.png" alt="[help instructions]">
+  <p><i>The resulting help window</i></p>
+</div>
+
   <a name="start_java"></a>
   <h4>Using a Web Browser as a Viewer</h4>
   <p>
