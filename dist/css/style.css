@@ -696,9 +696,20 @@ body.touch .arrow {
   text-decoration: underline;
 }
 
+/* decoder page
+ =======================================*/
+
 .main__inner pre {
   overflow: auto;
   width: 93vw;
+}
+
+/* rfbplayer page
+ =======================================*/
+
+blockquote.rfbplayer-page-blockquote {
+  width: 69vw;
+  overflow: auto;
 }
 
 @media (min-width: 1027px) {
