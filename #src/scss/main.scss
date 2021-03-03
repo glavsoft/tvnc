@@ -32,6 +32,9 @@ a {
   //padding:0;
   outline:none;
 }
+blockquote {
+  line-height: 24px;
+}
 //h3 {
 //  margin: 9px 0;
 //}
@@ -77,8 +80,13 @@ a {
   }
   &__inner {
     //display: flex;
+    width: 100vw;
+    overflow: auto;
     flex-direction: column;
     min-height: calc(100vh - 160px);
     //padding: 10px 0;
+    @media (max-width:480px) {
+      min-height: calc(100vh - 118px);
+    }
   }
 }
