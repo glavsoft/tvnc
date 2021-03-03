@@ -707,14 +707,14 @@ body.touch .arrow {
 
 .main__inner pre {
   overflow: auto;
-  width: 93vw;
+  width: 93%;
 }
 
 /* rfbplayer page
  =======================================*/
 
 blockquote.rfbplayer-page-blockquote {
-  width: 69vw;
+  width: 69%;
   overflow: auto;
 }
 
