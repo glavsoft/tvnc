@@ -245,92 +245,122 @@
     as well. This e-mail address will not be disclosed to any third party and will be used only
     for correspondence directly related to your request.
 </p>
-<p>
-</p><form method="post" action="https://www.tightvnc.com/request-licensing.php" id="submit-form" name="submit-form">
-    <table cellspacing="2" cellpadding="8" border="0" align="center">
-        <tbody><tr bgcolor="#F4F4F4">
-            <td valign="middle" nowrap="nowrap" align="left">
-                Your full real name (required):
-            </td>
-            <td>
-                <input type="text" name="name" size="32">
-            </td>
-        </tr>
-        <tr bgcolor="#F4F4F4">
-            <td valign="middle" nowrap="nowrap" align="left">
-                E-mail address (required):
-            </td>
-            <td>
-                <input name="email" type="text" size="32">
-            </td>
-        </tr>
-        <tr bgcolor="#F4F4F4">
-            <td valign="middle" nowrap="nowrap" align="left">
-                Company/organization name (required):
-            </td>
-            <td>
-                <input name="company" type="text" size="32">
-            </td>
-        </tr>
-        <tr bgcolor="#F4F4F4">
-            <td valign="middle" nowrap="nowrap" align="left">
-                Your position in the company (required):
-            </td>
-            <td>
-                <input name="position" type="text" size="32">
-            </td>
-        </tr>
-        <tr bgcolor="#F4F4F4">
-            <td colspan="2" valign="middle" nowrap="nowrap" align="left">
+
+<div class="form-wrap form-page-licensing-tvnserver">
+    <div class="forms-components">
+    <div class="forms__inner-container">
+        <form method="post" action="https://www.tightvnc.com/request-licensing.php" id="submit-form" name="submit-form">
+            <div class="forms-field-container">
+                <div class="forms-field forms-field-name">
+                    <label class="forms-field-label" for="form-name-field">Your full real name <span class="forms-required-label">*</span></label>
+                    <input id="form-name-field" type="text" name="name" class="forms-field-large forms-field-required" maxlength="256" minlength="2" required="required"/>
+                </div>
+                <div class="forms-field forms-field-email">
+                    <label class="forms-field-label" for="form-email-field">E-mail address <span class="forms-required-label">*</span></label>
+                    <input id="form-email-field" type="text" name="email" class="forms-field-large forms-field-required" maxlength="256" required="required"/>
+                </div>
+                <div class="forms-field forms-field-company">
+                    <label class="forms-field-label" for="form-company-field">Company/organization name <span class="forms-required-label">*</span></label>
+                    <input id="form-company-field" type="text" name="company" class="forms-field-large forms-field-required" maxlength="256" required="required"/>
+                </div>
+                <div class="forms-field forms-field-position">
+                    <label class="forms-field-label" for="form-position-field">Your position in the company <span class="forms-required-label">*</span></label>
+                    <input id="form-position-field" type="text" name="position" class="forms-field-large forms-field-required" maxlength="256" required="required"/>
+                </div>
+            </div>
+            <div class="forms-checkbox-container">
+                <p>Software you are interested in:</p>
+                <div>
+                    <input id="form-comp_wserver" type="checkbox" name="comp_wserver" value="yes">
+                    <label for="form-comp_wserver">TightVNC Server for Windows</label>
+                </div>
+                <div>
+                    <input id="form-comp_xserver" type="checkbox" name="comp_xserver" value="yes">
+                    <label for="form-comp_xserver">TightVNC Server for Unix/Linux</label>
+                </div>
+                <div>
+                    <input id="form-comp_mserver" type="checkbox" name="comp_mserver" value="yes">
+                    <label for="form-comp_mserver">TightVNC Server for macOS</label>
+                </div>
+                <div>
+                    <input id="form-comp_csviewer" type="checkbox" name="comp_csviewer" value="yes">
+                    <label for="form-comp_csviewer">C#/.NET Viewer SDK</label>
+                </div>
+                <div>
+                    <input id="form-comp_rcsdk" type="checkbox" name="comp_rcsdk" value="yes">
+                    <label for="form-comp_rcsdk">Viewer SDK for other systems</label>
+                </div>
+
+                <div>
+                    <input id="form-comp_wviewer" type="checkbox" name="comp_wviewer" value="yes">
+                    <label for="form-comp_wviewer">TightVNC Viewer for Windows</label>
+                </div>
+                <div>
+                    <input id="form-comp_macviewer" type="checkbox" name="comp_macviewer" value="yes">
+                    <label for="form-comp_macviewer">Viewer for macOS</label>
+                </div>
+                <div>
+                    <input id="form-comp_mviewers" type="checkbox" name="comp_mviewers" value="yes">
+                    <label for="form-comp_mviewers">Mobile Viewers (iOS, Android)</label>
+                </div>
+                <div>
+                    <input id="form-comp_jviewer" type="checkbox" name="comp_jviewer" value="yes">
+                    <label for="form-comp_jviewer">TightVNC Java Viewer</label>
+                </div>
+                <div>
+                    <input id="form-comp_dispatcher" type="checkbox" name="comp_dispatcher" value="yes">
+                    <label for="form-comp_dispatcher">TightVNC Dispatcher</label>
+                </div>
+                <div>
+                    <input id="form-comp_pctd" type="checkbox" name="comp_pctd" value="yes">
+                    <label for="form-comp_pctd">Pure C Tight Decoder</label>
+                </div>
+                <div>
+                    <input id="form-comp_other" type="checkbox" name="comp_other" value="yes">
+                    <label for="form-comp_other">Other [please write below]</label>
+                </div>
+            </div>
+            <div class="forms-radiobox-container">
                 <p>
-                    <font color="#007000"><b>Please choose what is appropriate:</b></font>
+                    <b>Please choose what is appropriate:</b>
                 </p>
                 <blockquote>
-                    <input type="radio" name="action" value="purchase"> Our company would like to purchase the license right now<br>
-                    <input type="radio" name="action" value="info"> We have a number of questions [please ask below]<br>
-                    <input type="radio" name="action" value="wish"> We would purchase the license if ... [please write below]
+                    <div>
+                        <input id="form-field-purchase" type="radio" name="action" value="purchase">
+                        <label for="form-field-purchase">We consider purchasing commercial licenses</label>
+                    </div>
+                    <div>
+                        <input id="form-field-info" type="radio" name="action" value="info">
+                        <label for="form-field-info">We have a number of questions [please ask below]</label>
+                    </div>
+                    <dv>
+                        <input id="form-field-wish" type="radio" name="action" value="wish">
+                        <label for="form-field-wish">We would purchase the license if ... [please write below]</label>
+                    </dv>
                 </blockquote>
-            </td>
-        </tr>
-        <tr bgcolor="#F4F4F4">
-            <td colspan="2" valign="middle" nowrap="nowrap" align="left">
-                Additional information you wish to provide to TightVNC authors:<br>
-                <textarea name="message" rows="5" cols="60"></textarea>
-            </td>
-        </tr>
-        <tr bgcolor="#F4F4F4">
-            <td colspan="2" valign="top" align="left">
-                <table width="100%" cellspacing="0" cellpadding="0" border="0">
-                    <tbody><tr>
-                        <td width="100%" valign="middle" nowrap="nowrap" align="left">
-                            Please click on the checkbox<br>
-                            at the right (required):
-                        </td>
-                        <td width="0">&nbsp;&nbsp;&nbsp;</td>
-                        <td width="0" valign="middle" align="right">
-                            <div class="g-recaptcha" data-sitekey="6LfkCEMUAAAAANOIVa5hBDNcHWGb4OJW1qraupXl"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfkCEMUAAAAANOIVa5hBDNcHWGb4OJW1qraupXl&amp;co=aHR0cHM6Ly93d3cudGlnaHR2bmMuY29tOjQ0Mw..&amp;hl=ru&amp;v=_KUxfxvAoJ4k7SaKyLbja4Mi&amp;size=normal&amp;cb=81le8mfwlzyh" role="presentation" name="a-3mpf15vghnix" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="304" height="78" frameborder="0"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
-                        </td>
-                    </tr>
-                    </tbody></table>
-            </td>
-        </tr>
-        <tr bgcolor="#F4F4F4">
-            <td colspan="2" valign="middle" nowrap="nowrap" align="center">
-                <input type="checkbox" name="privacy_agree" onchange="document.getElementById('submit').disabled = !this.checked;" value="yes">
-                I agree to the tightvnc.com
-                <a target="_blank" href="privacy.php">Privacy Policy</a> (required)<br>
-            </td>
-        </tr>
-        <tr bgcolor="#F4F4F4">
-            <td colspan="2" valign="middle" nowrap="nowrap" align="center">
-                <input type="hidden" name="comp_wserver" value="yes">
-                <input type="hidden" name="srcpage" value="licensing-tvnserver.php">
+            </div>
+            <div class="form-textarea-container">
+                <div>
+                    <label class="forms-field-label" for="form-field-textarea">Additional information you wish to provide to TightVNC authors:</label>
+                    <textarea id="form-field-textarea" name="message" rows="5" cols="60"></textarea>
+                </div>
+            </div>
+            <div class="forms-recaptcha-container">
+                <div class="g-recaptcha" data-sitekey="6LfkCEMUAAAAANOIVa5hBDNcHWGb4OJW1qraupXl"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfkCEMUAAAAANOIVa5hBDNcHWGb4OJW1qraupXl&amp;co=aHR0cHM6Ly93d3cudGlnaHR2bmMuY29tOjQ0Mw..&amp;hl=ru&amp;v=_KUxfxvAoJ4k7SaKyLbja4Mi&amp;size=normal&amp;cb=ttkjgcsflsb4" role="presentation" name="a-p03yqgkpejoe" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="304" height="78" frameborder="0"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+            </div>
+            <div class="forms-checkbox-privacy-container">
+                <input type="checkbox" checked name="privacy_agree" onchange="document.getElementById('submit').disabled = !this.checked;" value="yes" required="required">
+                <span>I agree to the tightvnc.com <a target="_blank" href="privacy.php">Privacy Policy</a> (required)</span>
+            </div>
+            <div class="forms-submit-container">
+                <input type="hidden" name="srcpage" value="licensing.php">
                 <input type="submit" name="submit" id="submit" value="Submit Information">
-            </td>
-        </tr>
-        </tbody></table>
-</form>
-<p></p>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
 <p>
     If you have problems with filling in this form, please <a href="contact.php">contact us
     directly</a>.

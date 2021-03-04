@@ -1,2 +1,74 @@
 /* Form-components
  =======================================*/
+.forms-components {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.forms__inner-container {
+  max-width: 600px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  background-color: rgb(244, 244, 244);
+  padding: 15px;
+  margin: auto;
+}
+.forms-field-container div{
+  display: flex;
+  flex-direction: column;
+}
+.forms-checkbox-container {
+  display: none;
+}
+.forms-required-label {
+  color: red;
+}
+.forms-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+.forms-field-label {
+  margin-bottom: 5px;
+}
+.forms-field-large {
+  font-size: 16px;
+  max-width: 350px;
+}
+.forms-radiobox-container blockquote {
+  margin: 5px 10px;
+}
+.form-textarea-container div{
+  display: flex;
+  flex-direction: column;
+}
+.form-textarea-container textarea {
+  //max-width: 350px;
+}
+.form-textarea-container,
+.forms-recaptcha-container,
+.forms-checkbox-privacy-container,
+.forms-submit-container {
+  margin-top: 10px;
+}
+.forms-submit-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.forms-field-label {
+  margin-bottom: 5px;
+}
+.forms-submit-container input {
+  cursor: pointer;
+  width: 250px;
+  height: 40px;
+  margin: 15px 15px 5px 15px;
+  font-size: 18px;
+}
+.forms-checkbox-privacy-container {
+  display: flex;
+  justify-content: center;
+}
+.forms-checkbox-privacy-container span{
+  margin-left: 5px;
+}
