@@ -23,6 +23,7 @@
     display: inline-block;
     margin-bottom: 6px;
   }
+  //
   &__link {
     text-decoration: none;
   }
@@ -56,10 +57,12 @@
       margin: 0 5px 5px;
     }
   }
-  &__button-accept a {
+  //
+  &__button-accept span {
     color: #ffffff;
   }
   &__button-close {
+    cursor: pointer;
     position: absolute;
     right: 15px;
     top: 50%;

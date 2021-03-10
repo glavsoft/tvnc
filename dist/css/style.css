@@ -494,11 +494,12 @@ a.bottom-container {
   letter-spacing: .25px;
 }
 
-.cookie-block__button-accept a {
+.cookie-block__button-accept span {
   color: #ffffff;
 }
 
 .cookie-block__button-close {
+  cursor: pointer;
   position: absolute;
   right: 15px;
   top: 50%;
