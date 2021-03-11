@@ -1281,6 +1281,12 @@ div.forms-checkbox-container {
   }
 }
 
+@media (max-width: 595px) {
+  .forms-recaptcha__text-field {
+    display: none;
+  }
+}
+
 @media (max-width: 527px) {
   .screenshot-page-container .screenshots-page-img {
     width: 100%;
