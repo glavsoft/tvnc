@@ -57,14 +57,14 @@ document.querySelectorAll('.menu__list li a').forEach(function(el) {
     if ( window.location.pathname.indexOf(el.getAttribute('href')) > 0 ) {                      //по умолчанию было -1
         el.classList.add('active-menu__link');
     }
-    else if ( (window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/') ) {    // ('/') второе условие нужно для того что бы исключить корневой файл
-        el.classList.add('active-menu__link');
-
-    }
-    else if (window.location.pathname === '/') {                                                                //в целом не нужная штука, когда зальется на хостинг можно убрать если в корне то просто /  или    /tvnc/dist/
-        document.querySelector('.menu__list li a').classList.add('active-menu__link');
-        document.querySelector('.menu__list .sub-menu__list li a').classList.add('active-menu__link');   //активный пункт home
-    }
+    // else if ( (window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/') ) {    // ('/') второе условие нужно для того что бы исключить корневой файл
+    //     el.classList.add('active-menu__link');
+    //
+    // }
+    // else if (window.location.pathname === '/') {                                                                //в целом не нужная штука, когда зальется на хостинг можно убрать если в корне то просто /  или    /tvnc/dist/
+    //     document.querySelector('.menu__list li a').classList.add('active-menu__link');
+    //     document.querySelector('.menu__list .sub-menu__list li a').classList.add('active-menu__link');   //активный пункт home
+    // }
 
 });
 
