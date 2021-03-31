@@ -103,28 +103,25 @@ burgerButton.onclick = function () {
 
 
 document.querySelectorAll('.menu__list li a').forEach(function (el) {
-  if (window.location.pathname.indexOf(el.getAttribute('href')) > 0) {
+  if (window.location.pathname.indexOf(el.getAttribute('href')) > -1) {
     //по умолчанию было -1
     el.classList.add('active-menu__link');
-  } // else if ( (window.location.pathname.indexOf(el.getAttribute('href')) > -1 && window.location.pathname === '/') ) {    // ('/') второе условие нужно для того что бы исключить корневой файл
-  //     el.classList.add('active-menu__link');
-  //
-  // }
-  // else if (window.location.pathname === '/') {                                                                //в целом не нужная штука, когда зальется на хостинг можно убрать если в корне то просто /  или    /tvnc/dist/
-  //     document.querySelector('.menu__list li a').classList.add('active-menu__link');
-  //     document.querySelector('.menu__list .sub-menu__list li a').classList.add('active-menu__link');   //активный пункт home
-  // }
-
-}); //Активный пункт САМОГО ВЕРХНЕГО меню с помощью JavaScript
+  }
+}); //Активный пункт САМОГО ВЕРХНЕГО меню с помощью JavaScript (подсветка родителя)
 
 document.querySelectorAll(".menu__list li a").forEach(function (el1) {
-  //console.log(el1.getAttribute('class'));
-  if (el1.getAttribute('class') == 'sub-menu__link active-menu__link') {
-    //console.log(el1.parentElement.innerHTML);
-    //console.log('sadadsasda');
-    //console.log(el1.parentNode.parentNode.parentNode.innerHTML);
-    var punktMainMenu = el1.parentNode.parentNode.parentNode.querySelector('.menu__link');
-    punktMainMenu.classList.add('active-menu__link');
+  if (el1.getAttribute('class') === 'sub-menu__link active-menu__link') {
+    var pktMainMenu = el1.parentNode.parentNode.parentNode.querySelector('.menu__link');
+    pktMainMenu.classList.add('active-menu__link');
+  }
+}); //активный пункт home и его родитель с учетом pathname = index.html либо /
+
+document.querySelectorAll('.menu__list li a').forEach(function (el2) {
+  if (window.location.pathname === '/' && el2.getAttribute('href') === 'index.html') {
+    //активный пункт home и его родитель в целом не нужная штука, когда зальется на хостинг можно убрать если в корне то просто /  или    /tvnc/dist/
+    el2.classList.add('active-menu__link');
+    var pktMainMenu = el2.parentNode.parentNode.parentNode.querySelector('.menu__link');
+    pktMainMenu.classList.add('active-menu__link');
   }
 });
 var privacyAgreeCheckbox = document.getElementById('privacy_agreeCheckbox');
