@@ -70,7 +70,7 @@ document.querySelectorAll(".menu__list li a").forEach(function(el1){
 
 //активный пункт home и его родитель с учетом pathname = index.html либо /
 document.querySelectorAll('.menu__list li a').forEach(function(el2) {
-    if (window.location.pathname === '/' && el2.getAttribute('href') === 'index.html') {    //активный пункт home и его родитель в целом не нужная штука, когда зальется на хостинг можно убрать если в корне то просто /  или    /tvnc/dist/
+    if (window.location.pathname === '/tvnc/dist/' && el2.getAttribute('href') === 'index.html') {    //активный пункт home и его родитель в целом не нужная штука, когда зальется на хостинг можно убрать если в корне то просто /  или    /tvnc/dist/
         el2.classList.add('active-menu__link');
         let pktMainMenu = el2.parentNode.parentNode.parentNode.querySelector('.menu__link');
         pktMainMenu.classList.add('active-menu__link');
