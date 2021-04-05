@@ -3,6 +3,9 @@
 .footer {
   display: flex;
   background-color: #e8e8e8;
+  .container {
+    max-width: none;
+  }
   &__inner {
     width: 100%;
     height: 38px;
