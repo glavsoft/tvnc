@@ -58,7 +58,7 @@ blockquote {
 .container {
   display: flex;
   width: 100%;
-  max-width: 1400px; //1450
+  max-width: 1450px; //1450
   margin: 0 auto;
   padding: 0 10px;
   @media(min-width: 1027px) {
@@ -76,7 +76,7 @@ blockquote {
     padding: 80px 0 0 0;
   }
   .container {
-    max-width: 1250px;
+    max-width: 1240px;
   }
   &__inner {
     //display: flex;
