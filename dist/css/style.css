@@ -47,6 +47,10 @@ blockquote {
   line-height: 24px;
 }
 
+p {
+  line-height: 24px;
+}
+
 /* Container
  =======================================*/
 
@@ -196,7 +200,7 @@ blockquote {
 }
 
 .header__title p {
-  margin: 0;
+  margin: 0 0 -3px 0;
 }
 
 /* our-products components
