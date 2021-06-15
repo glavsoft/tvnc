@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>TightVNC: VNC-Compatible Free Remote Control / Remote Desktop Software</title>
 <link rel="stylesheet" href="tightvnc.css">
-<link rel="image_src" href="logo/tightvnc-logo-80x80.jpg" />
+<link rel="image_src" href="logo/tightvnc-logo-80x80.jpg"/>
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 <link rel="shortcut icon" href="favicon.ico">
 <meta name="theme-color" content="#ffffff">
-<meta property="og:image" content="logo/tightvnc-logo-80x80.jpg" />
+<meta property="og:image" content="logo/tightvnc-logo-80x80.jpg"/>
 <meta name="author" content="Constantin Kaplinsky">
 <meta name="generator" content="XEmacs + Ruby + Guava tools">
 <meta name="description"
@@ -23,12 +23,31 @@
 <meta name="keywords"
       content="vnc,remote desktop,remote control,remote administration,free software,free download">
 <style type="text/css">
-    a.redlink:link { color: #ff0000; }
-    a.redlink:visited { color:red; }
-    a.redlink:active { color:red; }
-    a.redlink:hover { color:red; }
-    ul.mgnul > li { margin-top:0.5em; margin-bottom:0.5em; }
-    ol.mgnol > li { margin-top:0.5em; margin-bottom:0.5em; }
+    a.redlink:link {
+        color: #ff0000;
+    }
+
+    a.redlink:visited {
+        color: red;
+    }
+
+    a.redlink:active {
+        color: red;
+    }
+
+    a.redlink:hover {
+        color: red;
+    }
+
+    ul.mgnul > li {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    ol.mgnol > li {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
 </style>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
@@ -37,10 +56,10 @@
 
 <body>
 
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <div class="title-and-menu">
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="title-and-menu">
     <div>
         <a href="index.html" class="header__logo">
             <img src="logo/tightvnc-logo-90x90.png" alt="logo">
@@ -155,28 +174,29 @@
             <span class="menu__arrow arrow"></span>
             <ul class="sub-menu__list">
                 <li>
-                    <a href="https://play.google.com/store/apps/details?id=com.glavsoft.rrviewerpro&referrer=utm_source%3Dtightvnccom%26utm_medium%3Dlink%26utm_content%3Dmoreprod-link%26utm_campaign%3Drrviewer" class="sub-menu__link" target="_blank">Remote Ripple</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.glavsoft.rrviewerpro&referrer=utm_source%3Dtightvnccom%26utm_medium%3Dlink%26utm_content%3Dmoreprod-link%26utm_campaign%3Drrviewer"
+                       class="sub-menu__link" target="_blank">Remote Ripple</a>
                 </li>
                 <li>
                     <a href="rfbplayer.html" class="sub-menu__link">RFB Player</a>
                 </li>
                 <li>
-                    <a href="https://sourceforge.net/projects/vnc-reflector/" class="sub-menu__link" target="_blank">VNC Reflector</a>
+                    <a href="https://sourceforge.net/projects/vnc-reflector/" class="sub-menu__link" target="_blank">VNC
+                        Reflector</a>
                 </li>
             </ul>
         </li>
     </ul>
 </nav>
 </div>
-            </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <main class="main">
-        <div class="container">
-            <div class="main__inner">
-                
-<h3>Contents</h3>
+<main class="main">
+    <div class="container">
+        <div class="main__inner">
+            <h3>Contents</h3>
 <ul>
     <li><a href="#OS">What Windows versions does TightVNC support?</a></li>
     <li><a href="#portfwd">How would I connect from the Internet to a machine in the internal
@@ -191,7 +211,8 @@
 <p>
     TightVNC runs basically on any version of Windows
     (both 32-bit and 64-bit systems are supported):
-</p><ul>
+</p>
+<ul>
     <li>Windows XP / Vista / 7 / 8 / 8.1 / 10,</li>
     <li>corresponding versions of Windows Server.</li>
 </ul>
@@ -226,31 +247,33 @@
 </p>
 <div class="table-overflow">
     <table width="100%" cellspacing="2" cellpadding="5" border="0">
-    <tbody><tr bgcolor="#E8E8E8">
-        <th>Application</th>
-        <th>Start<br>Port</th>
-        <th>End<br>Port</th>
-        <th>Protocol</th>
-        <th>IP Address</th>
-        <th>Enable</th>
-    </tr>
-    <tr bgcolor="#F4F4F4" align="center">
-        <td>TightVNC</td>
-        <td>5900</td>
-        <td>5900</td>
-        <td>TCP</td>
-        <td>192.168.1.100</td>
-        <td>yes</td>
-    </tr>
-    <tr bgcolor="#F4F4F4" align="center">
-        <td>TightVNC</td>
-        <td>5800</td>
-        <td>5800</td>
-        <td>TCP</td>
-        <td>192.168.1.100</td>
-        <td>yes</td>
-    </tr>
-    </tbody></table>
+        <tbody>
+        <tr bgcolor="#E8E8E8">
+            <th>Application</th>
+            <th>Start<br>Port</th>
+            <th>End<br>Port</th>
+            <th>Protocol</th>
+            <th>IP Address</th>
+            <th>Enable</th>
+        </tr>
+        <tr bgcolor="#F4F4F4" align="center">
+            <td>TightVNC</td>
+            <td>5900</td>
+            <td>5900</td>
+            <td>TCP</td>
+            <td>192.168.1.100</td>
+            <td>yes</td>
+        </tr>
+        <tr bgcolor="#F4F4F4" align="center">
+            <td>TightVNC</td>
+            <td>5800</td>
+            <td>5800</td>
+            <td>TCP</td>
+            <td>192.168.1.100</td>
+            <td>yes</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 <p>
     When port forwarding is set up, you can connect to the router's IP address such way as
@@ -262,7 +285,8 @@
 </p>
 <ul>
     <li><a target="_blank" href="http://www.portforward.com/">www.portforward.com</a> (help on
-        setting up port forwarding on various routers and firewalls)</li>
+        setting up port forwarding on various routers and firewalls)
+    </li>
 </ul>
 <a name="howsecure"></a>
 <h3>How secure is TightVNC?</h3>
@@ -293,7 +317,8 @@
     restrict users from changing the server Properties, it might be better to use the
     AllowProperties setting. For more information, see the description of
     "AllowProperties", "AllowShutdown" and "AllowEditClients"
-    options in the <a target="_blank" href="http://www.realvnc.com/products/free/3.3.7/winvnc.html">VNC documentation</a>.
+    options in the <a target="_blank" href="http://www.realvnc.com/products/free/3.3.7/winvnc.html">VNC
+    documentation</a>.
 </p>
 <p>
 </p><h4>Answer for TightVNC versions 2.x:</h4>
@@ -333,39 +358,47 @@
 <ol>
     <li>Log in as an Administrator (or as a user with similar permissions).</li>
     <li>If TightVNC Server is running, close it. If it is running but not showing the tray icon,
-        choose Process Manages, locate WinVNC.exe process and shutdown it.</li>
+        choose Process Manages, locate WinVNC.exe process and shutdown it.
+    </li>
     <li>If TightVNC Server was registered as a system service, unregister it. To do that, locate
         WinVNC.exe file under \Program Files\TightVNC (or wherever TightVNC was installed), and type
-        in the command line: WinVNC.exe -remove</li>
+        in the command line: WinVNC.exe -remove
+    </li>
     <li>Remove the whole \Program Files\TightVNC directory (or wherever TightVNC was
-        installed).</li>
+        installed).
+    </li>
     <li>Remove all TightVNC shortcuts from the Start\All Programs menu.</li>
     <li>Remove the settings from the registry if desired. The settings can be found in
-        HKEY_LOCAL_MACHINE\Software\ORL and/or HKEY_CURRENT_USER\Software\ORL.</li>
+        HKEY_LOCAL_MACHINE\Software\ORL and/or HKEY_CURRENT_USER\Software\ORL.
+    </li>
 </ol>
 <h4>Uninstall procedure for TightVNC versions 2.x:</h4>
 <ol>
     <li>Log in as an Administrator (or as a user with similar permissions).</li>
     <li>If TightVNC Server is running, close it. If it is running but not showing the tray icon,
-        choose Process Manages, locate all tvnserver.exe process and shutdown each one of them.</li>
+        choose Process Manages, locate all tvnserver.exe process and shutdown each one of them.
+    </li>
     <li>If TightVNC Server was registered as a system service, unregister it. To do that, locate
         tvnserver.exe file under \Program Files\TightVNC (or wherever TightVNC was installed), and
-        type in the command line: tvnserver.exe -remove</li>
+        type in the command line: tvnserver.exe -remove
+    </li>
     <li>Remove the whole \Program Files\TightVNC directory (or wherever TightVNC was
-        installed).</li>
+        installed).
+    </li>
     <li>Remove all TightVNC shortcuts from the Start\All Programs menu.</li>
     <li>Remove the settings from the registry if desired. The settings can be found in
-        HKEY_LOCAL_MACHINE\Software\TightVNC and/or HKEY_CURRENT_USER\Software\TightVNC</li>
+        HKEY_LOCAL_MACHINE\Software\TightVNC and/or HKEY_CURRENT_USER\Software\TightVNC
+    </li>
 </ol>
 
-            </div>
         </div>
-    </main>
+    </div>
+</main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer-item footer-privacy">
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer-item footer-privacy">
     <a class="footer-privacy__link" href="privacy.html" target="_blank">
         Privacy Policy
     </a>
@@ -389,10 +422,10 @@
     </span>
     <span class="ok-cookie cookie-block__item cookie-block__link cookie-block__button-close"></span>
 </div>
-            </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="js/script.min.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

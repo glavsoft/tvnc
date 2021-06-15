@@ -20,6 +20,7 @@ let cookies = () => {
         ));
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }
+
     // проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
     if (!getCookie('hide-cookie')) {
         // показываем

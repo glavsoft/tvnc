@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>TightVNC: VNC-Compatible Free Remote Control / Remote Desktop Software</title>
 <link rel="stylesheet" href="tightvnc.css">
-<link rel="image_src" href="logo/tightvnc-logo-80x80.jpg" />
+<link rel="image_src" href="logo/tightvnc-logo-80x80.jpg"/>
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -15,7 +15,7 @@
 <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 <link rel="shortcut icon" href="favicon.ico">
 <meta name="theme-color" content="#ffffff">
-<meta property="og:image" content="logo/tightvnc-logo-80x80.jpg" />
+<meta property="og:image" content="logo/tightvnc-logo-80x80.jpg"/>
 <meta name="author" content="Constantin Kaplinsky">
 <meta name="generator" content="XEmacs + Ruby + Guava tools">
 <meta name="description"
@@ -23,12 +23,31 @@
 <meta name="keywords"
       content="vnc,remote desktop,remote control,remote administration,free software,free download">
 <style type="text/css">
-    a.redlink:link { color: #ff0000; }
-    a.redlink:visited { color:red; }
-    a.redlink:active { color:red; }
-    a.redlink:hover { color:red; }
-    ul.mgnul > li { margin-top:0.5em; margin-bottom:0.5em; }
-    ol.mgnol > li { margin-top:0.5em; margin-bottom:0.5em; }
+    a.redlink:link {
+        color: #ff0000;
+    }
+
+    a.redlink:visited {
+        color: red;
+    }
+
+    a.redlink:active {
+        color: red;
+    }
+
+    a.redlink:hover {
+        color: red;
+    }
+
+    ul.mgnul > li {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    ol.mgnol > li {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
 </style>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 
@@ -37,10 +56,10 @@
 
 <body>
 
-    <header class="header">
-        <div class="container">
-            <div class="header__inner">
-                <div class="title-and-menu">
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="title-and-menu">
     <div>
         <a href="index.html" class="header__logo">
             <img src="logo/tightvnc-logo-90x90.png" alt="logo">
@@ -155,27 +174,29 @@
             <span class="menu__arrow arrow"></span>
             <ul class="sub-menu__list">
                 <li>
-                    <a href="https://play.google.com/store/apps/details?id=com.glavsoft.rrviewerpro&referrer=utm_source%3Dtightvnccom%26utm_medium%3Dlink%26utm_content%3Dmoreprod-link%26utm_campaign%3Drrviewer" class="sub-menu__link" target="_blank">Remote Ripple</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.glavsoft.rrviewerpro&referrer=utm_source%3Dtightvnccom%26utm_medium%3Dlink%26utm_content%3Dmoreprod-link%26utm_campaign%3Drrviewer"
+                       class="sub-menu__link" target="_blank">Remote Ripple</a>
                 </li>
                 <li>
                     <a href="rfbplayer.html" class="sub-menu__link">RFB Player</a>
                 </li>
                 <li>
-                    <a href="https://sourceforge.net/projects/vnc-reflector/" class="sub-menu__link" target="_blank">VNC Reflector</a>
+                    <a href="https://sourceforge.net/projects/vnc-reflector/" class="sub-menu__link" target="_blank">VNC
+                        Reflector</a>
                 </li>
             </ul>
         </li>
     </ul>
 </nav>
 </div>
-            </div>
         </div>
-    </header>
+    </div>
+</header>
 
-    <main class="main">
-        <div class="container">
-            <div class="main__inner">
-                <h3>NAME</h3>
+<main class="main">
+    <div class="container">
+        <div class="main__inner">
+            <h3>NAME</h3>
 vncpasswd - set passwords for VNC server
 <h3>SYNOPSIS</h3>
 <font color="#007000"><b>vncpasswd</b></font>
@@ -193,72 +214,77 @@ passwords for the TightVNC server authentication. <font color="#007000"><b>Xvnc<
 passwords when started with the <font color="#007000"><b>-rfbauth</b></font> command-line option
 (or when started from the <font color="#007000"><b>vncserver</b></font> script).
 <p>
-<font color="#007000"><b>vncpasswd</b></font> allows to enter either one or two passwords. The first
-password is the primary one, the second password can be used for
-view-only authentication. <font color="#007000"><b>Xvnc</b></font> will restrict mouse and keyboard
-input from clients who authenticated with the view-only password. The
-<font color="#007000"><b>vncpasswd</b></font> utility asks interactively if it should set the second
-password.
+    <font color="#007000"><b>vncpasswd</b></font> allows to enter either one or two passwords. The first
+    password is the primary one, the second password can be used for
+    view-only authentication. <font color="#007000"><b>Xvnc</b></font> will restrict mouse and keyboard
+    input from clients who authenticated with the view-only password. The
+    <font color="#007000"><b>vncpasswd</b></font> utility asks interactively if it should set the second
+    password.
 </p><p>
-The password file name defaults to <font color="#007000"><b>$HOME/.vnc/passwd</b></font> unless the
-<font color="#007000"><b>-t</b></font> command-line option was used (see the OPTIONS section
-below). The <font color="#007000"><b>$HOME/.vnc/</b></font> directory will be created if it does not
-exist.
+    The password file name defaults to <font color="#007000"><b>$HOME/.vnc/passwd</b></font> unless the
+    <font color="#007000"><b>-t</b></font> command-line option was used (see the OPTIONS section
+    below). The <font color="#007000"><b>$HOME/.vnc/</b></font> directory will be created if it does not
+    exist.
 </p><p>
-Each password has to be longer than five characters (unless the
-<font color="#007000"><b>-f</b></font> command-line option was used, see its description below). 
-Only the first eight characters are significant. If the primary
-password is too short, the program will abort. If the view-only
-password is too short, then only the primary password will be saved.
+    Each password has to be longer than five characters (unless the
+    <font color="#007000"><b>-f</b></font> command-line option was used, see its description below).
+    Only the first eight characters are significant. If the primary
+    password is too short, the program will abort. If the view-only
+    password is too short, then only the primary password will be saved.
 </p><p>
-Unless a file name was provided in the command-line explicitly, this
-utility may perform certain sanity checks to prevent writing a
-password file into some hazardous place.
+    Unless a file name was provided in the command-line explicitly, this
+    utility may perform certain sanity checks to prevent writing a
+    password file into some hazardous place.
 </p><p>
-If at least one password was saved successfully, <font color="#007000"><b>vncpasswd</b></font> will
-exit with status code 0. Otherwise the returned status code will be
-set to 1.
-<br>
+    If at least one password was saved successfully, <font color="#007000"><b>vncpasswd</b></font> will
+    exit with status code 0. Otherwise the returned status code will be
+    set to 1.
+    <br>
 </p><h3>OPTIONS</h3>
 <dl compact="">
-<dt><font color="#007000"><b>-t</b></font></dt><dd>
-Write passwords into <font color="#007000"><b>/tmp/$USER-vnc/passwd</b></font>, creating the
-<font color="#007000"><b>/tmp/$USER-vnc/</b></font> directory if it does not exist, and checking the
-permissions on that directory (the mode must be 700). This option can
-help to improve security when your home partition may be shared via
-network (e.g. when using NFS).
-</dd><dt><font color="#007000"><b>-f</b></font></dt><dd>
-Filter mode. Read plain-text passwords from stdin, write encrypted
-versions to stdout. One or two passwords (full-control and view-only)
-can be supplied in the input stream, newline terminates a password. 
-Note that in the filter mode, short or even empty passwords will be
-silently accepted.
-</dd></dl>
+    <dt><font color="#007000"><b>-t</b></font></dt>
+    <dd>
+        Write passwords into <font color="#007000"><b>/tmp/$USER-vnc/passwd</b></font>, creating the
+        <font color="#007000"><b>/tmp/$USER-vnc/</b></font> directory if it does not exist, and checking the
+        permissions on that directory (the mode must be 700). This option can
+        help to improve security when your home partition may be shared via
+        network (e.g. when using NFS).
+    </dd>
+    <dt><font color="#007000"><b>-f</b></font></dt>
+    <dd>
+        Filter mode. Read plain-text passwords from stdin, write encrypted
+        versions to stdout. One or two passwords (full-control and view-only)
+        can be supplied in the input stream, newline terminates a password.
+        Note that in the filter mode, short or even empty passwords will be
+        silently accepted.
+    </dd>
+</dl>
 <h3>SEE ALSO</h3>
-<b><a href="vncserver.1.php">vncserver</a></b>(1), <b><a href="Xvnc.1.php">Xvnc</a></b>(1), <b><a href="vncviewer.1.php">vncviewer</a></b>(1),
+<b><a href="vncserver.1.php">vncserver</a></b>(1), <b><a href="Xvnc.1.php">Xvnc</a></b>(1), <b><a
+        href="vncviewer.1.php">vncviewer</a></b>(1),
 <b><a href="vncconnect.1.php">vncconnect</a></b>(1)
 <h3>AUTHORS</h3>
 Original VNC was developed in AT&amp;T Laboratories Cambridge. TightVNC
 additions were implemented by Constantin Kaplinsky. Many other people
 participated in development, testing and support.
 <p>
-<font color="#007000"><b>Man page authors:</b></font>
-<br>
-Marcus Brinkmann &lt;Marcus.Brinkmann at ruhr-uni-bochum.de&gt;,
-<br>
-Tim Waugh &lt;twaugh at redhat.com&gt;,
-<br>
-Constantin Kaplinsky &lt;const at tightvnc.com&gt;
+    <font color="#007000"><b>Man page authors:</b></font>
+    <br>
+    Marcus Brinkmann &lt;Marcus.Brinkmann at ruhr-uni-bochum.de&gt;,
+    <br>
+    Tim Waugh &lt;twaugh at redhat.com&gt;,
+    <br>
+    Constantin Kaplinsky &lt;const at tightvnc.com&gt;
 </p><p>
-            </p>
-            </div>
+</p>
         </div>
-    </main>
+    </div>
+</main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__inner">
-                <div class="footer-item footer-privacy">
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer-item footer-privacy">
     <a class="footer-privacy__link" href="privacy.html" target="_blank">
         Privacy Policy
     </a>
@@ -282,10 +308,10 @@ Constantin Kaplinsky &lt;const at tightvnc.com&gt;
     </span>
     <span class="ok-cookie cookie-block__item cookie-block__link cookie-block__button-close"></span>
 </div>
-            </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="js/script.min.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

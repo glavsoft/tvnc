@@ -1,4 +1,3 @@
-
 <h3>Contents</h3>
 <ul>
     <li><a href="#OS">What Windows versions does TightVNC support?</a></li>
@@ -14,7 +13,8 @@
 <p>
     TightVNC runs basically on any version of Windows
     (both 32-bit and 64-bit systems are supported):
-</p><ul>
+</p>
+<ul>
     <li>Windows XP / Vista / 7 / 8 / 8.1 / 10,</li>
     <li>corresponding versions of Windows Server.</li>
 </ul>
@@ -49,31 +49,33 @@
 </p>
 <div class="table-overflow">
     <table width="100%" cellspacing="2" cellpadding="5" border="0">
-    <tbody><tr bgcolor="#E8E8E8">
-        <th>Application</th>
-        <th>Start<br>Port</th>
-        <th>End<br>Port</th>
-        <th>Protocol</th>
-        <th>IP Address</th>
-        <th>Enable</th>
-    </tr>
-    <tr bgcolor="#F4F4F4" align="center">
-        <td>TightVNC</td>
-        <td>5900</td>
-        <td>5900</td>
-        <td>TCP</td>
-        <td>192.168.1.100</td>
-        <td>yes</td>
-    </tr>
-    <tr bgcolor="#F4F4F4" align="center">
-        <td>TightVNC</td>
-        <td>5800</td>
-        <td>5800</td>
-        <td>TCP</td>
-        <td>192.168.1.100</td>
-        <td>yes</td>
-    </tr>
-    </tbody></table>
+        <tbody>
+        <tr bgcolor="#E8E8E8">
+            <th>Application</th>
+            <th>Start<br>Port</th>
+            <th>End<br>Port</th>
+            <th>Protocol</th>
+            <th>IP Address</th>
+            <th>Enable</th>
+        </tr>
+        <tr bgcolor="#F4F4F4" align="center">
+            <td>TightVNC</td>
+            <td>5900</td>
+            <td>5900</td>
+            <td>TCP</td>
+            <td>192.168.1.100</td>
+            <td>yes</td>
+        </tr>
+        <tr bgcolor="#F4F4F4" align="center">
+            <td>TightVNC</td>
+            <td>5800</td>
+            <td>5800</td>
+            <td>TCP</td>
+            <td>192.168.1.100</td>
+            <td>yes</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 <p>
     When port forwarding is set up, you can connect to the router's IP address such way as
@@ -85,7 +87,8 @@
 </p>
 <ul>
     <li><a target="_blank" href="http://www.portforward.com/">www.portforward.com</a> (help on
-        setting up port forwarding on various routers and firewalls)</li>
+        setting up port forwarding on various routers and firewalls)
+    </li>
 </ul>
 <a name="howsecure"></a>
 <h3>How secure is TightVNC?</h3>
@@ -116,7 +119,8 @@
     restrict users from changing the server Properties, it might be better to use the
     AllowProperties setting. For more information, see the description of
     "AllowProperties", "AllowShutdown" and "AllowEditClients"
-    options in the <a target="_blank" href="http://www.realvnc.com/products/free/3.3.7/winvnc.html">VNC documentation</a>.
+    options in the <a target="_blank" href="http://www.realvnc.com/products/free/3.3.7/winvnc.html">VNC
+    documentation</a>.
 </p>
 <p>
 </p><h4>Answer for TightVNC versions 2.x:</h4>
@@ -156,27 +160,35 @@
 <ol>
     <li>Log in as an Administrator (or as a user with similar permissions).</li>
     <li>If TightVNC Server is running, close it. If it is running but not showing the tray icon,
-        choose Process Manages, locate WinVNC.exe process and shutdown it.</li>
+        choose Process Manages, locate WinVNC.exe process and shutdown it.
+    </li>
     <li>If TightVNC Server was registered as a system service, unregister it. To do that, locate
         WinVNC.exe file under \Program Files\TightVNC (or wherever TightVNC was installed), and type
-        in the command line: WinVNC.exe -remove</li>
+        in the command line: WinVNC.exe -remove
+    </li>
     <li>Remove the whole \Program Files\TightVNC directory (or wherever TightVNC was
-        installed).</li>
+        installed).
+    </li>
     <li>Remove all TightVNC shortcuts from the Start\All Programs menu.</li>
     <li>Remove the settings from the registry if desired. The settings can be found in
-        HKEY_LOCAL_MACHINE\Software\ORL and/or HKEY_CURRENT_USER\Software\ORL.</li>
+        HKEY_LOCAL_MACHINE\Software\ORL and/or HKEY_CURRENT_USER\Software\ORL.
+    </li>
 </ol>
 <h4>Uninstall procedure for TightVNC versions 2.x:</h4>
 <ol>
     <li>Log in as an Administrator (or as a user with similar permissions).</li>
     <li>If TightVNC Server is running, close it. If it is running but not showing the tray icon,
-        choose Process Manages, locate all tvnserver.exe process and shutdown each one of them.</li>
+        choose Process Manages, locate all tvnserver.exe process and shutdown each one of them.
+    </li>
     <li>If TightVNC Server was registered as a system service, unregister it. To do that, locate
         tvnserver.exe file under \Program Files\TightVNC (or wherever TightVNC was installed), and
-        type in the command line: tvnserver.exe -remove</li>
+        type in the command line: tvnserver.exe -remove
+    </li>
     <li>Remove the whole \Program Files\TightVNC directory (or wherever TightVNC was
-        installed).</li>
+        installed).
+    </li>
     <li>Remove all TightVNC shortcuts from the Start\All Programs menu.</li>
     <li>Remove the settings from the registry if desired. The settings can be found in
-        HKEY_LOCAL_MACHINE\Software\TightVNC and/or HKEY_CURRENT_USER\Software\TightVNC</li>
+        HKEY_LOCAL_MACHINE\Software\TightVNC and/or HKEY_CURRENT_USER\Software\TightVNC
+    </li>
 </ol>

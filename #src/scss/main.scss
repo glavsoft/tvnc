@@ -2,42 +2,52 @@
  =======================================*/
 
 html, body {
-  margin: 0;
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 16px;
-  color: #000000;
-  background-color: #ffffff;
+    margin: 0;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    color: #000000;
+    background-color: #ffffff;
 }
+
 a:active {
-  color:red;
+    color: red;
 }
+
 ul.mgnul > li {
-  margin-top:0.5em; margin-bottom:0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
+
 ol.mgnol > li {
-  margin-top:0.5em; margin-bottom:0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
+
 /* означает для всех элементов */
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 a {
-  color: $blue-color;
+    color: $blue-color;
 }
-*{
-  //margin:0;
-  //padding:0;
-  outline:none;
+
+* {
+    //margin:0;
+    //padding:0;
+    outline: none;
 }
+
 blockquote {
-  line-height: 24px;
+    line-height: 24px;
 }
+
 p {
-  line-height: 24px;
+    line-height: 24px;
 }
+
 //h3 {
 //  margin: 9px 0;
 //}
@@ -59,41 +69,44 @@ p {
 /* Container
  =======================================*/
 .container {
-  display: flex;
-  width: 100%;
-  max-width: 1450px; //1450
-  margin: 0 auto;
-  padding: 0 10px;
-  @media(min-width: 1027px) {
-    padding: 0 60px;
-  }
+    display: flex;
+    width: 100%;
+    max-width: 1450px; //1450
+    margin: 0 auto;
+    padding: 0 10px;
+    @media(min-width: 1027px) {
+        padding: 0 60px;
+    }
 }
 
 /* Main
  =======================================*/
 .main {
-  display: flex;
-  background-color: #ffffff;
-  padding: 122px 0 0 0;
-  @media(max-width: 480px) {
-    padding: 80px 0 0 0;
-  }
-  .container {
-    max-width: 1240px;
-  }
-  &__inner {
-    //display: flex;
-    width: 100vw;
-    overflow: auto;
-    flex-direction: column;
-    min-height: calc(100vh - 160px);
-    //padding: 10px 0;
-    div.table-overflow{
-      width: 99%;
-      overflow: auto;
+    display: flex;
+    background-color: #ffffff;
+    padding: 122px 0 0 0;
+    @media(max-width: 480px) {
+        padding: 80px 0 0 0;
     }
-    @media (max-width:480px) {
-      min-height: calc(100vh - 118px);
+
+    .container {
+        max-width: 1240px;
     }
-  }
+
+    &__inner {
+        //display: flex;
+        width: 100vw;
+        overflow: auto;
+        flex-direction: column;
+        min-height: calc(100vh - 160px);
+        //padding: 10px 0;
+        div.table-overflow {
+            width: 99%;
+            overflow: auto;
+        }
+
+        @media (max-width: 480px) {
+            min-height: calc(100vh - 118px);
+        }
+    }
 }
