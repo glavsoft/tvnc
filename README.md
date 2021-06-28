@@ -8,4 +8,6 @@
 -  HTML;
 -  CSS;
 -  js.
+
+##### Node version (node -v): v14.17.1
 ```
