@@ -114,7 +114,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 129px 0 0 0;
 }
 
@@ -132,9 +132,13 @@ p {
   min-height: calc(100vh - 167px);
 }
 
-.global[data-global-2306211720] > .main > .container > .inner div.table-overflow {
+.global[data-global-2306211720] > .main > .container > .inner > .table-overflow {
   width: 99%;
   overflow: auto;
+}
+
+.global[data-global-2306211720] > .main > .container > .inner > .table-overflow > table {
+  min-width: 400px;
 }
 
 .global[data-global-2306211720] > .footer {
