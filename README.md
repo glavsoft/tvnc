@@ -2,7 +2,7 @@
 
 ###  Simple one page website to practise HTML and CSS and js skills.
 
-#### Demo [here](https://mvdtom.github.io/tvnc/dist)
+#### Demo [here](https://glavsoft.github.io/tvnc/dist/)
 
 ####  Technologies used:
 -  HTML;
