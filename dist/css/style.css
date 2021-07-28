@@ -141,6 +141,15 @@ p {
   min-width: 400px;
 }
 
+.global[data-global-2306211720] > .main > .container > .inner pre {
+  width: 93%;
+  overflow: auto;
+}
+
+.global[data-global-2306211720] > .main > .container > .inner blockquote {
+  overflow: auto;
+}
+
 .global[data-global-2306211720] > .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1105,22 +1114,6 @@ body.touch .arrow {
 
 .active-menu__link2 {
   text-decoration: underline;
-}
-
-/* decoder page
- =======================================*/
-
-.main__inner pre {
-  overflow: auto;
-  width: 93%;
-}
-
-/* rfbplayer page
- =======================================*/
-
-blockquote.rfbplayer-page-blockquote {
-  width: 69%;
-  overflow: auto;
 }
 
 /* Screenshots page

@@ -5,26 +5,19 @@
 
     .screenshots-page {
         display: flex;
-        //flex-direction: row;
-        //flex-wrap: wrap;
         &-item {
-            //width: 50%;
             display: flex;
             justify-content: center;
-            //align-items: center;
             margin-right: 20px;
             margin-bottom: 20px;
         }
 
         p {
             padding-left: 30px;
-            //margin: 0;
         }
 
         img {
-            //object-fit: contain;
-            //width: 500px;
-            //margin-bottom: 0;
+
         }
     }
 
@@ -37,7 +30,7 @@
     }
 
     .screenshots-page-img {
-        //width: 500px;
+
     }
 }
 
@@ -65,7 +58,6 @@
         }
 
         .screenshots-page div {
-            //flex-wrap: wrap;
             justify-content: flex-start;
             max-width: 500px;
         }

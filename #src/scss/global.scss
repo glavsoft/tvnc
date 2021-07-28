@@ -135,6 +135,15 @@ p {
                     min-height: calc(100vh - 118px);
                 }
             }
+
+            & > .inner pre {
+                width: 93%;
+                overflow: auto;
+            }
+
+            & > .inner blockquote {
+                overflow: auto;
+            }
         }
     }
 
