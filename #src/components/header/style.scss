@@ -1,100 +1,66 @@
-/* Header
- =======================================*/
-.header {
-    //background-color: #e8e8e8;
-    //position: fixed;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 50;
-
-    &__inner {
-        position: relative;
-        width: 100%;
-        height: 129px;
-        display: flex;
-        justify-content: space-between;
-        padding: 15px 0;
-        align-items: center;
-        @media (max-width: 480px) {
-            height: 80px;
-        }
-    }
-}
-
-.header:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #e8e8e8;
-    z-index: 2;
-}
-
-/* Header logo and title
+/* Header (logo and menu)
  =======================================*/
 
-.title-and-menu {
+.title-and-menu[data-2306211815] {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
-
-    > div {
-        display: flex;
-        margin-bottom: 7px;
-    }
-
     @media (max-width: 927px) {
         align-items: center;
     }
     @media(max-width: 767px) {
         flex-wrap: nowrap;
     }
-}
 
-.header__logo {
-    flex: 0 0 90px;
-    overflow: hidden;
-    position: relative;
-    z-index: 3;
-    margin-right: 15px;
-    display: flex;
-    @media (max-width: 767px) {
-        //flex: 0 0 80px;
-    }
-    @media (max-width: 480px) {
-        //flex: 0 0 72px;
-        flex: 0 0 60px;
-    }
-}
+    & > .container {
+        display: flex;
+        margin-bottom: 7px;
 
-.header__logo img {
-    max-width: 100%;
-    display: block;
-}
+        & > .logo {
+            flex: 0 0 90px;
+            overflow: hidden;
+            position: relative;
+            z-index: 3;
+            margin-right: 15px;
+            display: flex;
 
-.header__title {
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 355px;
-    margin-right: auto;
+            @media (max-width: 767px) {
+                //flex: 0 0 80px;
+            }
+            @media (max-width: 480px) {
+                //flex: 0 0 72px;
+                flex: 0 0 60px;
+            }
 
-    h3 {
-        margin: 0;
-    }
+            & > img {
+                max-width: 100%;
+                display: block;
+            }
+        }
+        & > .title {
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 355px;
+            margin-right: auto;
 
-    p {
-        margin: 0 0 -3px 0;
-        @media (max-width: 480px) {
-            display: none;
+            & > h3 {
+                margin: 0;
+            }
+            & > p {
+                margin: 0 0 -3px 0;
+
+                @media (max-width: 480px) {
+                    display: none;
+                }
+            }
         }
     }
 }
+
+
+

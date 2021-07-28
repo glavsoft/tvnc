@@ -51,10 +51,18 @@ p {
   line-height: 24px;
 }
 
-/* Container
- =======================================*/
+.global[data-global-2306211720] {
+  /* Container
+    =======================================*/
+  /* Header
+    =======================================*/
+  /* Main
+    =======================================*/
+  /* Footer
+    =======================================*/
+}
 
-.container {
+.global[data-global-2306211720] > * > .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,40 +72,7 @@ p {
   padding: 0 10px;
 }
 
-/* Main
- =======================================*/
-
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #ffffff;
-  padding: 122px 0 0 0;
-}
-
-.main .container {
-  max-width: 1240px;
-}
-
-.main__inner {
-  width: 100vw;
-  overflow: auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: calc(100vh - 160px);
-}
-
-.main__inner div.table-overflow {
-  width: 99%;
-  overflow: auto;
-}
-
-/* Header
- =======================================*/
-
-.header {
+.global[data-global-2306211720] > .header {
   position: absolute;
   width: 100%;
   top: 0;
@@ -105,7 +80,7 @@ p {
   z-index: 50;
 }
 
-.header__inner {
+.global[data-global-2306211720] > .header > .container > .inner {
   position: relative;
   width: 100%;
   height: 129px;
@@ -121,7 +96,7 @@ p {
           align-items: center;
 }
 
-.header:before {
+.global[data-global-2306211720] > .header:before {
   content: "";
   position: absolute;
   top: 0;
@@ -132,10 +107,58 @@ p {
   z-index: 2;
 }
 
-/* Header logo and title
+.global[data-global-2306211720] > .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffffff;
+  padding: 129px 0 0 0;
+}
+
+.global[data-global-2306211720] > .main > .container {
+  max-width: 1240px;
+}
+
+.global[data-global-2306211720] > .main > .container > .inner {
+  width: 100vw;
+  overflow: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(100vh - 167px);
+}
+
+.global[data-global-2306211720] > .main > .container > .inner div.table-overflow {
+  width: 99%;
+  overflow: auto;
+}
+
+.global[data-global-2306211720] > .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #e8e8e8;
+}
+
+.global[data-global-2306211720] > .footer > .container > .inner {
+  width: 100%;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Header (logo and menu)
  =======================================*/
 
-.title-and-menu {
+.title-and-menu[data-2306211815] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,14 +177,14 @@ p {
   width: 100%;
 }
 
-.title-and-menu > div {
+.title-and-menu[data-2306211815] > .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 7px;
 }
 
-.header__logo {
+.title-and-menu[data-2306211815] > .container > .logo {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 90px;
           flex: 0 0 90px;
@@ -174,12 +197,12 @@ p {
   display: flex;
 }
 
-.header__logo img {
+.title-and-menu[data-2306211815] > .container > .logo > img {
   max-width: 100%;
   display: block;
 }
 
-.header__title {
+.title-and-menu[data-2306211815] > .container > .title {
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,11 +218,11 @@ p {
   margin-right: auto;
 }
 
-.header__title h3 {
+.title-and-menu[data-2306211815] > .container > .title > h3 {
   margin: 0;
 }
 
-.header__title p {
+.title-and-menu[data-2306211815] > .container > .title > p {
   margin: 0 0 -3px 0;
 }
 
@@ -777,19 +800,11 @@ p {
 /* Footer
  =======================================*/
 
-.footer {
+.footer-container[data-2306211639] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #e8e8e8;
-}
-
-.footer__inner {
   width: 100%;
-  height: 38px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -798,17 +813,11 @@ p {
           align-items: center;
 }
 
-.footer-item {
+.footer-container[data-2306211639] > .item {
   font-size: 13px;
 }
 
-/* Footer Privacy Policy
- =======================================*/
-
-/* Footer Copyright
- =====================================*/
-
-.footer-copyright__paragraph {
+.footer-container[data-2306211639] > .copyright > .paragraph {
   color: #000000;
   margin: 0 auto;
   text-align: right;
@@ -1534,13 +1543,13 @@ END 404 PAGE STYLE
 ======================================*/
 
 @media (min-width: 1027px) {
-  .container {
+  .global[data-global-2306211720] > * > .container {
     padding: 0 60px;
   }
 }
 
 @media (max-width: 927px) {
-  .title-and-menu {
+  .title-and-menu[data-2306211815] {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1692,7 +1701,7 @@ END 404 PAGE STYLE
 }
 
 @media (max-width: 767px) {
-  .title-and-menu {
+  .title-and-menu[data-2306211815] {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
@@ -1829,25 +1838,25 @@ END 404 PAGE STYLE
 }
 
 @media (max-width: 480px) {
-  .main {
-    padding: 80px 0 0 0;
-  }
-
-  .main__inner {
-    min-height: calc(100vh - 118px);
-  }
-
-  .header__inner {
+  .global[data-global-2306211720] > .header > .container > .inner {
     height: 80px;
   }
 
-  .header__logo {
+  .global[data-global-2306211720] > .main {
+    padding: 80px 0 0 0;
+  }
+
+  .global[data-global-2306211720] > .main > .container > .inner {
+    min-height: calc(100vh - 118px);
+  }
+
+  .title-and-menu[data-2306211815] > .container > .logo {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 60px;
             flex: 0 0 60px;
   }
 
-  .header__title p {
+  .title-and-menu[data-2306211815] > .container > .title > p {
     display: none;
   }
 }
