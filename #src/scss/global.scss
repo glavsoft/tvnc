@@ -1,12 +1,12 @@
-/* Main style
+/* Global style
  =======================================*/
 
 html, body {
     margin: 0;
     font-family: Verdana, Arial, sans-serif;
     font-size: 16px;
-    color: #000000;
-    background-color: #ffffff;
+    color: #000;
+    background-color: #fff;
 }
 
 a:active {
@@ -46,6 +46,8 @@ p {
     line-height: 24px;
 }
 
+/* Body inner
+=======================================*/
 .global[data-global-2306211720] {
 
     /* Container
@@ -53,7 +55,7 @@ p {
     & > * > .container {
         display: flex;
         width: 100%;
-        max-width: 1450px; //1450
+        max-width: 1450px;
         margin: 0 auto;
         padding: 0 10px;
         @media(min-width: 1027px) {
@@ -113,6 +115,7 @@ p {
                 overflow: auto;
                 flex-direction: column;
                 min-height: calc(100vh - 167px);
+
                 div.table-overflow {
                     width: 99%;
                     overflow: auto;

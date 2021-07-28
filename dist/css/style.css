@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* Main style
+/* Global style
  =======================================*/
 
 html,
@@ -8,8 +8,8 @@ body {
   margin: 0;
   font-family: Verdana, Arial, sans-serif;
   font-size: 16px;
-  color: #000000;
-  background-color: #ffffff;
+  color: #000;
+  background-color: #fff;
 }
 
 a:active {
@@ -50,6 +50,9 @@ blockquote {
 p {
   line-height: 24px;
 }
+
+/* Body inner
+=======================================*/
 
 .global[data-global-2306211720] {
   /* Container
