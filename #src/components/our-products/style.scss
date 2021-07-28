@@ -1,20 +1,22 @@
+/* our-products components
+ =======================================*/
+
 @font-face {
     font-family: 'Tahoma-Bold';
-    src:
-            url('../fonts/Tahoma-Bold.woff2') format('woff2'),
-            url('../fonts/Tahoma-Bold.woff') format('woff');
+    src: url('../fonts/Tahoma-Bold.woff2') format('woff2'),
+    url('../fonts/Tahoma-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Tahoma-Regular';
-    src:
-            url('../fonts/Tahoma.woff2') format('woff2'),
-            url('../fonts/Tahoma.woff') format('woff');
+    src: url('../fonts/Tahoma.woff2') format('woff2'),
+    url('../fonts/Tahoma.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
+
 :root {
     --black: rgba(0, 0, 0, 1);
     --viking: rgba(86, 204, 242, .4);
