@@ -1,107 +1,82 @@
-.winst-container {
-    display: flex;
-    flex-direction: column;
-}
+/* winst page style
+ =======================================*/
 
-.winst-wrap {
+.winst-page[data-2907211228] {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.winst-wrap.winst-wrap-images {
     justify-content: center;
-    flex-direction: column;
-    max-width: 256px;
-    margin: auto;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
 
-    p {
-        font-size: 13px;
-        margin-top: 5px;
+    @include _-750 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & > .wrap {
+        margin: 0 20px;
+
+        @include _-414 {
+            margin: 0;
+        }
+
+        & > .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include _-750 {
+                align-items: center !important;
+            }
+
+            & > .img {
+                max-width: 100%;
+            }
+
+            & > .text {
+                margin-top: 10px;
+                font-family: inherit;
+                font-size: 13px;
+                font-weight: normal;
+                line-height: 23px;
+            }
+        }
+
+        & + .wrap {
+
+            & > .item {
+                align-items: flex-start;
+            }
+            & > .item:first-child {
+
+                @include _-750 {
+                    margin-top: 0;
+                }
+            }
+        }
     }
 }
 
-.winst-wrap.winst-wrap-images.winst-wrap-images-new {
-    max-width: 386px;
-}
-
-.winst-wrap div {
+.winst-page[data-2907211025] {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-basis: 0;
-    flex-grow: 1;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    p {
+    margin-left: auto;
+    margin-right: auto;
+
+    & > .img {
+        max-width: 100%;
+    }
+
+    & > .text {
+        margin-top: 10px;
+        font-family: inherit;
         font-size: 13px;
-        margin-top: 5px;
-        margin-bottom: 0;
-    }
-
-    img {
-
-    }
-}
-
-.winst-wrap .winst-first {
-    p {
-        margin-left: auto;
-    }
-
-    img {
-        margin-left: auto;
-        width: 100%;
-        max-width: 320px;
-        object-fit: contain;
-    }
-}
-
-.winst-wrap .winst-second {
-    p {
-        margin-right: auto;
-    }
-
-    img {
-        margin-right: auto;
-        width: 100%;
-        max-width: 320px;
-        object-fit: contain;
-    }
-}
-
-@media(max-width: 767px) {
-    .winst-wrap {
-        flex-direction: column;
-
-        .winst-first p,
-        .winst-first img,
-        .winst-second p,
-        .winst-second img {
-            margin: auto;
-        }
-
-        div {
-            margin-right: 0;
-            margin-left: 0;
-        }
-    }
-    .winst-wrap.winst-wrap-images {
-        justify-content: center;
-        align-items: center;
-        max-width: 256px;
-        margin: auto;
-    }
-    .winst-wrap.winst-wrap-images img {
-        object-fit: contain;
-        width: 100%;
-    }
-    .winst-wrap.winst-wrap-images.winst-wrap-images-new {
-        max-width: 386px;
+        font-weight: normal;
     }
 }
