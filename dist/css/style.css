@@ -1701,7 +1701,7 @@ END 404 PAGE STYLE
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin-right: 0px;
+    margin-right: 0;
   }
 }
 
