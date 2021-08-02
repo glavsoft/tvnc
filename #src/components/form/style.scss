@@ -206,5 +206,50 @@ div.forms-checkbox-container {
                 }
             }
         }
+
+        & > .checkbox-container {
+            display: inline-block;
+            width: 100%;
+
+            & > .left,
+            & > .right {
+                margin-right: 15px;
+            }
+
+            & > .left {
+                display: inline-block;
+                flex-basis: 0;
+                flex-grow: 1;
+
+                & > .label {
+                    display: inline-block;
+
+                    & > .input {
+                        display: inline-block;
+                    }
+
+                    & > .text {
+                        display: inline-block;
+                    }
+                }
+            }
+            & > .right {
+                display: inline-block;
+                flex-basis: 0;
+                flex-grow: 1;
+
+                & > .label {
+                    display: inline-block;
+
+                    & > .input {
+                        display: inline-block;
+                    }
+
+                    & > .text {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
     }
 }

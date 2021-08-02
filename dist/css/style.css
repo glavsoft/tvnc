@@ -1491,6 +1491,58 @@ div.forms-checkbox-container {
   color: #d4696a;
 }
 
+.form-container[data-0208211447] > .form > .checkbox-container {
+  display: inline-block;
+  width: 100%;
+}
+
+.form-container[data-0208211447] > .form > .checkbox-container > .left,
+.form-container[data-0208211447] > .form > .checkbox-container > .right {
+  margin-right: 15px;
+}
+
+.form-container[data-0208211447] > .form > .checkbox-container > .left {
+  display: inline-block;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.form-container[data-0208211447] > .form > .checkbox-container > .left > .label {
+  display: inline-block;
+}
+
+.form-container[data-0208211447] > .form > .checkbox-container > .left > .label > .input {
+  display: inline-block;
+}
+
+.form-container[data-0208211447] > .form > .checkbox-container > .left > .label > .text {
+  display: inline-block;
+}
+
+.form-container[data-0208211447] > .form > .checkbox-container > .right {
+  display: inline-block;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.form-container[data-0208211447] > .form > .checkbox-container > .right > .label {
+  display: inline-block;
+}
+
+.form-container[data-0208211447] > .form > .checkbox-container > .right > .label > .input {
+  display: inline-block;
+}
+
+.form-container[data-0208211447] > .form > .checkbox-container > .right > .label > .text {
+  display: inline-block;
+}
+
 .form-page-licensing .forms-checkbox-wrap {
   display: block;
 }
