@@ -1423,7 +1423,7 @@ div.forms-checkbox-container {
 404 PAGE STYLE
 ======================================*/
 
-.error-404-page-container {
+.error-404[data-0208211135] {
   position: relative;
   height: 100%;
   width: 100%;
@@ -1431,7 +1431,7 @@ div.forms-checkbox-container {
   color: #404248;
 }
 
-.error-404-page-container > .container {
+.error-404[data-0208211135] > .container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1442,11 +1442,11 @@ div.forms-checkbox-container {
           transform: translate(-50%, -50%);
 }
 
-.error-404-page-container > .container > .item {
+.error-404[data-0208211135] > .container > .item {
   line-height: 1.9em;
 }
 
-.error-404-page-container > .container > .button {
+.error-404[data-0208211135] > .container > .button {
   display: inline-block;
   margin: 10px 0 10px 0;
   text-decoration: none;
@@ -1458,7 +1458,7 @@ div.forms-checkbox-container {
   cursor: pointer;
 }
 
-.error-404-page-container > .container > .button > span {
+.error-404[data-0208211135] > .container > .button > span {
   min-height: 40px;
   min-width: 190px;
   display: -webkit-box !important;
@@ -1484,29 +1484,29 @@ div.forms-checkbox-container {
   text-shadow: none;
 }
 
-.error-404-page-container > .container > .button:focus,
-.error-404-page-container > .container > .button:hover {
+.error-404[data-0208211135] > .container > .button:focus,
+.error-404[data-0208211135] > .container > .button:hover {
   color: #0366d6;
   opacity: 0.7;
 }
 
-.error-404-page-container > .container > .text-1 {
+.error-404[data-0208211135] > .container > .text-1 {
   margin-bottom: 40px;
   font-weight: 700;
   line-height: 1em;
   font-size: clamp(140px, 15vw, 190px);
 }
 
-.error-404-page-container > .container > .text-2 {
+.error-404[data-0208211135] > .container > .text-2 {
   font-size: clamp(25px, 3vw, 34px);
   font-weight: 700;
 }
 
-.error-404-page-container > .container > .text-3 {
+.error-404[data-0208211135] > .container > .text-3 {
   font-size: clamp(18px, 3vw, 25px);
 }
 
-.error-404-page-container > .container > .text-4 {
+.error-404[data-0208211135] > .container > .text-4 {
   font-size: clamp(14px, 3vw, 18px);
   font-weight: 700;
   margin-bottom: 50px;
