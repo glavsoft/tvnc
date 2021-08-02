@@ -1,3 +1,4 @@
+/*==================================   cookie js    ============================================*/
 ( function () {
 
     const cookieBlock = document.querySelector('.cookie-block');

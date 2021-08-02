@@ -1,3 +1,4 @@
+@@include('global.js')
 @@include('main.js')
 @@include('../components/cookie/script.js')
 @@include('../components/nav/script.js')

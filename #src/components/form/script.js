@@ -1,3 +1,4 @@
+/*==================================   form js    ============================================*/
 ( function () {
 
     let privacyAgreeCheckbox = document.getElementById('privacy_agreeCheckbox');

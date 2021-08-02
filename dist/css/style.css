@@ -150,6 +150,10 @@ p {
   overflow: auto;
 }
 
+.global[data-global-2306211720] > .main * {
+  overflow-wrap: break-word;
+}
+
 .global[data-global-2306211720] > .footer {
   display: -webkit-box;
   display: -ms-flexbox;
