@@ -1151,6 +1151,7 @@ body.touch .arrow {
 .screenshot-page-container[data-2807211703] > .items > .item > img {
   width: 100%;
   max-width: 495px;
+  border-radius: 7px;
 }
 
 .screenshot-page-container[data-2807211703] > .items:last-child > .item > img {
@@ -1421,6 +1422,73 @@ div.forms-checkbox-container {
   display: block;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.form-container[data-0208211447] {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.form-container[data-0208211447] > .form {
+  min-height: 700px;
+  max-width: 600px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #f4f4f4;
+}
+
+.form-container[data-0208211447] > .form > .fields-container > .label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.form-container[data-0208211447] > .form > .fields-container > .label > .text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-width: 260px;
+  margin: 0 5px 5px 0;
+}
+
+.form-container[data-0208211447] > .form > .fields-container > .label > .input {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  max-height: 26px;
+  width: 100%;
+  min-width: 230px;
+  max-width: 330px;
+}
+
+.form-container[data-0208211447] > .form > .fields-container > .label > .input > .input {
+  width: 100%;
+  padding-right: 15px;
+  font-size: 16px;
+}
+
+.form-container[data-0208211447] > .form > .fields-container > .label > .input:after {
+  content: "*";
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  top: 3px;
+  right: 3px;
+  line-height: 1em;
+  color: #d4696a;
 }
 
 .form-page-licensing .forms-checkbox-wrap {

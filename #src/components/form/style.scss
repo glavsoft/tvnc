@@ -143,3 +143,68 @@ div.forms-checkbox-container {
         display: none;
     }
 }
+
+
+
+
+
+
+.form-container[data-0208211447] {
+    width: 100%;
+    margin: 20px 0;
+
+    & > .form {
+        min-height: 700px;
+        max-width: 600px;
+        border: 1px solid #f0f0f0;
+        border-radius: 5px;
+        margin: 0 auto;
+        padding: 15px;
+        background-color: #f4f4f4;
+
+        & > .fields-container {
+
+            & > .label {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-bottom: 12px;
+
+                & > .text {
+                    flex-grow: 1;
+                    //flex-basis: 0;
+                    min-width: 260px;
+                    margin: 0 5px 5px 0;
+                }
+
+                & > .input {
+                    position: relative;
+                    flex-grow: 1;
+                    flex-basis: 0;
+                    max-height: 26px;
+                    width: 100%;
+                    min-width: 230px;
+                    max-width: 330px;
+
+                    & > .input {
+                        width: 100%;
+                        padding-right: 15px;
+                        font-size: 16px;
+                    }
+                }
+
+                & > .input:after {
+                    content: "*";
+                    position: absolute;
+                    display: inline-block;
+                    height: 100%;
+                    top: 3px;
+                    right: 3px;
+                    line-height: 1em;
+                    color: #d4696a;
+                }
+            }
+        }
+    }
+}
