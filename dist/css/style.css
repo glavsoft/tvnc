@@ -1153,6 +1153,10 @@ body.touch .arrow {
   max-width: 495px;
 }
 
+.screenshot-page-container[data-2807211703] > .items:last-child > .item > img {
+  max-width: 402px;
+}
+
 /* winst page style
  =======================================*/
 
