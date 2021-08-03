@@ -1425,6 +1425,11 @@ body.touch .arrow {
 .form-container[data-0208211447] > .form > .recaptcha-container > .text {
   display: block;
   margin: 10px 10px 10px 0;
+  line-height: 21px;
+}
+
+.form-container[data-0208211447] > .form > .recaptcha-container > .text > span {
+  color: #d4696a;
 }
 
 .form-container[data-0208211447] > .form > .recaptcha-container > .g-recaptcha {
@@ -1808,12 +1813,6 @@ END 404 PAGE STYLE
 
   .frame-1 .remote-core-sdk {
     margin-top: 24px;
-  }
-}
-
-@media (max-width: 595px) {
-  .form-container[data-0208211447] > .form > .recaptcha-container > .text {
-    display: none;
   }
 }
 
