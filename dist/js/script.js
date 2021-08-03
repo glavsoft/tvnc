@@ -140,21 +140,63 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 (function () {
-  var privacyAgreeCheckbox = document.getElementById('privacy_agreeCheckbox');
-  var formSubmitButton = document.getElementById('submit');
+  var form = document.querySelector(".form-container[data-0208211447] > .form"); //если не будет этого класса to-connect-with то инпуты не будут завязаны с кнопкой отправить
 
-  if (privacyAgreeCheckbox.checked === false) {
-    //условие если галочка не выбрана то есть false то тогда делать кнопку не активной
-    formSubmitButton.disabled = true;
+  var inputs = form.querySelectorAll('input.to-connect-with');
+  var btn = form.querySelector(".submit-container[data-0308211314] > .input#submit");
+  setTimeout(function () {
+    btn.setAttribute('disabled', '');
+  }, 3000);
+  btn.addEventListener('click', getChecked);
+
+  for (var i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener('click', getChecked);
+    inputs[i].addEventListener('keyup', getChecked);
   }
 
-  function getCheckedPolicy() {
-    formSubmitButton.disabled = !privacyAgreeCheckbox.checked; //если выбран чекбокс то кнопка активна, сянта галочка кнопка не активна
-  }
+  function getChecked() {
+    var allEmptyCheckboxes = true;
+    var allEmptyEmail = true;
+    var selectedAllCheckbox = null;
+    var filledAllEmail = null;
+    var numberAllCheckboxes = null;
+    var numberAllInputEmail = null;
 
-  setInterval(function getCheckedPolicy() {
-    //если по какой то причине не отправлена форма то проверять стоит ли галочка на чекбоксе
-    formSubmitButton.disabled = !privacyAgreeCheckbox.checked; //если выбран чекбокс то кнопка активна, не сянта галочка кнопка не активна
-  }, 0);
+    for (var _i = 0; _i < inputs.length; _i++) {
+      if (inputs[_i].type === 'checkbox') {
+        numberAllCheckboxes++;
+      }
+
+      if (inputs[_i].type === 'text') {
+        numberAllInputEmail++;
+      }
+    }
+
+    for (var _i2 = 0; _i2 < inputs.length; _i2++) {
+      if (inputs[_i2].type === 'checkbox' && inputs[_i2].checked === true) {
+        var numberCheckedCheckboxes = !!inputs[_i2];
+        selectedAllCheckbox += numberCheckedCheckboxes;
+
+        if (numberAllCheckboxes === selectedAllCheckbox) {
+          allEmptyCheckboxes = false;
+        }
+      }
+
+      if (inputs[_i2].type === 'text' && inputs[_i2].value !== '') {
+        var numberFilledEmail = !!inputs[_i2];
+        filledAllEmail += numberFilledEmail;
+
+        if (numberAllInputEmail === filledAllEmail) {
+          allEmptyEmail = false;
+        }
+      }
+    }
+
+    if (!allEmptyEmail && !allEmptyCheckboxes) {
+      btn.removeAttribute('disabled');
+    } else {
+      btn.setAttribute('disabled', '');
+    }
+  }
 })();
 /*==================================   404 js    ============================================*/

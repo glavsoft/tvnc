@@ -1438,20 +1438,26 @@ body.touch .arrow {
   display: block;
   width: 100%;
   margin-top: 15px;
-  text-align: center;
 }
 
 .form-container[data-0208211447] > .form > .privacy-container > .label {
-  display: block;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form-container[data-0208211447] > .form > .privacy-container > .label > .input {
   display: inline;
+  margin-right: 10px;
 }
 
 .form-container[data-0208211447] > .form > .privacy-container > .label > .text {
   display: inline;
   line-height: 21px;
+}
+
+.form-container[data-0208211447] > .form > .privacy-container > .label > .text > span {
+  color: #d4696a;
 }
 
 .form-container[data-0208211447] > .form > .submit-container {

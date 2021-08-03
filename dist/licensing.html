@@ -316,25 +316,25 @@
             <label class="label">
                 <div class="text">Your full real name (required):</div>
                 <div class="input">
-                    <input class="input" type="text" name="name" maxlength="256">
+                    <input class="input to-connect-with" type="text" name="name" maxlength="256">
                 </div>
             </label>
             <label class="label">
                 <div class="text">E-mail address (required):</div>
                 <div class="input">
-                    <input class="input" type="text" name="email" maxlength="256">
+                    <input class="input to-connect-with" type="text" name="email" maxlength="256">
                 </div>
             </label>
             <label class="label">
                 <div class="text">Company/organization name (required):</div>
                 <div class="input">
-                    <input class="input" type="text" name="company" maxlength="256">
+                    <input class="input to-connect-with" type="text" name="company" maxlength="256">
                 </div>
             </label>
             <label class="label">
                 <div class="text">Your position in the company (required):</div>
                 <div class="input">
-                    <input class="input" type="text" name="position" maxlength="256">
+                    <input class="input to-connect-with" type="text" name="position" maxlength="256">
                 </div>
             </label>
         </div>
@@ -428,14 +428,13 @@
         </div>
         <div class="privacy-container">
             <label class="label">
-                <input class="input" type="checkbox" name="privacy_agree"
-                       onchange="document.getElementById('submit').disabled = !this.checked;" value="yes">
+                <input class="input to-connect-with" type="checkbox" name="privacy_agree" value="yes">
                 <div class="text">I agree to the tightvnc.com <a target="_blank" href="privacy.html">Privacy Policy</a>
-                    (required)
+                    (required) <span>*</span>
                 </div>
             </label>
         </div>
-        <div class="submit-container">
+        <div data-0308211314 class="submit-container">
             <input class="input" type="hidden" name="srcpage" value="licensing.html">
             <input class="input" type="submit" name="submit" id="submit" value="Submit Information">
         </div>
