@@ -9,14 +9,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 /*==================================   global js    ============================================*/
 
 /*==================================   main js    ============================================*/
+// добавление обертки для всех таблиц
 (function () {
-  var tables = document.getElementsByTagName('table'),
-      length = tables.length,
-      i,
-      wrapper;
+  var tables = document.getElementsByTagName('table');
+  var length = tables.length;
 
-  for (i = 0; i < length; i++) {
-    wrapper = document.createElement('div');
+  for (var i = 0; i < length; i++) {
+    var wrapper = document.createElement('div');
     wrapper.setAttribute('class', 'table-overflow');
     tables[i].parentNode.insertBefore(wrapper, tables[i]);
     wrapper.appendChild(tables[i]);

@@ -1,11 +1,11 @@
 /*==================================   main js    ============================================*/
+// добавление обертки для всех таблиц
 (function () {
-    let tables = document.getElementsByTagName('table'),
-        length = tables.length,
-        i, wrapper;
+    let tables = document.getElementsByTagName('table');
+    let length = tables.length;
 
-    for (i = 0; i < length; i++) {
-        wrapper = document.createElement('div');
+    for (let i = 0; i < length; i++) {
+        let wrapper = document.createElement('div');
         wrapper.setAttribute('class', 'table-overflow');
         tables[i].parentNode.insertBefore(wrapper, tables[i]);
         wrapper.appendChild(tables[i]);
