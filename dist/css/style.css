@@ -246,6 +246,9 @@ p {
   margin: 0 0 -3px 0;
 }
 
+/* END Header (logo and menu)
+ =======================================*/
+
 /* our-products components
  =======================================*/
 
@@ -817,6 +820,9 @@ p {
           justify-content: center;
 }
 
+/* END our-products components
+ =======================================*/
+
 /* Footer
  =======================================*/
 
@@ -842,6 +848,9 @@ p {
   margin: 0 auto;
   text-align: right;
 }
+
+/* END Footer
+ =======================================*/
 
 /* Cookie block
  =====================================*/
@@ -940,6 +949,9 @@ p {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
+
+/* END Cookie block
+ =====================================*/
 
 /* Nav
  =======================================*/
@@ -1120,6 +1132,9 @@ body.touch .arrow {
   text-decoration: underline;
 }
 
+/* END Nav
+ =======================================*/
+
 /* Screenshots page
  =======================================*/
 
@@ -1157,6 +1172,9 @@ body.touch .arrow {
 .screenshot-page-container[data-2807211703] > .items:last-child > .item > img {
   max-width: 402px;
 }
+
+/* END Screenshots page
+ =======================================*/
 
 /* winst page style
  =======================================*/
@@ -1247,6 +1265,9 @@ body.touch .arrow {
   font-size: 13px;
   font-weight: normal;
 }
+
+/* END winst page style
+ =======================================*/
 
 /* Form-components
  =======================================*/
@@ -1483,11 +1504,20 @@ body.touch .arrow {
   cursor: default;
 }
 
+/* END Form-components
+ =======================================*/
+
+/* Licensing page
+ =====================================*/
+
 .page-form-wrapper.licensing-page-form .form-container[data-0208211447] > .form > .checkbox-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
+
+/* END Licensing page
+ =====================================*/
 
 /*====================================
 404 PAGE STYLE
