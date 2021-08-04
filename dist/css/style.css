@@ -212,6 +212,7 @@ p {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 90px;
           flex: 0 0 90px;
+  max-height: 90px;
   overflow: hidden;
   position: relative;
   z-index: 3;
@@ -1864,6 +1865,7 @@ END 404 PAGE STYLE
   }
 
   .title-and-menu[data-2306211815] > .container > .logo {
+    max-height: 60px;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 60px;
             flex: 0 0 60px;
