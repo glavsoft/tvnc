@@ -9,8 +9,22 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 /*==================================   global js    ============================================*/
 
 /*==================================   main js    ============================================*/
+(function () {
+  var tables = document.getElementsByTagName('table'),
+      length = tables.length,
+      i,
+      wrapper;
 
+  for (i = 0; i < length; i++) {
+    wrapper = document.createElement('div');
+    wrapper.setAttribute('class', 'table-overflow');
+    tables[i].parentNode.insertBefore(wrapper, tables[i]);
+    wrapper.appendChild(tables[i]);
+  }
+})();
 /*==================================   cookie js    ============================================*/
+
+
 (function () {
   var cookieBlock = document.querySelector('.cookie-block');
   var okCookie = document.querySelectorAll('.ok-cookie');
