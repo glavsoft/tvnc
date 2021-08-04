@@ -54,18 +54,10 @@ p {
 /* Body inner
 =======================================*/
 
-.global[data-global-2306211720] {
-  /* Container
-    =======================================*/
-  /* Header
-    =======================================*/
-  /* Main
-    =======================================*/
-  /* Footer
-    =======================================*/
-}
+/* Container
+=======================================*/
 
-.global[data-global-2306211720] > * > .container {
+.global[data-global-2306211720] > .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,7 +67,10 @@ p {
   padding: 0 10px;
 }
 
-.global[data-global-2306211720] > .header {
+/* Header
+=======================================*/
+
+.header[data-global-2306211720] {
   position: absolute;
   width: 100%;
   top: 0;
@@ -83,7 +78,7 @@ p {
   z-index: 50;
 }
 
-.global[data-global-2306211720] > .header > .container > .inner {
+.header[data-global-2306211720] > .container > .inner {
   position: relative;
   width: 100%;
   height: 129px;
@@ -99,7 +94,7 @@ p {
           align-items: center;
 }
 
-.global[data-global-2306211720] > .header:before {
+.header[data-global-2306211720]:before {
   content: "";
   position: absolute;
   top: 0;
@@ -110,7 +105,10 @@ p {
   z-index: 2;
 }
 
-.global[data-global-2306211720] > .main {
+/* Main
+=======================================*/
+
+.main[data-global-2306211720] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,11 +116,11 @@ p {
   padding: 129px 0 0 0;
 }
 
-.global[data-global-2306211720] > .main > .container {
+.main[data-global-2306211720] > .container {
   max-width: 1240px;
 }
 
-.global[data-global-2306211720] > .main > .container > .inner {
+.main[data-global-2306211720] > .container > .inner {
   width: 100vw;
   overflow: auto;
   -webkit-box-orient: vertical;
@@ -132,36 +130,39 @@ p {
   min-height: calc(100vh - 167px);
 }
 
-.global[data-global-2306211720] > .main > .container > .inner > .table-overflow {
+.main[data-global-2306211720] > .container > .inner > .table-overflow {
   width: 99%;
   overflow: auto;
 }
 
-.global[data-global-2306211720] > .main > .container > .inner > .table-overflow > table {
+.main[data-global-2306211720] > .container > .inner > .table-overflow > table {
   min-width: 400px;
 }
 
-.global[data-global-2306211720] > .main > .container > .inner pre {
+.main[data-global-2306211720] > .container > .inner pre {
   width: 93%;
   overflow: auto;
 }
 
-.global[data-global-2306211720] > .main > .container > .inner blockquote {
+.main[data-global-2306211720] > .container > .inner blockquote {
   overflow: auto;
 }
 
-.global[data-global-2306211720] > .main * {
+.main[data-global-2306211720] * {
   overflow-wrap: break-word;
 }
 
-.global[data-global-2306211720] > .footer {
+/* Footer
+=======================================*/
+
+.footer[data-global-2306211720] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: #e8e8e8;
 }
 
-.global[data-global-2306211720] > .footer > .container > .inner {
+.footer[data-global-2306211720] > .container > .inner {
   width: 100%;
   height: 38px;
   display: -webkit-box;
@@ -174,6 +175,9 @@ p {
       -ms-flex-align: center;
           align-items: center;
 }
+
+/* END Body inner
+=======================================*/
 
 /* Header (logo and menu)
  =======================================*/
@@ -1617,7 +1621,7 @@ END 404 PAGE STYLE
 ======================================*/
 
 @media (min-width: 1027px) {
-  .global[data-global-2306211720] > * > .container {
+  .global[data-global-2306211720] > .container {
     padding: 0 60px;
   }
 }
@@ -1847,15 +1851,15 @@ END 404 PAGE STYLE
 }
 
 @media (max-width: 480px) {
-  .global[data-global-2306211720] > .header > .container > .inner {
+  .header[data-global-2306211720] > .container > .inner {
     height: 80px;
   }
 
-  .global[data-global-2306211720] > .main {
+  .main[data-global-2306211720] {
     padding: 80px 0 0 0;
   }
 
-  .global[data-global-2306211720] > .main > .container > .inner {
+  .main[data-global-2306211720] > .container > .inner {
     min-height: calc(100vh - 118px);
   }
 
