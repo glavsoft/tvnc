@@ -95,23 +95,36 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   var body = document.querySelector('body');
 
   if (isMobile.any()) {
-    body.classList.add('touch');
-    var arrow = document.querySelectorAll('.arrow');
+    (function () {
+      body.classList.add('touch');
+      var arrow = document.querySelectorAll('.arrow');
 
-    var _loop = function _loop(i) {
-      var thisLink = arrow[i].previousElementSibling;
-      var subMenu = arrow[i].nextElementSibling;
-      var thisArrow = arrow[i];
-      thisLink.classList.add('parent');
-      arrow[i].addEventListener('click', function () {
-        subMenu.classList.toggle('open');
-        thisArrow.classList.toggle('active');
-      });
-    };
+      var _loop = function _loop(i) {
+        var thisLink = arrow[i].previousElementSibling;
+        var subMenu = arrow[i].nextElementSibling;
+        var thisArrow = arrow[i];
+        thisLink.classList.add('parent');
+        arrow[i].addEventListener('click', function () {
+          subMenu.classList.toggle('open');
+          thisArrow.classList.toggle('active');
+        });
 
-    for (var i = 0; i < arrow.length; i++) {
-      _loop(i);
-    }
+        if (window.screen.width > 927) {
+          //применять данное правило только если ширина окна больше чем 927 px
+          //отслеживает клик в любою область кроме текущей стрелки(пункта подменю), скрывает любой другой пункт подменю тем самым делает что бы отображалась только одна плашка подменю
+          document.addEventListener('click', function (evt) {
+            if (!arrow[i].contains(evt.target)) {
+              subMenu.classList.remove('open');
+              thisArrow.classList.remove('active');
+            }
+          });
+        }
+      };
+
+      for (var i = 0; i < arrow.length; i++) {
+        _loop(i);
+      }
+    })();
   } else {
     body.classList.add('mouse');
   } //добавление кнопки бургер меню

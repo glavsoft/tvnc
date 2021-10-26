@@ -42,6 +42,15 @@
                 subMenu.classList.toggle('open');
                 thisArrow.classList.toggle('active');
             });
+            if (window.screen.width > 927) { //применять данное правило только если ширина окна больше чем 927 px
+                //отслеживает клик в любою область кроме текущей стрелки(пункта подменю), скрывает любой другой пункт подменю тем самым делает что бы отображалась только одна плашка подменю
+                document.addEventListener('click', function(evt) {
+                    if (!arrow[i].contains(evt.target)) {
+                        subMenu.classList.remove('open');
+                        thisArrow.classList.remove('active');
+                    }
+                });
+            }
         }
     } else {
         body.classList.add('mouse');
