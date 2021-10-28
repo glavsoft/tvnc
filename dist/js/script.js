@@ -23,145 +23,141 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 (function () {
   /*==================================   cookie js    ============================================*/
-  (function () {
-    var cookieBlock = document.querySelector('.cookie-block');
-    var okCookie = document.querySelectorAll('.ok-cookie');
+  var cookieBlock = document.querySelector('.cookie-block');
+  var okCookie = document.querySelectorAll('.ok-cookie');
 
-    var _iterator = _createForOfIteratorHelper(okCookie),
-        _step;
+  var _iterator = _createForOfIteratorHelper(okCookie),
+      _step;
 
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var Item = _step.value;
-        // закрываем по клику
-        Item.addEventListener('click', function () {
-          // записываем cookie на 30 деней, с которой мы не показываем окно
-          cookieBlock.style.display = 'none';
-          var date = new Date();
-          date.setDate(date.getDate() + 30);
-          document.cookie = "hide-cookie=ok; path=/; expires=" + date.toUTCString();
-        });
-      }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var Item = _step.value;
+      // закрываем по клику
+      Item.addEventListener('click', function () {
+        // записываем cookie на 30 деней, с которой мы не показываем окно
+        cookieBlock.style.display = 'none';
+        var date = new Date();
+        date.setDate(date.getDate() + 30);
+        document.cookie = "hide-cookie=ok; path=/; expires=" + date.toUTCString();
+      });
     }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
 
-    var cookies = function cookies() {
-      // функция возвращает cookie с именем name, если есть, если нет, то undefined
-      function getCookie(name) {
-        var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
-        return matches ? decodeURIComponent(matches[1]) : undefined;
-      } // проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
+  var cookies = function cookies() {
+    // функция возвращает cookie с именем name, если есть, если нет, то undefined
+    function getCookie(name) {
+      var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+    } // проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
 
 
-      if (!getCookie('hide-cookie')) {
-        // показываем
-        setTimeout(function () {
-          cookieBlock.style.display = 'block';
-        }, 1000);
-      }
-    };
+    if (!getCookie('hide-cookie')) {
+      // показываем
+      setTimeout(function () {
+        cookieBlock.style.display = 'block';
+      }, 1000);
+    }
+  };
 
-    cookies();
-  })();
+  cookies();
 })();
 
 (function () {
   /*==================================   navigation js    ============================================*/
-  (function () {
-    //переменная которая определеяет с мобилього ли устройства или планшета зашли на сайт
-    var isMobile = {
-      Android: function Android() {
-        return navigator.userAgent.match(/Android/i);
-      },
-      BlackBerry: function BlackBerry() {
-        return navigator.userAgent.match(/BlackBerry/i);
-      },
-      iOS: function iOS() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-      },
-      Opera: function Opera() {
-        return navigator.userAgent.match(/Opera Mini/i);
-      },
-      Windows: function Windows() {
-        return navigator.userAgent.match(/IEMobile/i);
-      },
-      any: function any() {
-        return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
-      }
-    };
-    var body = document.querySelector('body');
+  //переменная которая определеяет с мобилього ли устройства или планшета зашли на сайт
+  var isMobile = {
+    Android: function Android() {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function BlackBerry() {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function iOS() {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function Opera() {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function Windows() {
+      return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function any() {
+      return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+    }
+  };
+  var body = document.querySelector('body');
 
-    if (isMobile.any()) {
-      (function () {
-        body.classList.add('touch');
-        var arrow = document.querySelectorAll('.arrow');
+  if (isMobile.any()) {
+    (function () {
+      body.classList.add('touch');
+      var arrow = document.querySelectorAll('.arrow');
 
-        var _loop = function _loop(i) {
-          var thisLink = arrow[i].previousElementSibling;
-          var subMenu = arrow[i].nextElementSibling;
-          var thisArrow = arrow[i];
-          thisLink.classList.add('parent');
-          arrow[i].addEventListener('click', function () {
-            subMenu.classList.toggle('open');
-            thisArrow.classList.toggle('active');
+      var _loop = function _loop(i) {
+        var thisLink = arrow[i].previousElementSibling;
+        var subMenu = arrow[i].nextElementSibling;
+        var thisArrow = arrow[i];
+        thisLink.classList.add('parent');
+        arrow[i].addEventListener('click', function () {
+          subMenu.classList.toggle('open');
+          thisArrow.classList.toggle('active');
+        });
+
+        if (window.screen.width > 927) {
+          //применять данное правило только если ширина окна больше чем 927 px
+          //отслеживает клик в любою область кроме текущей стрелки(пункта подменю), скрывает любой другой пункт подменю тем самым делает что бы отображалась только одна плашка подменю
+          document.addEventListener('click', function (evt) {
+            if (!arrow[i].contains(evt.target)) {
+              subMenu.classList.remove('open');
+              thisArrow.classList.remove('active');
+            }
           });
-
-          if (window.screen.width > 927) {
-            //применять данное правило только если ширина окна больше чем 927 px
-            //отслеживает клик в любою область кроме текущей стрелки(пункта подменю), скрывает любой другой пункт подменю тем самым делает что бы отображалась только одна плашка подменю
-            document.addEventListener('click', function (evt) {
-              if (!arrow[i].contains(evt.target)) {
-                subMenu.classList.remove('open');
-                thisArrow.classList.remove('active');
-              }
-            });
-          }
-        };
-
-        for (var i = 0; i < arrow.length; i++) {
-          _loop(i);
         }
-      })();
-    } else {
-      body.classList.add('mouse');
-    } //добавление кнопки бургер меню
+      };
 
-
-    var burgerButton = document.querySelector('.header__burger');
-
-    burgerButton.onclick = function () {
-      burgerButton.classList.toggle('active');
-      document.querySelector('.menu').classList.toggle('active');
-      document.querySelector('body').classList.toggle('lock');
-    }; //Активный пункт меню с помощью JavaScript
-
-
-    document.querySelectorAll('.menu__list li a').forEach(function (el) {
-      if (window.location.pathname.indexOf(el.getAttribute('href')) > -1) {
-        //по умолчанию было -1
-        el.classList.add('active-menu__link');
+      for (var i = 0; i < arrow.length; i++) {
+        _loop(i);
       }
-    }); //Активный пункт САМОГО ВЕРХНЕГО меню с помощью JavaScript (подсветка родителя)
+    })();
+  } else {
+    body.classList.add('mouse');
+  } //добавление кнопки бургер меню
 
-    document.querySelectorAll(".menu__list li a").forEach(function (el1) {
-      if (el1.getAttribute('class') === 'sub-menu__link active-menu__link') {
-        var pktMainMenu = el1.parentNode.parentNode.parentNode.querySelector('.menu__link');
-        pktMainMenu.classList.add('active-menu__link');
-      }
-    }); //активный пункт home и его родитель с учетом pathname = index.html либо /
 
-    document.querySelectorAll('.menu__list li a').forEach(function (el2) {
-      if (window.location.pathname === '/tvnc/dist/' && el2.getAttribute('href') === 'index.html') {
-        //активный пункт home и его родитель в целом не нужная штука, когда зальется на хостинг можно убрать если в корне то просто /  или    /tvnc/dist/
-        el2.classList.add('active-menu__link');
-        var pktMainMenu = el2.parentNode.parentNode.parentNode.querySelector('.menu__link');
-        pktMainMenu.classList.add('active-menu__link');
-      }
-    });
-  })();
+  var burgerButton = document.querySelector('.header__burger');
+
+  burgerButton.onclick = function () {
+    burgerButton.classList.toggle('active');
+    document.querySelector('.menu').classList.toggle('active');
+    document.querySelector('body').classList.toggle('lock');
+  }; //Активный пункт меню с помощью JavaScript
+
+
+  document.querySelectorAll('.menu__list li a').forEach(function (el) {
+    if (window.location.pathname.indexOf(el.getAttribute('href')) > -1) {
+      //по умолчанию было -1
+      el.classList.add('active-menu__link');
+    }
+  }); //Активный пункт САМОГО ВЕРХНЕГО меню с помощью JavaScript (подсветка родителя)
+
+  document.querySelectorAll(".menu__list li a").forEach(function (el1) {
+    if (el1.getAttribute('class') === 'sub-menu__link active-menu__link') {
+      var pktMainMenu = el1.parentNode.parentNode.parentNode.querySelector('.menu__link');
+      pktMainMenu.classList.add('active-menu__link');
+    }
+  }); //активный пункт home и его родитель с учетом pathname = index.html либо /
+
+  document.querySelectorAll('.menu__list li a').forEach(function (el2) {
+    if (window.location.pathname === '/tvnc/dist/' && el2.getAttribute('href') === 'index.html') {
+      //активный пункт home и его родитель в целом не нужная штука, когда зальется на хостинг можно убрать если в корне то просто /  или    /tvnc/dist/
+      el2.classList.add('active-menu__link');
+      var pktMainMenu = el2.parentNode.parentNode.parentNode.querySelector('.menu__link');
+      pktMainMenu.classList.add('active-menu__link');
+    }
+  });
 })();
 
 (function () {
@@ -236,10 +232,37 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   /*==================================   our-products js    ============================================*/
   var card = [{
     //cardBackgroundColor: '',
-    img: 'logo/tightvnc-logo-90x90.png',
-    alt: 'tightvnc',
+    imgSrc: 'logo/tightvnc-logo-90x90.png',
+    imgAlt: 'tightvnc',
     title: 'TightVNC v.2',
     description: 'Famous remote desktop tool, 100% free and Open Source',
+    text: '✓Windows XP & above  ✓Java Viewer',
+    buttonText: 'Download your free copy' //buttonBackgroundColor: '',
+
+  }, {
+    //cardBackgroundColor: '',
+    imgSrc: 'logo/tightvnc-logo-90x90.png',
+    imgAlt: 'tightvnc',
+    title: 'Remote Core',
+    description: 'Easily add remote desktop functions into your own software',
+    text: '✓Windows XP & above  ✓Java Viewer',
+    buttonText: 'Download your free copy' //buttonBackgroundColor: '',
+
+  }, {
+    //cardBackgroundColor: '',
+    imgSrc: 'logo/remoteripple-logo-90x90.png',
+    imgAlt: 'tightvnc',
+    title: 'Remote Ripple',
+    description: 'New app to view & control VNC remote desktops',
+    text: '✓Windows XP & above  ✓Java Viewer',
+    buttonText: 'Download your free copy' //buttonBackgroundColor: '',
+
+  }, {
+    //cardBackgroundColor: '',
+    imgSrc: 'logo/mightyviewer-logo-90x90.png',
+    imgAlt: 'tightvnc',
+    title: 'MightyViewer',
+    description: 'Continuously monitor many remote desktops in real time',
     text: '✓Windows XP & above  ✓Java Viewer',
     buttonText: 'Download your free copy' //buttonBackgroundColor: '',
 
@@ -250,14 +273,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
   for (var i = 0; i < card.length; i++) {
     var cloneItem = item.cloneNode(true);
-    var imgSrcs = ourProduct.querySelectorAll('img');
+    var img = cloneItem.querySelectorAll('img');
+    var title = cloneItem.querySelectorAll('.title');
+    var description = cloneItem.querySelectorAll('.description');
+    var text = cloneItem.querySelectorAll('.middle > .text');
+    var buttonText = cloneItem.querySelectorAll('.bottom > .text');
 
-    for (var j = 0; j < i; j++) {
-      var imgSrc = imgSrcs[j];
-      imgSrc.src[j] = card[i].img;
+    for (var j = 0; j < img.length; j++) {
+      img[j].src = card[i].imgSrc;
+      img[j].alt = card[i].imgAlt;
+      title[j].textContent = card[i].title;
+      description[j].textContent = card[i].description;
+      text[j].textContent = card[i].text;
+      buttonText[j].textContent = card[i].buttonText;
     }
 
     ourProduct.appendChild(cloneItem);
-    alert(card[i].img);
   }
 })();
