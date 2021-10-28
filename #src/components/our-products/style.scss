@@ -479,3 +479,120 @@
 }
 /* END our-products components
  =======================================*/
+
+.container[data-our-product="2810210945"] {
+    --black: rgba(0, 0, 0, 1);
+    --viking: rgba(86, 204, 242, .4);
+    --caribbean-green-pearl: rgba(111, 207, 151, .4);
+    --gray: rgba(128, 128, 128, 1);
+    --mountain-mist: rgba(153, 153, 153, 1);
+    --nobel: rgba(178, 178, 178, 1);
+    --melon: rgba(249, 187, 185, .4);
+    --sweet-corn: rgba(255, 238, 138, .4);
+    --rice-cake: rgba(255, 252, 240, 1);
+    --white: rgba(255, 255, 255, 1);
+
+    --font-size-s: 14px;
+    --font-size-m: 16px;
+    --font-size-l: 18px;
+    --font-size-xl: 26px;
+
+    --font-family-inter: "Inter";
+    --font-family-inter-bold: "Inter-Bold";
+    --font-family-inter-regular: "Inter-Regular";
+    --font-family-tahoma-bold: "Tahoma-Bold";
+    --font-family-tahoma-regular: "Tahoma-Regular";
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: -26px;
+
+    & > .item {
+        height: 183px;
+        width: 331px;
+        margin-right: 26px;
+        margin-bottom: 26px;
+        padding: 10px 13px;
+        border-radius: 12px;
+        background-color: var(--rice-cake);
+
+        & > .wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & > .top {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                height: 77px;
+
+                & > .logo {
+                    height: 72px;
+                    width: 72px;
+                }
+                & > .text {
+                    display: flex;
+                    flex-direction: column;
+                    width: 209px;
+                    margin-left: 13px;
+
+                    & > .title {
+                        color: var(--black);
+                        font-family: var(--font-family-tahoma-bold);
+                        font-size: var(--font-size-xl);
+                        font-weight: 700;
+                        font-style: normal;
+                    }
+                    & > .description{
+                        margin-top: 3px;
+                        color: var(--black);
+                        font-family: var(--font-family-tahoma-regular);
+                        font-size: var(--font-size-m);
+                        font-weight: 400;
+                        font-style: normal;
+                    }
+                }
+            }
+            & > .middle {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 24px;
+                width: 100%;
+                margin-top: 6px;
+
+                & > .text {
+                    color: var(--gray);
+                    font-family: var(--font-family-tahoma-regular);
+                    font-size: var(--font-size-m);
+                    font-weight: 400;
+                    font-style: normal;
+                }
+            }
+            & > .bottom {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 38px;
+                width: 267px;
+                margin-top: 9px;
+                border-radius: 8px;
+                text-decoration: none;
+                cursor: pointer;
+                background-color: var(--sweet-corn);
+
+                & > .text {
+                    color: var(--black);
+                    font-family: var(--font-family-tahoma-regular);
+                    font-size: var(--font-size-l);
+                    font-weight: 400;
+                    font-style: normal;
+                }
+            }
+        }
+    }
+}

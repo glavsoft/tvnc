@@ -1,8 +1,21 @@
 @@include('global.js')
-@@include('main.js')
-@@include('../components/cookie/script.js')
-@@include('../components/nav/script.js')
-@@include('../components/form/script.js')
-@@include('../pages/404/script.js')
-
-
+(function(){
+    @@include('main.js')
+}());
+(function(){
+    @@include('../components/cookie/script.js')
+}());
+(function(){
+    @@include('../components/nav/script.js')
+}());
+(function(){
+    window.onload = function () {
+        @@include('../components/form/script.js')
+    }
+}());
+(function(){
+    @@include('../pages/404/script.js')
+}());
+(function(){
+    @@include('../components/our-products/script.js')
+}());
