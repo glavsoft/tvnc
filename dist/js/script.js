@@ -231,49 +231,73 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 (function () {
   /*==================================   our-products js    ============================================*/
   var card = [{
-    imgSrc: 'logo/tightvnc-logo-90x90.png',
-    imgAlt: 'tightvnc',
-    title: 'TightVNC v.2',
+    img: [{
+      imgSrc: 'logo/tightvnc-logo-90x90.png',
+      imgAlt: 'tightvnc'
+    }],
+    title: [{
+      text: 'TightVNC v.2'
+    }],
     description: [{
       text: 'Famous remote desktop tool, 100% free and Open Source'
     }],
-    middleText: '✓Windows XP & above  ✓Java Viewer',
+    middleText: [{
+      text: '✓Windows XP & above  ✓Java Viewer'
+    }],
     buttonText: [{
       text: 'Download your free copy',
       "class": 'my-button'
     }]
   }, {
-    imgSrc: 'logo/tightvnc-logo-90x90.png',
-    imgAlt: 'tightvnc',
-    title: 'Remote Core',
+    img: [{
+      imgSrc: 'logo/tightvnc-logo-90x90.png',
+      imgAlt: 'tightvnc'
+    }],
+    title: [{
+      text: 'Remote Core'
+    }],
     description: [{
       text: 'Easily add remote desktop functions into your own software'
     }],
-    middleText: '✓Windows XP & above  ✓Java Viewer',
+    middleText: [{
+      text: '✓.NET ✓iOS ✓macOS ✓Android ✓Linux +more!'
+    }],
     buttonText: [{
       text: 'More info & Request a demo',
       "class": 'qq',
-      remove: false
+      isHidden: false
     }]
   }, {
-    imgSrc: 'logo/remoteripple-logo-90x90.png',
-    imgAlt: 'tightvnc',
-    title: 'Remote Ripple',
+    img: [{
+      imgSrc: 'logo/remoteripple-logo-90x90.png',
+      imgAlt: 'Remote Ripple'
+    }],
+    title: [{
+      text: 'Remote Ripple'
+    }],
     description: [{
       text: 'New app to view & control VNC remote desktops'
     }],
-    middleText: '✓Windows XP & above  ✓Java Viewer',
+    middleText: [{
+      text: '✓iOS  ✓iPadOS  ✓macOS  ✓Android'
+    }],
     buttonText: [{
       text: 'Get more info & Install'
     }]
   }, {
-    imgSrc: 'logo/mightyviewer-logo-90x90.png',
-    imgAlt: 'tightvnc',
-    title: 'MightyViewer',
+    img: [{
+      imgSrc: 'logo/mightyviewer-logo-90x90.png',
+      imgAlt: 'MightyViewer'
+    }],
+    title: [{
+      text: 'MightyViewer'
+    }],
     description: [{
       text: 'Continuously monitor many remote desktops in real time'
     }],
-    middleText: '✓Windows XP & above  ✓Java Viewer',
+    middleText: [{
+      text: '✓ All modern versions of Windows'
+    }],
     buttonText: [{
       text: 'Get more info & Install',
       "class": 'a123'
@@ -283,7 +307,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   var template = ourProduct.querySelector('#template').content;
   var item = template.querySelector('.item');
 
-  var _loop2 = function _loop2(i) {
+  for (var i = 0; i < card.length; i++) {
     var cloneItem = item.cloneNode(true);
     var img = cloneItem.querySelectorAll('img');
     var title = cloneItem.querySelectorAll('.title');
@@ -291,8 +315,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var middleText = cloneItem.querySelectorAll('.middle > .paragraph');
     var buttonText = cloneItem.querySelectorAll('.bottom > .text');
 
-    var _loop3 = function _loop3(j) {
-      var addContent = function addContent(items) {
+    for (var j = 0; j < cloneItem.children.length; j++) {
+      var addSrc = function addSrc(items) {
         var _iterator2 = _createForOfIteratorHelper(items),
             _step2;
 
@@ -300,8 +324,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
             var _item = _step2.value;
 
-            if (_item.text) {
-              return _item.text;
+            if (_item.imgSrc) {
+              return _item.imgSrc;
             }
           }
         } catch (err) {
@@ -311,7 +335,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         }
       };
 
-      var addRemove = function addRemove(items) {
+      var addAlt = function addAlt(items) {
         var _iterator3 = _createForOfIteratorHelper(items),
             _step3;
 
@@ -319,8 +343,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
             var _item2 = _step3.value;
 
-            if (_item2.remove) {
-              buttonText[j].remove();
+            if (_item2.imgAlt) {
+              return _item2.imgAlt;
             }
           }
         } catch (err) {
@@ -330,7 +354,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         }
       };
 
-      var addClass = function addClass(items) {
+      var addContent = function addContent(items) {
         var _iterator4 = _createForOfIteratorHelper(items),
             _step4;
 
@@ -338,8 +362,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
             var _item3 = _step4.value;
 
-            if (_item3["class"]) {
-              return _item3["class"];
+            if (_item3.text) {
+              return _item3.text;
             }
           }
         } catch (err) {
@@ -349,26 +373,54 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         }
       };
 
-      img[j].src = card[i].imgSrc;
-      img[j].alt = card[i].imgAlt;
-      title[j].textContent = card[i].title; //description[j].textContent = card[i].description;
+      var addHidden = function addHidden(items) {
+        var _iterator5 = _createForOfIteratorHelper(items),
+            _step5;
 
+        try {
+          for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+            var _item4 = _step5.value;
+
+            if (_item4.isHidden) {
+              return 'none';
+            }
+          }
+        } catch (err) {
+          _iterator5.e(err);
+        } finally {
+          _iterator5.f();
+        }
+      };
+
+      var addClass = function addClass(items) {
+        var _iterator6 = _createForOfIteratorHelper(items),
+            _step6;
+
+        try {
+          for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
+            var _item5 = _step6.value;
+
+            if (_item5["class"]) {
+              return _item5["class"];
+            }
+          }
+        } catch (err) {
+          _iterator6.e(err);
+        } finally {
+          _iterator6.f();
+        }
+      };
+
+      img[j].src = addSrc(card[i].img);
+      img[j].alt = addAlt(card[i].img);
+      title[j].textContent = addContent(card[i].title);
       description[j].textContent = addContent(card[i].description);
-      middleText[j].textContent = card[i].middleText;
-      buttonText[j].textContent = addContent(card[i].buttonText); //addClass(card[i].buttonText);
-
+      middleText[j].textContent = addContent(card[i].middleText);
+      buttonText[j].textContent = addContent(card[i].buttonText);
       buttonText[j].classList.add(addClass(card[i].buttonText));
-      addRemove(card[i].buttonText);
-    };
-
-    for (var j = 0; j < cloneItem.children.length; j++) {
-      _loop3(j);
+      buttonText[j].style.display = addHidden(card[i].buttonText);
     }
 
     ourProduct.appendChild(cloneItem);
-  };
-
-  for (var i = 0; i < card.length; i++) {
-    _loop2(i);
   }
 })();

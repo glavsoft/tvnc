@@ -2,72 +2,32 @@
 
 let card = [
     {
-        imgSrc: 'logo/tightvnc-logo-90x90.png',
-        imgAlt: 'tightvnc',
-        title: 'TightVNC v.2',
-        description: [
-            {
-                text: 'Famous remote desktop tool, 100% free and Open Source',
-            }
-        ],
-        middleText: '✓Windows XP & above  ✓Java Viewer',
-        buttonText: [
-            {
-                text: 'Download your free copy',
-                class: 'my-button',
-            }
-        ],
+        img: [{imgSrc: 'logo/tightvnc-logo-90x90.png', imgAlt: 'tightvnc',}],
+        title: [{text: 'TightVNC v.2',}],
+        description: [{text: 'Famous remote desktop tool, 100% free and Open Source',}],
+        middleText: [{text: '✓Windows XP & above  ✓Java Viewer',}],
+        buttonText: [{text: 'Download your free copy', class: 'my-button',}],
     },
     {
-        imgSrc: 'logo/tightvnc-logo-90x90.png',
-        imgAlt: 'tightvnc',
-        title: 'Remote Core',
-        description: [
-            {
-                text: 'Easily add remote desktop functions into your own software',
-            }
-        ],
-        middleText: '✓Windows XP & above  ✓Java Viewer',
-        buttonText: [
-            {
-                text: 'More info & Request a demo',
-                class: 'qq',
-                remove: false,
-            }
-        ],
+        img: [{imgSrc: 'logo/tightvnc-logo-90x90.png', imgAlt: 'tightvnc',}],
+        title: [{text: 'Remote Core',}],
+        description: [{text: 'Easily add remote desktop functions into your own software',}],
+        middleText: [{text: '✓.NET ✓iOS ✓macOS ✓Android ✓Linux +more!',}],
+        buttonText: [{text: 'More info & Request a demo', class: 'qq', isHidden: false,}],
     },
     {
-        imgSrc: 'logo/remoteripple-logo-90x90.png',
-        imgAlt: 'tightvnc',
-        title: 'Remote Ripple',
-        description: [
-            {
-                text: 'New app to view & control VNC remote desktops',
-            }
-        ],
-        middleText: '✓Windows XP & above  ✓Java Viewer',
-        buttonText: [
-            {
-                text: 'Get more info & Install',
-            }
-        ],
+        img: [{imgSrc: 'logo/remoteripple-logo-90x90.png', imgAlt: 'Remote Ripple',}],
+        title: [{text: 'Remote Ripple',}],
+        description: [{text: 'New app to view & control VNC remote desktops',}],
+        middleText: [{text: '✓iOS  ✓iPadOS  ✓macOS  ✓Android',}],
+        buttonText: [{text: 'Get more info & Install',}],
     },
     {
-        imgSrc: 'logo/mightyviewer-logo-90x90.png',
-        imgAlt: 'tightvnc',
-        title: 'MightyViewer',
-        description: [
-            {
-                text: 'Continuously monitor many remote desktops in real time',
-            }
-        ],
-        middleText: '✓Windows XP & above  ✓Java Viewer',
-        buttonText: [
-            {
-                text: 'Get more info & Install',
-                class: 'a123',
-            }
-        ],
+        img: [{imgSrc: 'logo/mightyviewer-logo-90x90.png', imgAlt: 'MightyViewer',}],
+        title: [{text: 'MightyViewer'}],
+        description: [{text: 'Continuously monitor many remote desktops in real time',}],
+        middleText: [{text: '✓ All modern versions of Windows',}],
+        buttonText: [{text: 'Get more info & Install', class: 'a123',}],
     },
 ];
 
@@ -86,6 +46,23 @@ for (let i = 0; i < card.length; i++) {
     let buttonText = cloneItem.querySelectorAll('.bottom > .text');
 
     for (let j = 0; j < cloneItem.children.length; j++) {
+
+        let addSrc = function (items) {
+            for (let item of items) {
+                if (item.imgSrc) {
+                    return item.imgSrc;
+                }
+            }
+        }
+
+        let addAlt = function (items) {
+            for (let item of items) {
+                if (item.imgAlt) {
+                    return item.imgAlt;
+                }
+            }
+        }
+
         let addContent = function (items) {
             for (let item of items) {
                 if (item.text) {
@@ -94,10 +71,10 @@ for (let i = 0; i < card.length; i++) {
             }
         }
 
-        let addRemove = function (items) {
+        let addHidden = function (items) {
             for (let item of items) {
-                if (item.remove) {
-                    buttonText[j].remove();
+                if (item.isHidden) {
+                    return 'none'
                 }
             }
         }
@@ -110,17 +87,14 @@ for (let i = 0; i < card.length; i++) {
             }
         }
 
-        img[j].src = card[i].imgSrc;
-        img[j].alt = card[i].imgAlt;
-        title[j].textContent = card[i].title;
-        //description[j].textContent = card[i].description;
+        img[j].src = addSrc(card[i].img);
+        img[j].alt = addAlt(card[i].img);
+        title[j].textContent = addContent(card[i].title);
         description[j].textContent = addContent(card[i].description);
-        middleText[j].textContent = card[i].middleText;
+        middleText[j].textContent = addContent(card[i].middleText);
         buttonText[j].textContent = addContent(card[i].buttonText);
-        //addClass(card[i].buttonText);
         buttonText[j].classList.add(addClass(card[i].buttonText));
-        addRemove(card[i].buttonText);
-
+        buttonText[j].style.display = addHidden(card[i].buttonText);
     }
 
     ourProduct.appendChild(cloneItem);
