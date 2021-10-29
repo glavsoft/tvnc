@@ -231,41 +231,45 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 (function () {
   /*==================================   our-products js    ============================================*/
   var card = [{
-    //cardBackgroundColor: '',
     imgSrc: 'logo/tightvnc-logo-90x90.png',
     imgAlt: 'tightvnc',
     title: 'TightVNC v.2',
     description: 'Famous remote desktop tool, 100% free and Open Source',
     text: '✓Windows XP & above  ✓Java Viewer',
-    buttonText: 'Download your free copy' //buttonBackgroundColor: '',
-
+    buttonText: [{
+      text: 'Download your free copy',
+      hidden: false
+    }]
   }, {
-    //cardBackgroundColor: '',
     imgSrc: 'logo/tightvnc-logo-90x90.png',
     imgAlt: 'tightvnc',
     title: 'Remote Core',
     description: 'Easily add remote desktop functions into your own software',
     text: '✓Windows XP & above  ✓Java Viewer',
-    buttonText: 'Download your free copy' //buttonBackgroundColor: '',
-
+    buttonText: [{
+      text: 'More info & Request a demo',
+      hidden: false
+    }]
   }, {
-    //cardBackgroundColor: '',
     imgSrc: 'logo/remoteripple-logo-90x90.png',
     imgAlt: 'tightvnc',
     title: 'Remote Ripple',
     description: 'New app to view & control VNC remote desktops',
     text: '✓Windows XP & above  ✓Java Viewer',
-    buttonText: 'Download your free copy' //buttonBackgroundColor: '',
-
+    buttonText: [{
+      text: 'Get more info & Install',
+      hidden: false
+    }]
   }, {
-    //cardBackgroundColor: '',
     imgSrc: 'logo/mightyviewer-logo-90x90.png',
     imgAlt: 'tightvnc',
     title: 'MightyViewer',
     description: 'Continuously monitor many remote desktops in real time',
     text: '✓Windows XP & above  ✓Java Viewer',
-    buttonText: 'Download your free copy' //buttonBackgroundColor: '',
-
+    buttonText: [{
+      text: 'Get more info & Install',
+      hidden: false
+    }]
   }];
   var ourProduct = document.querySelector('.container[data-our-product="2810210945"]');
   var template = ourProduct.querySelector('#template').content;
@@ -279,13 +283,32 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var text = cloneItem.querySelectorAll('.middle > .text');
     var buttonText = cloneItem.querySelectorAll('.bottom > .text');
 
-    for (var j = 0; j < img.length; j++) {
+    for (var j = 0; j < cloneItem.children.length; j++) {
+      var arrayIterating = function arrayIterating(items) {
+        var _iterator2 = _createForOfIteratorHelper(items),
+            _step2;
+
+        try {
+          for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+            var _item = _step2.value;
+
+            if (!_item.hidden) {
+              return _item.text;
+            }
+          }
+        } catch (err) {
+          _iterator2.e(err);
+        } finally {
+          _iterator2.f();
+        }
+      };
+
       img[j].src = card[i].imgSrc;
       img[j].alt = card[i].imgAlt;
       title[j].textContent = card[i].title;
       description[j].textContent = card[i].description;
       text[j].textContent = card[i].text;
-      buttonText[j].textContent = card[i].buttonText;
+      buttonText[j].textContent = arrayIterating(card[i].buttonText);
     }
 
     ourProduct.appendChild(cloneItem);
