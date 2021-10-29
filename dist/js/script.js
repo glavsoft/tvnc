@@ -234,8 +234,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     imgSrc: 'logo/tightvnc-logo-90x90.png',
     imgAlt: 'tightvnc',
     title: 'TightVNC v.2',
-    description: 'Famous remote desktop tool, 100% free and Open Source',
-    text: '✓Windows XP & above  ✓Java Viewer',
+    description: [{
+      text: 'Famous remote desktop tool, 100% free and Open Source'
+    }],
+    middleText: '✓Windows XP & above  ✓Java Viewer',
     buttonText: [{
       text: 'Download your free copy',
       "class": 'my-button'
@@ -244,19 +246,23 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     imgSrc: 'logo/tightvnc-logo-90x90.png',
     imgAlt: 'tightvnc',
     title: 'Remote Core',
-    description: 'Easily add remote desktop functions into your own software',
-    text: '✓Windows XP & above  ✓Java Viewer',
+    description: [{
+      text: 'Easily add remote desktop functions into your own software'
+    }],
+    middleText: '✓Windows XP & above  ✓Java Viewer',
     buttonText: [{
       text: 'More info & Request a demo',
       "class": 'qq',
-      remove: true
+      remove: false
     }]
   }, {
     imgSrc: 'logo/remoteripple-logo-90x90.png',
     imgAlt: 'tightvnc',
     title: 'Remote Ripple',
-    description: 'New app to view & control VNC remote desktops',
-    text: '✓Windows XP & above  ✓Java Viewer',
+    description: [{
+      text: 'New app to view & control VNC remote desktops'
+    }],
+    middleText: '✓Windows XP & above  ✓Java Viewer',
     buttonText: [{
       text: 'Get more info & Install'
     }]
@@ -264,8 +270,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     imgSrc: 'logo/mightyviewer-logo-90x90.png',
     imgAlt: 'tightvnc',
     title: 'MightyViewer',
-    description: 'Continuously monitor many remote desktops in real time',
-    text: '✓Windows XP & above  ✓Java Viewer',
+    description: [{
+      text: 'Continuously monitor many remote desktops in real time'
+    }],
+    middleText: '✓Windows XP & above  ✓Java Viewer',
     buttonText: [{
       text: 'Get more info & Install',
       "class": 'a123'
@@ -280,7 +288,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var img = cloneItem.querySelectorAll('img');
     var title = cloneItem.querySelectorAll('.title');
     var description = cloneItem.querySelectorAll('.description');
-    var text = cloneItem.querySelectorAll('.middle > .text');
+    var middleText = cloneItem.querySelectorAll('.middle > .paragraph');
     var buttonText = cloneItem.querySelectorAll('.bottom > .text');
 
     var _loop3 = function _loop3(j) {
@@ -291,7 +299,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         try {
           for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
             var _item = _step2.value;
-            return _item.text;
+
+            if (_item.text) {
+              return _item.text;
+            }
           }
         } catch (err) {
           _iterator2.e(err);
@@ -328,7 +339,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
             var _item3 = _step4.value;
 
             if (_item3["class"]) {
-              buttonText[j].classList.add(_item3["class"]);
+              return _item3["class"];
             }
           }
         } catch (err) {
@@ -340,12 +351,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
       img[j].src = card[i].imgSrc;
       img[j].alt = card[i].imgAlt;
-      title[j].textContent = card[i].title;
-      description[j].textContent = card[i].description;
-      text[j].textContent = card[i].text;
-      buttonText[j].textContent = addContent(card[i].buttonText); //buttonText[j].classList.add(addClass(card[i].buttonText));
+      title[j].textContent = card[i].title; //description[j].textContent = card[i].description;
 
-      addClass(card[i].buttonText);
+      description[j].textContent = addContent(card[i].description);
+      middleText[j].textContent = card[i].middleText;
+      buttonText[j].textContent = addContent(card[i].buttonText); //addClass(card[i].buttonText);
+
+      buttonText[j].classList.add(addClass(card[i].buttonText));
       addRemove(card[i].buttonText);
     };
 

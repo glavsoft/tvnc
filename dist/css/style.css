@@ -902,7 +902,7 @@ p {
   width: 72px;
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .top > .text {
+.container[data-our-product="2810210945"] > .item > .wrap > .top > .information {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -914,7 +914,7 @@ p {
   margin-left: 13px;
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .top > .text > .title {
+.container[data-our-product="2810210945"] > .item > .wrap > .top > .information > .title {
   color: var(--black);
   font-family: var(--font-family-tahoma-bold);
   font-size: var(--font-size-xl);
@@ -922,7 +922,7 @@ p {
   font-style: normal;
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .top > .text > .description {
+.container[data-our-product="2810210945"] > .item > .wrap > .top > .information > .description {
   margin-top: 3px;
   color: var(--black);
   font-family: var(--font-family-tahoma-regular);
@@ -950,7 +950,7 @@ p {
   margin-top: 6px;
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .middle > .text {
+.container[data-our-product="2810210945"] > .item > .wrap > .middle > .paragraph {
   color: var(--gray);
   font-family: var(--font-family-tahoma-regular);
   font-size: var(--font-size-m);
