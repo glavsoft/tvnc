@@ -238,7 +238,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     text: '✓Windows XP & above  ✓Java Viewer',
     buttonText: [{
       text: 'Download your free copy',
-      hidden: false
+      "class": 'my-button'
     }]
   }, {
     imgSrc: 'logo/tightvnc-logo-90x90.png',
@@ -248,7 +248,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     text: '✓Windows XP & above  ✓Java Viewer',
     buttonText: [{
       text: 'More info & Request a demo',
-      hidden: false
+      "class": 'qq',
+      remove: true
     }]
   }, {
     imgSrc: 'logo/remoteripple-logo-90x90.png',
@@ -257,8 +258,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     description: 'New app to view & control VNC remote desktops',
     text: '✓Windows XP & above  ✓Java Viewer',
     buttonText: [{
-      text: 'Get more info & Install',
-      hidden: false
+      text: 'Get more info & Install'
     }]
   }, {
     imgSrc: 'logo/mightyviewer-logo-90x90.png',
@@ -268,14 +268,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     text: '✓Windows XP & above  ✓Java Viewer',
     buttonText: [{
       text: 'Get more info & Install',
-      hidden: false
+      "class": 'a123'
     }]
   }];
   var ourProduct = document.querySelector('.container[data-our-product="2810210945"]');
   var template = ourProduct.querySelector('#template').content;
   var item = template.querySelector('.item');
 
-  for (var i = 0; i < card.length; i++) {
+  var _loop2 = function _loop2(i) {
     var cloneItem = item.cloneNode(true);
     var img = cloneItem.querySelectorAll('img');
     var title = cloneItem.querySelectorAll('.title');
@@ -283,18 +283,15 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     var text = cloneItem.querySelectorAll('.middle > .text');
     var buttonText = cloneItem.querySelectorAll('.bottom > .text');
 
-    for (var j = 0; j < cloneItem.children.length; j++) {
-      var arrayIterating = function arrayIterating(items) {
+    var _loop3 = function _loop3(j) {
+      var addContent = function addContent(items) {
         var _iterator2 = _createForOfIteratorHelper(items),
             _step2;
 
         try {
           for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
             var _item = _step2.value;
-
-            if (!_item.hidden) {
-              return _item.text;
-            }
+            return _item.text;
           }
         } catch (err) {
           _iterator2.e(err);
@@ -303,14 +300,63 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         }
       };
 
+      var addRemove = function addRemove(items) {
+        var _iterator3 = _createForOfIteratorHelper(items),
+            _step3;
+
+        try {
+          for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+            var _item2 = _step3.value;
+
+            if (_item2.remove) {
+              buttonText[j].remove();
+            }
+          }
+        } catch (err) {
+          _iterator3.e(err);
+        } finally {
+          _iterator3.f();
+        }
+      };
+
+      var addClass = function addClass(items) {
+        var _iterator4 = _createForOfIteratorHelper(items),
+            _step4;
+
+        try {
+          for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+            var _item3 = _step4.value;
+
+            if (_item3["class"]) {
+              buttonText[j].classList.add(_item3["class"]);
+            }
+          }
+        } catch (err) {
+          _iterator4.e(err);
+        } finally {
+          _iterator4.f();
+        }
+      };
+
       img[j].src = card[i].imgSrc;
       img[j].alt = card[i].imgAlt;
       title[j].textContent = card[i].title;
       description[j].textContent = card[i].description;
       text[j].textContent = card[i].text;
-      buttonText[j].textContent = arrayIterating(card[i].buttonText);
+      buttonText[j].textContent = addContent(card[i].buttonText); //buttonText[j].classList.add(addClass(card[i].buttonText));
+
+      addClass(card[i].buttonText);
+      addRemove(card[i].buttonText);
+    };
+
+    for (var j = 0; j < cloneItem.children.length; j++) {
+      _loop3(j);
     }
 
     ourProduct.appendChild(cloneItem);
+  };
+
+  for (var i = 0; i < card.length; i++) {
+    _loop2(i);
   }
 })();

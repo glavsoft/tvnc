@@ -10,7 +10,7 @@ let card = [
         buttonText: [
             {
                 text: 'Download your free copy',
-                hidden: false,
+                class: 'my-button',
             }
         ],
     },
@@ -23,7 +23,8 @@ let card = [
         buttonText: [
             {
                 text: 'More info & Request a demo',
-                hidden: false,
+                class: 'qq',
+                remove: true,
             }
         ],
     },
@@ -36,7 +37,6 @@ let card = [
         buttonText: [
             {
                 text: 'Get more info & Install',
-                hidden: false,
             }
         ],
     },
@@ -49,7 +49,7 @@ let card = [
         buttonText: [
             {
                 text: 'Get more info & Install',
-                hidden: false,
+                class: 'a123',
             }
         ],
     },
@@ -70,10 +70,24 @@ for (let i = 0; i < card.length; i++) {
     let buttonText = cloneItem.querySelectorAll('.bottom > .text');
 
     for (let j = 0; j < cloneItem.children.length; j++) {
-        let arrayIterating = function (items) {
+        let addContent = function (items) {
             for (let item of items) {
-                if (!item.hidden) {
-                    return item.text;
+                return item.text;
+            }
+        }
+
+        let addRemove = function (items) {
+            for (let item of items) {
+                if (item.remove) {
+                    buttonText[j].remove();
+                }
+            }
+        }
+
+        let addClass = function (items) {
+            for (let item of items) {
+                if (item.class) {
+                    buttonText[j].classList.add(item.class);
                 }
             }
         }
@@ -83,7 +97,11 @@ for (let i = 0; i < card.length; i++) {
         title[j].textContent = card[i].title;
         description[j].textContent = card[i].description;
         text[j].textContent = card[i].text;
-        buttonText[j].textContent = arrayIterating(card[i].buttonText);
+        buttonText[j].textContent = addContent(card[i].buttonText);
+        //buttonText[j].classList.add(addClass(card[i].buttonText));
+        addClass(card[i].buttonText);
+        addRemove(card[i].buttonText);
+
     }
 
     ourProduct.appendChild(cloneItem);
