@@ -839,6 +839,9 @@ p {
   --sweet-corn: rgba(255, 238, 138, .4);
   --rice-cake: rgba(255, 252, 240, 1);
   --white: rgba(255, 255, 255, 1);
+  --light-pink: rgba(255, 248, 244, 1);
+  --light-gray: rgba(241, 247, 248, 1);
+  --light-green: rgba(241, 251, 248, 1);
   --font-size-s: 14px;
   --font-size-m: 16px;
   --font-size-l: 18px;
@@ -865,12 +868,27 @@ p {
   margin-bottom: 26px;
 }
 
+.wrapper[data-our-product="2810210945"] > .container > .card-tightvnc {
+  background-color: var(--rice-cake);
+}
+
+.wrapper[data-our-product="2810210945"] > .container > .card-remotecoresdk {
+  background-color: var(--light-pink);
+}
+
+.wrapper[data-our-product="2810210945"] > .container > .card-remoteripple {
+  background-color: var(--light-gray);
+}
+
+.wrapper[data-our-product="2810210945"] > .container > .card-mightyviewer {
+  background-color: var(--light-green);
+}
+
 .wrapper[data-our-product="2810210945"] > .container > .item {
   height: 183px;
   width: 331px;
   padding: 10px 13px;
   border-radius: 12px;
-  background-color: var(--rice-cake);
 }
 
 .wrapper[data-our-product="2810210945"] > .container > .item > .wrap {
@@ -961,6 +979,22 @@ p {
   font-style: normal;
 }
 
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .button-tightvnc {
+  background-color: var(--sweet-corn);
+}
+
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .button-remotecoresdk {
+  background-color: var(--melon);
+}
+
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .button-remoteripple {
+  background-color: var(--viking);
+}
+
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .button-mightyviewer {
+  background-color: var(--caribbean-green-pearl);
+}
+
 .wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -981,7 +1015,6 @@ p {
   border-radius: 8px;
   text-decoration: none;
   cursor: pointer;
-  background-color: var(--sweet-corn);
 }
 
 .wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .bottom > .text {

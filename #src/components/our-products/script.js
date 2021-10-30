@@ -16,7 +16,7 @@ let card = [
         title: [{ text: 'Remote Core', }],
         description: [{ text: 'Easily add remote desktop functions into your own software', }],
         middleText: [{ text: '✓.NET ✓iOS ✓macOS ✓Android ✓Linux +more!', }],
-        button: [{ class: 'button-remotecore', }],
+        button: [{ class: 'button-remotecoresdk', }],
         buttonText: [{ text: 'More info & Request a demo', class: 'qq', isHidden: false, }],
     },
     {
@@ -34,7 +34,7 @@ let card = [
         title: [{ text: 'MightyViewer' }],
         description: [{ text: 'Continuously monitor many remote desktops in real time', }],
         middleText: [{ text: '✓ All modern versions of Windows', }],
-        button: [{ class: 'button-tightvnc', }],
+        button: [{ class: 'button-mightyviewer', }],
         buttonText: [{ text: 'Get more info & Install', class: 'a123', }],
     },
 ];

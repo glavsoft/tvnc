@@ -272,7 +272,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       text: '✓.NET ✓iOS ✓macOS ✓Android ✓Linux +more!'
     }],
     button: [{
-      "class": 'button-remotecore'
+      "class": 'button-remotecoresdk'
     }],
     buttonText: [{
       text: 'More info & Request a demo',
@@ -320,7 +320,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       text: '✓ All modern versions of Windows'
     }],
     button: [{
-      "class": 'button-tightvnc'
+      "class": 'button-mightyviewer'
     }],
     buttonText: [{
       text: 'Get more info & Install',

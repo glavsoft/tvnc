@@ -491,6 +491,9 @@
     --sweet-corn: rgba(255, 238, 138, .4);
     --rice-cake: rgba(255, 252, 240, 1);
     --white: rgba(255, 255, 255, 1);
+    --light-pink: rgba(255, 248, 244, 1);
+    --light-gray: rgba(241, 247, 248, 1);
+    --light-green: rgba(241, 251, 248, 1);
 
     --font-size-s: 14px;
     --font-size-m: 16px;
@@ -512,12 +515,23 @@
         margin-right: 26px;
         margin-bottom: 26px;
 
+        & > .card-tightvnc {
+            background-color: var(--rice-cake);
+        }
+        & > .card-remotecoresdk {
+            background-color: var(--light-pink);
+        }
+        & > .card-remoteripple {
+            background-color: var(--light-gray);
+        }
+        & > .card-mightyviewer {
+            background-color: var(--light-green);
+        }
         & > .item {
             height: 183px;
             width: 331px;
             padding: 10px 13px;
             border-radius: 12px;
-            background-color: var(--rice-cake);
 
             & > .wrap {
                 display: flex;
@@ -574,6 +588,19 @@
                         font-style: normal;
                     }
                 }
+                & > .button-tightvnc {
+                    background-color: var(--sweet-corn);
+                }
+                & > .button-remotecoresdk {
+                    background-color: var(--melon);
+                }
+                & > .button-remoteripple {
+                    background-color: var(--viking);
+                }
+                & > .button-mightyviewer {
+                    background-color: var(--caribbean-green-pearl);
+                }
+
                 & > .bottom {
                     display: flex;
                     flex-direction: row;
@@ -585,7 +612,6 @@
                     border-radius: 8px;
                     text-decoration: none;
                     cursor: pointer;
-                    background-color: var(--sweet-corn);
 
                     & > .text {
                         color: var(--black);
