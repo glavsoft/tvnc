@@ -1,13 +1,11 @@
 # tvnc
 
-###  Simple one page website to practise HTML and CSS and js skills.
+### Demo [here](https://glavsoft.github.io/tvnc/dist/)
 
-#### Demo [here](https://glavsoft.github.io/tvnc/dist/)
-
-####  Technologies used:
+###  Technologies used:
 -  HTML;
 -  CSS;
 -  js.
 
-##### Node version (node -v): v14.17.1
+#### Node version (node -v): v14.17.1
 ```
