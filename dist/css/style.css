@@ -828,7 +828,7 @@ p {
 /* END our-products components
  =======================================*/
 
-.container[data-our-product="2810210945"] {
+.wrapper[data-our-product="2810210945"] {
   --black: rgba(0, 0, 0, 1);
   --viking: rgba(86, 204, 242, .4);
   --caribbean-green-pearl: rgba(111, 207, 151, .4);
@@ -860,17 +860,20 @@ p {
   margin-bottom: -26px;
 }
 
-.container[data-our-product="2810210945"] > .item {
-  height: 183px;
-  width: 331px;
+.wrapper[data-our-product="2810210945"] > .container {
   margin-right: 26px;
   margin-bottom: 26px;
+}
+
+.wrapper[data-our-product="2810210945"] > .container > .item {
+  height: 183px;
+  width: 331px;
   padding: 10px 13px;
   border-radius: 12px;
   background-color: var(--rice-cake);
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap {
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -883,7 +886,7 @@ p {
           align-items: center;
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .top {
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -897,12 +900,12 @@ p {
   height: 77px;
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .top > .logo {
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .top > .logo {
   height: 72px;
   width: 72px;
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .top > .information {
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .top > .information {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -914,7 +917,7 @@ p {
   margin-left: 13px;
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .top > .information > .title {
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .top > .information > .title {
   color: var(--black);
   font-family: var(--font-family-tahoma-bold);
   font-size: var(--font-size-xl);
@@ -922,7 +925,7 @@ p {
   font-style: normal;
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .top > .information > .description {
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .top > .information > .description {
   margin-top: 3px;
   color: var(--black);
   font-family: var(--font-family-tahoma-regular);
@@ -931,7 +934,7 @@ p {
   font-style: normal;
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .middle {
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .middle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -950,7 +953,7 @@ p {
   margin-top: 6px;
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .middle > .paragraph {
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .middle > .paragraph {
   color: var(--gray);
   font-family: var(--font-family-tahoma-regular);
   font-size: var(--font-size-m);
@@ -958,7 +961,7 @@ p {
   font-style: normal;
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .bottom {
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -981,7 +984,7 @@ p {
   background-color: var(--sweet-corn);
 }
 
-.container[data-our-product="2810210945"] > .item > .wrap > .bottom > .text {
+.wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .bottom > .text {
   color: var(--black);
   font-family: var(--font-family-tahoma-regular);
   font-size: var(--font-size-l);

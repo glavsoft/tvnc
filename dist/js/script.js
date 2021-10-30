@@ -231,9 +231,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 (function () {
   /*==================================   our-products js    ============================================*/
   var card = [{
+    cardProduct: [{
+      "class": 'card-tightvnc'
+    }],
     img: [{
-      imgSrc: 'logo/tightvnc-logo-90x90.png',
-      imgAlt: 'tightvnc'
+      src: 'logo/tightvnc-logo-90x90.png',
+      alt: 'tightvnc'
     }],
     title: [{
       text: 'TightVNC v.2'
@@ -244,14 +247,20 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     middleText: [{
       text: '✓Windows XP & above  ✓Java Viewer'
     }],
+    button: [{
+      "class": 'button-tightvnc'
+    }],
     buttonText: [{
       text: 'Download your free copy',
       "class": 'my-button'
     }]
   }, {
+    cardProduct: [{
+      "class": 'card-remotecoresdk'
+    }],
     img: [{
-      imgSrc: 'logo/tightvnc-logo-90x90.png',
-      imgAlt: 'tightvnc'
+      src: 'logo/tightvnc-logo-90x90.png',
+      alt: 'tightvnc'
     }],
     title: [{
       text: 'Remote Core'
@@ -262,15 +271,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     middleText: [{
       text: '✓.NET ✓iOS ✓macOS ✓Android ✓Linux +more!'
     }],
+    button: [{
+      "class": 'button-remotecore'
+    }],
     buttonText: [{
       text: 'More info & Request a demo',
       "class": 'qq',
       isHidden: false
     }]
   }, {
+    cardProduct: [{
+      "class": 'card-remoteripple'
+    }],
     img: [{
-      imgSrc: 'logo/remoteripple-logo-90x90.png',
-      imgAlt: 'Remote Ripple'
+      src: 'logo/remoteripple-logo-90x90.png',
+      alt: 'Remote Ripple'
     }],
     title: [{
       text: 'Remote Ripple'
@@ -281,13 +296,19 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     middleText: [{
       text: '✓iOS  ✓iPadOS  ✓macOS  ✓Android'
     }],
+    button: [{
+      "class": 'button-remoteripple'
+    }],
     buttonText: [{
       text: 'Get more info & Install'
     }]
   }, {
+    cardProduct: [{
+      "class": 'card-mightyviewer'
+    }],
     img: [{
-      imgSrc: 'logo/mightyviewer-logo-90x90.png',
-      imgAlt: 'MightyViewer'
+      src: 'logo/mightyviewer-logo-90x90.png',
+      alt: 'MightyViewer'
     }],
     title: [{
       text: 'MightyViewer'
@@ -298,34 +319,39 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     middleText: [{
       text: '✓ All modern versions of Windows'
     }],
+    button: [{
+      "class": 'button-tightvnc'
+    }],
     buttonText: [{
       text: 'Get more info & Install',
       "class": 'a123'
     }]
   }];
-  var ourProduct = document.querySelector('.container[data-our-product="2810210945"]');
+  var ourProduct = document.querySelector('.wrapper[data-our-product="2810210945"]');
   var template = ourProduct.querySelector('#template').content;
-  var item = template.querySelector('.item');
+  var container = template.querySelector('.container');
 
   for (var i = 0; i < card.length; i++) {
-    var cloneItem = item.cloneNode(true);
+    var cloneItem = container.cloneNode(true);
+    var cardProduct = cloneItem.querySelectorAll('.item');
     var img = cloneItem.querySelectorAll('img');
     var title = cloneItem.querySelectorAll('.title');
     var description = cloneItem.querySelectorAll('.description');
     var middleText = cloneItem.querySelectorAll('.middle > .paragraph');
+    var button = cloneItem.querySelectorAll('.bottom');
     var buttonText = cloneItem.querySelectorAll('.bottom > .text');
 
     for (var j = 0; j < cloneItem.children.length; j++) {
-      var addSrc = function addSrc(items) {
+      var addOptions = function addOptions(items, name) {
         var _iterator2 = _createForOfIteratorHelper(items),
             _step2;
 
         try {
           for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-            var _item = _step2.value;
+            var item = _step2.value;
 
-            if (_item.imgSrc) {
-              return _item.imgSrc;
+            if (item[name]) {
+              return item[name];
             }
           }
         } catch (err) {
@@ -335,90 +361,16 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         }
       };
 
-      var addAlt = function addAlt(items) {
-        var _iterator3 = _createForOfIteratorHelper(items),
-            _step3;
-
-        try {
-          for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-            var _item2 = _step3.value;
-
-            if (_item2.imgAlt) {
-              return _item2.imgAlt;
-            }
-          }
-        } catch (err) {
-          _iterator3.e(err);
-        } finally {
-          _iterator3.f();
-        }
-      };
-
-      var addContent = function addContent(items) {
-        var _iterator4 = _createForOfIteratorHelper(items),
-            _step4;
-
-        try {
-          for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-            var _item3 = _step4.value;
-
-            if (_item3.text) {
-              return _item3.text;
-            }
-          }
-        } catch (err) {
-          _iterator4.e(err);
-        } finally {
-          _iterator4.f();
-        }
-      };
-
-      var addHidden = function addHidden(items) {
-        var _iterator5 = _createForOfIteratorHelper(items),
-            _step5;
-
-        try {
-          for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-            var _item4 = _step5.value;
-
-            if (_item4.isHidden) {
-              return 'none';
-            }
-          }
-        } catch (err) {
-          _iterator5.e(err);
-        } finally {
-          _iterator5.f();
-        }
-      };
-
-      var addClass = function addClass(items) {
-        var _iterator6 = _createForOfIteratorHelper(items),
-            _step6;
-
-        try {
-          for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
-            var _item5 = _step6.value;
-
-            if (_item5["class"]) {
-              return _item5["class"];
-            }
-          }
-        } catch (err) {
-          _iterator6.e(err);
-        } finally {
-          _iterator6.f();
-        }
-      };
-
-      img[j].src = addSrc(card[i].img);
-      img[j].alt = addAlt(card[i].img);
-      title[j].textContent = addContent(card[i].title);
-      description[j].textContent = addContent(card[i].description);
-      middleText[j].textContent = addContent(card[i].middleText);
-      buttonText[j].textContent = addContent(card[i].buttonText);
-      buttonText[j].classList.add(addClass(card[i].buttonText));
-      buttonText[j].style.display = addHidden(card[i].buttonText);
+      cardProduct[j].classList.add(addOptions(card[i].cardProduct, 'class'));
+      img[j].src = addOptions(card[i].img, 'src');
+      img[j].alt = addOptions(card[i].img, 'alt');
+      title[j].textContent = addOptions(card[i].title, 'text');
+      description[j].textContent = addOptions(card[i].description, 'text');
+      middleText[j].textContent = addOptions(card[i].middleText, 'text');
+      button[j].classList.add(addOptions(card[i].button, 'class'));
+      buttonText[j].textContent = addOptions(card[i].buttonText, 'text');
+      buttonText[j].classList.add(addOptions(card[i].buttonText, 'class'));
+      buttonText[j].style.display = addOptions(card[i].buttonText, 'hidden');
     }
 
     ourProduct.appendChild(cloneItem);
