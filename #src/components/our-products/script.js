@@ -37,6 +37,24 @@ let card = [
         button: [{ class: 'button-mightyviewer', url: 'https://mightyviewer.com', }],
         buttonText: [{ text: 'Get more info & Install', }],
     },
+    {
+        cardProduct: [{ class: 'card-tightvnc', }],
+        img: [{ src: 'logo/tightvnc-logo-90x90.png', alt: 'tightvnc', }],
+        title: [{ text: 'TightVNC v.2', }],
+        description: [{ text: 'Famous remote desktop tool, 100% free and Open Source', }],
+        middleText: [{ text: '✓Windows XP & above  ✓Java Viewer', }],
+        button: [{ class: 'button-tightvnc', url: '/download.php', }],
+        buttonText: [{ text: 'Download your free copy', }],
+    },
+    {
+        cardProduct: [{ class: 'card-remotecoresdk', }],
+        img: [{ src: '', alt: '', hidden: 'none', }],
+        title: [{ text: 'Remote Core SDK', }],
+        description: [{ text: 'Easily add remote desktop functions into your own software', }],
+        middleText: [{ text: '✓.NET ✓iOS ✓macOS ✓Android ✓Linux +more!', }],
+        button: [{ class: 'button-remotecoresdk', url: 'https://remotecoresdk.com', }],
+        buttonText: [{ text: 'More info & Request a demo', }],
+    },
 ];
 
 let ourProduct = document.querySelector('.wrapper[data-our-product="2810210945"]');
