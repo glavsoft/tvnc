@@ -7,17 +7,17 @@ let card = [
         title: [{ text: 'TightVNC v.2', }],
         description: [{ text: 'Famous remote desktop tool, 100% free and Open Source', }],
         middleText: [{ text: '✓Windows XP & above  ✓Java Viewer', }],
-        button: [{ class: 'button-tightvnc', }],
-        buttonText: [{ text: 'Download your free copy', class: 'my-button', }],
+        button: [{ class: 'button-tightvnc', url: '/download.php', }],
+        buttonText: [{ text: 'Download your free copy', }],
     },
     {
         cardProduct: [{ class: 'card-remotecoresdk', }],
-        img: [{ src: 'logo/tightvnc-logo-90x90.png', alt: 'tightvnc', }],
-        title: [{ text: 'Remote Core', }],
+        img: [{ src: '', alt: '', hidden: 'none', }],
+        title: [{ text: 'Remote Core SDK', }],
         description: [{ text: 'Easily add remote desktop functions into your own software', }],
         middleText: [{ text: '✓.NET ✓iOS ✓macOS ✓Android ✓Linux +more!', }],
-        button: [{ class: 'button-remotecoresdk', }],
-        buttonText: [{ text: 'More info & Request a demo', class: 'qq', isHidden: false, }],
+        button: [{ class: 'button-remotecoresdk', url: 'https://remotecoresdk.com', }],
+        buttonText: [{ text: 'More info & Request a demo', }],
     },
     {
         cardProduct: [{ class: 'card-remoteripple', }],
@@ -25,7 +25,7 @@ let card = [
         title: [{ text: 'Remote Ripple', }],
         description: [{ text: 'New app to view & control VNC remote desktops', }],
         middleText: [{ text: '✓iOS  ✓iPadOS  ✓macOS  ✓Android', }],
-        button: [{ class: 'button-remoteripple', }],
+        button: [{ class: 'button-remoteripple', url: 'https://remoteripple.com', }],
         buttonText: [{ text: 'Get more info & Install', }],
     },
     {
@@ -34,8 +34,8 @@ let card = [
         title: [{ text: 'MightyViewer' }],
         description: [{ text: 'Continuously monitor many remote desktops in real time', }],
         middleText: [{ text: '✓ All modern versions of Windows', }],
-        button: [{ class: 'button-mightyviewer', }],
-        buttonText: [{ text: 'Get more info & Install', class: 'a123', }],
+        button: [{ class: 'button-mightyviewer', url: 'https://mightyviewer.com', }],
+        buttonText: [{ text: 'Get more info & Install', }],
     },
 ];
 
@@ -68,10 +68,12 @@ for (let i = 0; i < card.length; i++) {
         cardProduct[j].classList.add(addOptions(card[i].cardProduct, 'class'));
         img[j].src = addOptions(card[i].img, 'src');
         img[j].alt = addOptions(card[i].img, 'alt');
+        img[j].style.display = addOptions(card[i].img, 'hidden');
         title[j].textContent = addOptions(card[i].title, 'text');
         description[j].textContent = addOptions(card[i].description, 'text');
         middleText[j].textContent = addOptions(card[i].middleText, 'text');
         button[j].classList.add(addOptions(card[i].button, 'class'));
+        button[j].href = addOptions(card[i].button, 'url');
         buttonText[j].textContent = addOptions(card[i].buttonText, 'text');
         buttonText[j].classList.add(addOptions(card[i].buttonText, 'class'));
         buttonText[j].style.display = addOptions(card[i].buttonText, 'hidden');

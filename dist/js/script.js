@@ -248,22 +248,23 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       text: '✓Windows XP & above  ✓Java Viewer'
     }],
     button: [{
-      "class": 'button-tightvnc'
+      "class": 'button-tightvnc',
+      url: '/download.php'
     }],
     buttonText: [{
-      text: 'Download your free copy',
-      "class": 'my-button'
+      text: 'Download your free copy'
     }]
   }, {
     cardProduct: [{
       "class": 'card-remotecoresdk'
     }],
     img: [{
-      src: 'logo/tightvnc-logo-90x90.png',
-      alt: 'tightvnc'
+      src: '',
+      alt: '',
+      hidden: 'none'
     }],
     title: [{
-      text: 'Remote Core'
+      text: 'Remote Core SDK'
     }],
     description: [{
       text: 'Easily add remote desktop functions into your own software'
@@ -272,12 +273,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       text: '✓.NET ✓iOS ✓macOS ✓Android ✓Linux +more!'
     }],
     button: [{
-      "class": 'button-remotecoresdk'
+      "class": 'button-remotecoresdk',
+      url: 'https://remotecoresdk.com'
     }],
     buttonText: [{
-      text: 'More info & Request a demo',
-      "class": 'qq',
-      isHidden: false
+      text: 'More info & Request a demo'
     }]
   }, {
     cardProduct: [{
@@ -297,7 +297,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       text: '✓iOS  ✓iPadOS  ✓macOS  ✓Android'
     }],
     button: [{
-      "class": 'button-remoteripple'
+      "class": 'button-remoteripple',
+      url: 'https://remoteripple.com'
     }],
     buttonText: [{
       text: 'Get more info & Install'
@@ -320,11 +321,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       text: '✓ All modern versions of Windows'
     }],
     button: [{
-      "class": 'button-mightyviewer'
+      "class": 'button-mightyviewer',
+      url: 'https://mightyviewer.com'
     }],
     buttonText: [{
-      text: 'Get more info & Install',
-      "class": 'a123'
+      text: 'Get more info & Install'
     }]
   }];
   var ourProduct = document.querySelector('.wrapper[data-our-product="2810210945"]');
@@ -364,10 +365,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       cardProduct[j].classList.add(addOptions(card[i].cardProduct, 'class'));
       img[j].src = addOptions(card[i].img, 'src');
       img[j].alt = addOptions(card[i].img, 'alt');
+      img[j].style.display = addOptions(card[i].img, 'hidden');
       title[j].textContent = addOptions(card[i].title, 'text');
       description[j].textContent = addOptions(card[i].description, 'text');
       middleText[j].textContent = addOptions(card[i].middleText, 'text');
       button[j].classList.add(addOptions(card[i].button, 'class'));
+      button[j].href = addOptions(card[i].button, 'url');
       buttonText[j].textContent = addOptions(card[i].buttonText, 'text');
       buttonText[j].classList.add(addOptions(card[i].buttonText, 'class'));
       buttonText[j].style.display = addOptions(card[i].buttonText, 'hidden');
