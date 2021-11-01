@@ -7,7 +7,7 @@ let card = [
         title: [{ text: 'TightVNC v.2', }],
         description: [{ text: 'Famous remote desktop tool, 100% free and Open Source', }],
         middleText: [{ text: '✓Windows XP & above  ✓Java Viewer', }],
-        button: [{ class: 'button-tightvnc', url: '/download.php', }],
+        button: [{ class: 'button-tightvnc', url: '/download.php', target: '_blank', onclick: "javascript: pageTracker._trackPageview('/sites/tightvnc/rcolumn');", }],
         buttonText: [{ text: 'Download your free copy', }],
     },
     {
@@ -16,7 +16,7 @@ let card = [
         title: [{ text: 'Remote Core SDK', }],
         description: [{ text: 'Easily add remote desktop functions into your own software', }],
         middleText: [{ text: '✓.NET ✓iOS ✓macOS ✓Android ✓Linux +more!', }],
-        button: [{ class: 'button-remotecoresdk', url: 'https://remotecoresdk.com', }],
+        button: [{ class: 'button-remotecoresdk', url: 'https://remotecoresdk.com', target: '_blank', onclick: "javascript: pageTracker._trackPageview('/sites/remotecoresdk/rcolumn');", }],
         buttonText: [{ text: 'More info & Request a demo', }],
     },
     {
@@ -25,7 +25,7 @@ let card = [
         title: [{ text: 'Remote Ripple', }],
         description: [{ text: 'New app to view & control VNC remote desktops', }],
         middleText: [{ text: '✓iOS  ✓iPadOS  ✓macOS  ✓Android', }],
-        button: [{ class: 'button-remoteripple', url: 'https://remoteripple.com', }],
+        button: [{ class: 'button-remoteripple', url: 'https://remoteripple.com', target: '_blank', onclick: "javascript: pageTracker._trackPageview('/sites/remoteripple/rcolumn');", }],
         buttonText: [{ text: 'Get more info & Install', }],
     },
     {
@@ -34,26 +34,8 @@ let card = [
         title: [{ text: 'MightyViewer' }],
         description: [{ text: 'Continuously monitor many remote desktops in real time', }],
         middleText: [{ text: '✓ All modern versions of Windows', }],
-        button: [{ class: 'button-mightyviewer', url: 'https://mightyviewer.com', }],
+        button: [{ class: 'button-mightyviewer', url: 'https://mightyviewer.com', target: '_blank', onclick: "javascript: pageTracker._trackPageview('/sites/mightyviewer/rcolumn');", }],
         buttonText: [{ text: 'Get more info & Install', }],
-    },
-    {
-        cardProduct: [{ class: 'card-tightvnc', }],
-        img: [{ src: 'logo/tightvnc-logo-90x90.png', alt: 'tightvnc', }],
-        title: [{ text: 'TightVNC v.2', }],
-        description: [{ text: 'Famous remote desktop tool, 100% free and Open Source', }],
-        middleText: [{ text: '✓Windows XP & above  ✓Java Viewer', }],
-        button: [{ class: 'button-tightvnc', url: '/download.php', }],
-        buttonText: [{ text: 'Download your free copy', }],
-    },
-    {
-        cardProduct: [{ class: 'card-remotecoresdk', }],
-        img: [{ src: '', alt: '', hidden: 'none', }],
-        title: [{ text: 'Remote Core SDK', }],
-        description: [{ text: 'Easily add remote desktop functions into your own software', }],
-        middleText: [{ text: '✓.NET ✓iOS ✓macOS ✓Android ✓Linux +more!', }],
-        button: [{ class: 'button-remotecoresdk', url: 'https://remotecoresdk.com', }],
-        buttonText: [{ text: 'More info & Request a demo', }],
     },
 ];
 
@@ -92,6 +74,8 @@ for (let i = 0; i < card.length; i++) {
         middleText[j].textContent = addOptions(card[i].middleText, 'text');
         button[j].classList.add(addOptions(card[i].button, 'class'));
         button[j].href = addOptions(card[i].button, 'url');
+        button[j].target = addOptions(card[i].button, 'target');
+        button[j].setAttribute('onClick', addOptions(card[i].button, 'onclick'));
         buttonText[j].textContent = addOptions(card[i].buttonText, 'text');
         buttonText[j].classList.add(addOptions(card[i].buttonText, 'class'));
         buttonText[j].style.display = addOptions(card[i].buttonText, 'hidden');

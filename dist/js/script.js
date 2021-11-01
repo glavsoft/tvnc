@@ -249,7 +249,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     }],
     button: [{
       "class": 'button-tightvnc',
-      url: '/download.php'
+      url: '/download.php',
+      target: '_blank',
+      onclick: "javascript: pageTracker._trackPageview('/sites/tightvnc/rcolumn');"
     }],
     buttonText: [{
       text: 'Download your free copy'
@@ -274,7 +276,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     }],
     button: [{
       "class": 'button-remotecoresdk',
-      url: 'https://remotecoresdk.com'
+      url: 'https://remotecoresdk.com',
+      target: '_blank',
+      onclick: "javascript: pageTracker._trackPageview('/sites/remotecoresdk/rcolumn');"
     }],
     buttonText: [{
       text: 'More info & Request a demo'
@@ -298,7 +302,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     }],
     button: [{
       "class": 'button-remoteripple',
-      url: 'https://remoteripple.com'
+      url: 'https://remoteripple.com',
+      target: '_blank',
+      onclick: "javascript: pageTracker._trackPageview('/sites/remoteripple/rcolumn');"
     }],
     buttonText: [{
       text: 'Get more info & Install'
@@ -322,59 +328,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     }],
     button: [{
       "class": 'button-mightyviewer',
-      url: 'https://mightyviewer.com'
+      url: 'https://mightyviewer.com',
+      target: '_blank',
+      onclick: "javascript: pageTracker._trackPageview('/sites/mightyviewer/rcolumn');"
     }],
     buttonText: [{
       text: 'Get more info & Install'
-    }]
-  }, {
-    cardProduct: [{
-      "class": 'card-tightvnc'
-    }],
-    img: [{
-      src: 'logo/tightvnc-logo-90x90.png',
-      alt: 'tightvnc'
-    }],
-    title: [{
-      text: 'TightVNC v.2'
-    }],
-    description: [{
-      text: 'Famous remote desktop tool, 100% free and Open Source'
-    }],
-    middleText: [{
-      text: '✓Windows XP & above  ✓Java Viewer'
-    }],
-    button: [{
-      "class": 'button-tightvnc',
-      url: '/download.php'
-    }],
-    buttonText: [{
-      text: 'Download your free copy'
-    }]
-  }, {
-    cardProduct: [{
-      "class": 'card-remotecoresdk'
-    }],
-    img: [{
-      src: '',
-      alt: '',
-      hidden: 'none'
-    }],
-    title: [{
-      text: 'Remote Core SDK'
-    }],
-    description: [{
-      text: 'Easily add remote desktop functions into your own software'
-    }],
-    middleText: [{
-      text: '✓.NET ✓iOS ✓macOS ✓Android ✓Linux +more!'
-    }],
-    button: [{
-      "class": 'button-remotecoresdk',
-      url: 'https://remotecoresdk.com'
-    }],
-    buttonText: [{
-      text: 'More info & Request a demo'
     }]
   }];
   var ourProduct = document.querySelector('.wrapper[data-our-product="2810210945"]');
@@ -420,6 +379,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       middleText[j].textContent = addOptions(card[i].middleText, 'text');
       button[j].classList.add(addOptions(card[i].button, 'class'));
       button[j].href = addOptions(card[i].button, 'url');
+      button[j].target = addOptions(card[i].button, 'target');
+      button[j].setAttribute('onClick', addOptions(card[i].button, 'onclick'));
       buttonText[j].textContent = addOptions(card[i].buttonText, 'text');
       buttonText[j].classList.add(addOptions(card[i].buttonText, 'class'));
       buttonText[j].style.display = addOptions(card[i].buttonText, 'hidden');
