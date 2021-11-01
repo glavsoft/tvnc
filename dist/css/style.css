@@ -271,7 +271,7 @@ p {
   font-style: normal;
 }
 
-.wrapper[data-our-product="2810210945"] {
+:root {
   --black: rgba(0, 0, 0, 1);
   --viking: rgba(86, 204, 242, .4);
   --caribbean-green-pearl: rgba(111, 207, 151, .4);
@@ -294,6 +294,9 @@ p {
   --font-family-inter-regular: "Inter-Regular";
   --font-family-tahoma-bold: "Tahoma-Bold";
   --font-family-tahoma-regular: "Tahoma-Regular";
+}
+
+.wrapper[data-our-product="2810210945"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,7 +317,7 @@ p {
 .wrapper[data-our-product="2810210945"] > .container > .item {
   height: 183px;
   width: 331px;
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: 12px;
 }
 
