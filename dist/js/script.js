@@ -235,8 +235,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       "class": 'card-tightvnc'
     }],
     img: [{
-      src: 'logo/tightvnc-logo-90x90.png',
-      alt: 'tightvnc'
+      src: 'logo/tightvnc-logo-new-168x168.png',
+      alt: 'tightvnc logo'
     }],
     title: [{
       text: 'TightVNC v.2'
@@ -245,7 +245,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       text: 'Famous remote desktop tool, 100% free and Open Source'
     }],
     middleText: [{
-      text: '✓Windows XP & above  ✓Java Viewer'
+      text: 'Windows XP & above | Java Viewer'
     }],
     button: [{
       "class": 'button-tightvnc',
@@ -258,21 +258,46 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     }]
   }, {
     cardProduct: [{
+      "class": 'card-sourcecode'
+    }],
+    img: [{
+      src: 'logo/source-code-logo-new-168x168.png',
+      alt: 'source code logo'
+    }],
+    title: [{
+      text: 'Source Code'
+    }],
+    description: [{
+      text: 'Get commercial licenses for TightVNC and related software'
+    }],
+    middleText: [{
+      text: 'Windows XP & above | Unix/Linux | macOS'
+    }],
+    button: [{
+      "class": 'button-sourcecode',
+      url: '/download.php',
+      target: '_blank',
+      onclick: "javascript: pageTracker._trackPageview('/sites/sourcecode/rcolumn');"
+    }],
+    buttonText: [{
+      text: 'Learn more & request prices'
+    }]
+  }, {
+    cardProduct: [{
       "class": 'card-remotecoresdk'
     }],
     img: [{
-      src: '',
-      alt: '',
-      hidden: 'none'
+      src: 'logo/remote-core-SDK-logo-new-168x168.png',
+      alt: 'remote ripple logo'
     }],
     title: [{
       text: 'Remote Core SDK'
     }],
     description: [{
-      text: 'Easily add remote desktop functions into your own software'
+      text: 'Integrate remote desktop functions into your software'
     }],
     middleText: [{
-      text: '✓.NET ✓iOS ✓macOS ✓Android ✓Linux +more!'
+      text: '.NET | iOS | macOS | Android | Linux+more'
     }],
     button: [{
       "class": 'button-remotecoresdk',
@@ -281,50 +306,24 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       onclick: "javascript: pageTracker._trackPageview('/sites/remotecoresdk/rcolumn');"
     }],
     buttonText: [{
-      text: 'More info & Request a demo'
-    }]
-  }, {
-    cardProduct: [{
-      "class": 'card-remoteripple'
-    }],
-    img: [{
-      src: 'logo/remoteripple-logo-90x90.png',
-      alt: 'Remote Ripple'
-    }],
-    title: [{
-      text: 'Remote Ripple'
-    }],
-    description: [{
-      text: 'New app to view & control VNC remote desktops'
-    }],
-    middleText: [{
-      text: '✓iOS  ✓iPadOS  ✓macOS  ✓Android'
-    }],
-    button: [{
-      "class": 'button-remoteripple',
-      url: 'https://remoteripple.com',
-      target: '_blank',
-      onclick: "javascript: pageTracker._trackPageview('/sites/remoteripple/rcolumn');"
-    }],
-    buttonText: [{
-      text: 'Get more info & Install'
+      text: 'Learn more & request a demo'
     }]
   }, {
     cardProduct: [{
       "class": 'card-mightyviewer'
     }],
     img: [{
-      src: 'logo/mightyviewer-logo-90x90.png',
-      alt: 'MightyViewer'
+      src: 'logo/mightyviewer-logo-new-168x168.png',
+      alt: 'mightyviewer logo'
     }],
     title: [{
       text: 'MightyViewer'
     }],
     description: [{
-      text: 'Continuously monitor many remote desktops in real time'
+      text: 'Monitor many remote desktops in real time on one screen'
     }],
     middleText: [{
-      text: '✓ All modern versions of Windows'
+      text: 'All modern versions of Windows'
     }],
     button: [{
       "class": 'button-mightyviewer',
@@ -333,7 +332,59 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       onclick: "javascript: pageTracker._trackPageview('/sites/mightyviewer/rcolumn');"
     }],
     buttonText: [{
-      text: 'Get more info & Install'
+      text: 'Learn more & install'
+    }]
+  }, {
+    cardProduct: [{
+      "class": 'card-remoteripple'
+    }],
+    img: [{
+      src: 'logo/remote-ripple-logo-new-168x168.png',
+      alt: 'remote ripple logo'
+    }],
+    title: [{
+      text: 'Remote Ripple'
+    }],
+    description: [{
+      text: 'View and control VNC remote desktops from any device'
+    }],
+    middleText: [{
+      text: 'Windows | iOS | iPadOS | macOS | Android'
+    }],
+    button: [{
+      "class": 'button-remoteripple',
+      url: 'https://remoteripple.com',
+      target: '_blank',
+      onclick: "javascript: pageTracker._trackPageview('/sites/remoteripple/rcolumn');"
+    }],
+    buttonText: [{
+      text: 'Learn more & install'
+    }]
+  }, {
+    cardProduct: [{
+      "class": 'card-tightprojector'
+    }],
+    img: [{
+      src: 'logo/tightprojector-logo-new-168x168.png',
+      alt: 'tightprojector logo'
+    }],
+    title: [{
+      text: 'TightProjector'
+    }],
+    description: [{
+      text: 'Broadcast your live desktop to the whole local-area network'
+    }],
+    middleText: [{
+      text: 'Windows XP & above | Java Viewer'
+    }],
+    button: [{
+      "class": 'button-tightprojector',
+      url: 'https://tightprojector.com',
+      target: '_blank',
+      onclick: "javascript: pageTracker._trackPageview('/sites/tightprojector/rcolumn');"
+    }],
+    buttonText: [{
+      text: 'Learn more & install'
     }]
   }];
   var ourProduct = document.querySelector('.wrapper[data-our-product="2810210945"]');
@@ -372,8 +423,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
       cardProduct[j].classList.add(addOptions(card[i].cardProduct, 'class'));
       img[j].src = addOptions(card[i].img, 'src');
-      img[j].alt = addOptions(card[i].img, 'alt');
-      img[j].style.display = addOptions(card[i].img, 'hidden');
+      img[j].alt = addOptions(card[i].img, 'alt'); //img[j].style.display = addOptions(card[i].img, 'hidden');
+
       title[j].textContent = addOptions(card[i].title, 'text');
       description[j].textContent = addOptions(card[i].description, 'text');
       middleText[j].textContent = addOptions(card[i].middleText, 'text');
