@@ -35,8 +35,6 @@
     --sea-shell-color: rgba(255, 239, 235, 1);
     --intense-yellow-pink: rgba(255, 126, 94, 1);
 
-
-
     --sea-green-crayola: rgba(157, 218, 191, 1);
     --smoky-white: rgba(241, 250, 246, 1);
     --moderate-aquamarine: rgba(101, 196, 154, 1);
@@ -48,11 +46,6 @@
     --periwinkle: rgba(210, 189, 255, 1);
     --magnolia: rgba(248, 244, 255, 1);
     --wisteria: rgba(184, 150, 255, 1);
-
-
-
-
-
 
     //font
     --font-size-s: 14px;
@@ -79,13 +72,19 @@
 
         & > .item {
             height: 205px;
-            width: 352px;
+            width: 100%;
+            max-width: 352px;
+            min-width: 290px;
             padding: 12px;
             border-radius: 24px;
             border-radius: clamp(12px, 1.4vw, 24px);
             border-width: 1px;
             border-style: solid;
             border-color: transparent;
+
+            @media (max-width: 400px) {
+                height: auto;
+            }
 
             & > .wrap {
                 display: flex;
@@ -96,7 +95,6 @@
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
-                    height: 77px;
 
                     & > .logo {
                         height: 84px;
@@ -132,9 +130,12 @@
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
-                    height: 24px;
                     width: 100%;
-                    margin-top: 10px;
+                    margin-top: 6px;
+
+                    @media (max-width: 400px) {
+                        justify-content: flex-start;
+                    }
 
                     & > .paragraph {
                         color: var(--gray-window);
@@ -151,8 +152,9 @@
                     justify-content: center;
                     align-items: center;
                     height: 45px;
-                    width: 303px;
-                    margin-top: 12px;
+                    width: 100%;
+                    max-width: 303px;
+                    margin-top: 17px;
                     border-radius: 12px;
                     text-decoration: none;
                     cursor: pointer;

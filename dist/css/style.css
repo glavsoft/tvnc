@@ -324,7 +324,9 @@ p {
 
 .wrapper[data-our-product="2810210945"] > .container > .item {
   height: 205px;
-  width: 352px;
+  width: 100%;
+  max-width: 352px;
+  min-width: 290px;
   padding: 12px;
   border-radius: 24px;
   border-radius: clamp(12px, 1.4vw, 24px);
@@ -357,7 +359,6 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 77px;
 }
 
 .wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .top > .logo {
@@ -409,9 +410,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 24px;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .middle > .paragraph {
@@ -437,8 +437,9 @@ p {
       -ms-flex-align: center;
           align-items: center;
   height: 45px;
-  width: 303px;
-  margin-top: 12px;
+  width: 100%;
+  max-width: 303px;
+  margin-top: 17px;
   border-radius: 12px;
   text-decoration: none;
   cursor: pointer;
@@ -1556,5 +1557,17 @@ END 404 PAGE STYLE
 @media (max-width: 414px) {
   .winst-page[data-2907211228] > .wrap {
     margin: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper[data-our-product="2810210945"] > .container > .item {
+    height: auto;
+  }
+
+  .wrapper[data-our-product="2810210945"] > .container > .item > .wrap > .middle {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
